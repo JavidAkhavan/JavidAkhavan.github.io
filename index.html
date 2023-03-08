@@ -55,7 +55,7 @@
             <a class="nav-link js-scroll-trigger" href="#experience">Experiences</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Academic Projects</a>
+            <a class="nav-link js-scroll-trigger" href="#Publications">Publications</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#publication">Certificates</a>
@@ -64,7 +64,7 @@
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#language">Languages</a>
+            <a class="nav-link js-scroll-trigger" href="#Test_Scores">Test Scores</a>
           </li>          
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
@@ -82,10 +82,17 @@
           </h1>
           <div class="subheading mb-5"><a href="https://www.stevens.edu/school-engineering-science/departments/mechanical-engineering">School of Engineering & Science</a>, <a href="https://stevens.edu">Stevens Institute of Technology</a>, Hoboken, New Jersey</br> <a href="mailto:jakhavan@stevens.edu">jakhavan@stevens.edu</a>
           </div>
-          <p class="lead mb-5">I received my B.Sc degree in Computer Architecture Systems from <a href="https://ce.aut.ac.ir/en">Department of Computer Engineering</a> at the <a href="https://aut.ac.ir/en/">Amirkabir University of Technology, (Tehran Polytechnics)</a> and started my M.Sc. studying at the <a href = "https://ut.ac.ir/en">University of Tehran</a>, majoring in Computer Architecture. 
-		   
-		   My research interests are <b>Hardware Accelerators</b>, <b>Deep Neural Networks</b>, <b>Reconfigurable Computing</b>, <b>FPGAs</b>, <b>Approximate Computing</b>, and <b> Embedded Systems</b>. Right now I'm working on Implementation of an <b>FPGA-based Multi-precision Accelerator for DNNs</b>, as my master thesis.
-            <!-- I am mostly interested in <b>Robotics</b>, <b>Machine Learning</b>, and <b>Parallel Processing</b>.</p> -->
+          <p  class="lead mb-5"  style="color:black;"><ul style=“list-style-type:square”>
+                <li  style="color:black;">Experienced Creative Model Developer Focused on Autonomous, Self-Aware Monitoring, and Control Systems.</li>
+<li style="color:black;">5+ years of combined industrial and academic experience in Computer Vision and Machine Learning.</li>
+<li style="color:black;">Hands-on expertise in a variety of products and deep models within the control field.</li>
+<li style="color:black;">Proven ability to consistently achieve results and meet project goals.</li>
+<li style="color:black;">Ph.D. in Robotics and Artificial Intelligence from ME@SIT.</li>
+<li style="color:black;">Strong intuition in Automation and Autonomous Control Systems.</li>
+<li style="color:black;">Excellent interpersonal and team collaboration skills.</li>
+<li style="color:black;">Proficient in Data Science and Statistics.</li>
+<li style="color:black;">Advanced working knowledge of Python, MATLAB, and related libraries</li>
+<li style="color:black;">Available for immediate start.</li>
           </p>
           
           <a href="/file/Akhavan_Resume_v5.pdf">
@@ -116,7 +123,7 @@
           <div class="resume-item d-flex flex-column flex-md-row">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Stevens Institute of Technology</h3>
-              <div class="subheading mb-3"><a href="https://www.stevens.edu/school-engineering-science/departments/mechanical-engineering">Department of Mechanical Engineering</a></br>Master of Engineering</div>
+              <div class="subheading mb-3"><a href="https://www.stevens.edu/school-engineering-science/departments/mechanical-engineering">Department of Mechanical Engineering</a></br style="color:black;" > Ph.D. </div>
         <div><b style="color:black;">Robotics & Artificial Intelligence</div>
       <div>Advisor: <a href = "https://www.stevens.edu/profile/smanooch"><b>Professor Souran Manoochehri</b></a></div>
         
@@ -163,12 +170,27 @@
         <div class="mr-auto">
           <h2 class="mb-5">Research</h2>
           
-		  <p>The high computation demanded by deep learning models motivated the hardware acceleration of Neural Networks. Recent studies have focused on four architectures of accelerators for DNNs, including GPU, FPGA. ASIC, and CGRA. </br>
-		     Because of the high power consumption of GPU, it's not efficient to use them in embedded systems, as in these devices power consumption is a critical challenge. Also, according to the development of Neural Networks, flexibility is the major benefit of FPGAs over the ASIC. Thanks to Deep Neural Network's inherent tolerance against errors, the bit-width of data and operations in Neural Networks can be reduced with a negligible impact on accuracy. In many designed accelerators, they have considered a minimum bit-width that preserves the original accuracy. However, researches have shown that not also the minimum required bit-width varies significantly across variant Neural Networks, but also it differs across different layers of a single Neural Network.  </br>
-			 </br> For my master thesis, I have been working on a Multi-Precision Deep Neural Network Accelerator (MpDNN), which is able to change the working bit-width dynamically. The design supports run-time splitting an operator into multiple independent operators with smaller bit-width, effectively increasing throughput when lower precision is required. MpDNN is designed for FPGA, and the multipliers and bit-width adaption mechanisms are optimized for the LUT-based structure of FPGAs. The accelerator's building block is a 16-bit multiply-and-accumulate (MAC) unit made by the 16-bit mpDNN multiplier. The baseline multiplier of this 16-bit MAC unit is an approximate 4-bit multiplier which utilizes 6-input LUTs and the associated carry chain. This approximate multiplier eliminated the carry propagation to reduce the latency, but the input carry is predicted by incorporating some input bits of the previous bit positions in each bit position's calculations. 
-The 16-bit multiplier is made by 16 baseline multipliers, which can be fused recursively to build four 8-bit multipliers or one 16-bit multiplier.
-</br>Also, I have written a paper, <b>"MpDNN: Multi-Precision Deep Neural Network Acceleration on FPGA,"</b> and we are going to submit it to a known conference or journal as soon as possible. 
-              
+		  <p>My research stands out in the field as it effectively integrates the expertise of multiple disciplines, including Mechanical Engineering, Computer Science, and Electrical Engineering, to bridge existing gaps. In contrast to recent works that focus primarily on mechanical engineering approaches to create a solution, my research leverages the latest tools and ideas from computer science to deliver significant improvements in efficacy. My research aligns with the Industry 4.0 movement, striving to create self-aware automated manufacturing systems that minimize reliance on human labor and interaction with the minimum material and time waste.
+</p>
+<p>
+My unique skillset is the result of a deep understanding of both mechanical engineering and computer science, allowing me to identify and propose optimal solutions to the engineering problems at hand. While many peers rely on conventional methods, my research goes beyond such limitations by applying state-of-the-art machine learning and artificial intelligence concepts to engineering practices.
+ </p>
+		     <p>
+As a researcher specializing in the application of machine learning in mechanical engineering, my primary objective is to design self-aware machinery that can function independently, even in the presence of defects or environmental anomalies. My research has significant practical implications for industries such as manufacturing, robotics, autonomous driving, as well as mass consumer goods and household appliances. Among my most noteworthy research contributions are:
+<ul style=“list-style-type:square”>
+                <li>
+                  The development of an autonomous defect detection system for 3D printing manufacturing units, which ensures production resilience and quality assurance without any human intervention.
+                </li>
+                <li>
+                  The creation of an artificial intelligence-based application for real-time melt pool analysis and quality estimation in direct energy deposition additive manufacturing machines.
+                </li> 
+                <li>
+The implementation of an autonomous process adjustment algorithm for additive manufacturing machines, enabling rapid real-time adaptation to anomalies and machine faults and guaranteeing successful manufacturing in the event of an out-of-order machine.
+                </li>
+                <li>
+                  The establishment of two publicly accessible databases to facilitate data accessibility for researchers in the field of smart manufacturing, thereby promoting knowledge dissemination and scientific advancement.
+                </li>
+         </p>
 		
 		  </div>
                   </div>
@@ -180,19 +202,17 @@ The 16-bit multiplier is made by 16 baseline multipliers, which can be fused rec
           <p>My interests are as follows:
 
             <b><div style="float: left; width: 50%;">
-              <ul><li>Hardware Accelerators</li>
-                  <li>Deep Neural Networks</li>
-		  <li>Data/Computation Reuse</li>
-		  <li>Pattern Recognition</li>
-		  <li>Machine Learning</li>
+              <ul><li>Deep Methods for Computer Vision</li>
+		  <li>Data Acquisition & Visualization</li>
+      <li>Autonomous Defect Detection, Classification, and Elimination </li>
 				  
                   </ul></div>
 
             <div style="float: right; width: 50%;">
-              <ul><li>FPGAs</li>
-	          <li>Computer Architecture</li>
-                  <li>Approximate Computing</li>
-		  <li>Reconfigurable Computing</li>
+
+              <ul><li>Deep Neural Networks</li>
+      <li>Machine Learning</li>
+		  <li>Reinforcment Learning for Pattern recognition & Control</li>
                   <!-- <li>High-performance Computing</li> -->
                   <!-- <li>Imitation Learning</li> -->
                 </ul></div>
@@ -266,117 +286,82 @@ scenario compilation, and Console-VR program Synchronization in C#/Java/Python. 
             </div>
           </div>
 		        <hr class="m-0"></br>
-		  <h3> ATTENDED WORKSHOPS </h3>
-		  </br>
-		  <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">• <a href = "http://cs.ipm.ac.ir/asoc2019/">Third IPM Advanced School of Computing</a></h3>
-              <div class="subheading mb-3">Computer Architecture</div>
-              <p>The Institute for Research in Fundamental Sciences <a href="http://www.ipm.ac.ir/"><b>(IPM)</b></a> affiliated with the Ministry of Science, Research, and Technology, was founded in 1989 under the name of Institute for Studies in Theoretical Physics and Mathematics.
-				In the <a href ="http://cs.ipm.ac.ir/asoc2019/"><b>Third Advanced School of Computing</b></a>, experts working on computer architecture were invited to give lectures on various aspects of this influential and evolving branch of computer science. <a href="https://oergin.kasirgalabs.com/"><b>Prof. Oğuz Ergin</b></a> from TOBB University of Economics and Technology, 
-				<a href="https://people.inf.ethz.ch/omutlu/"><b>Prof. Onur Multu</b></a> from ETH Zurich, <a href="http://www.cs.bilkent.edu.tr/~ozturk/"><b>Prof. Ozcan Ozturk</b></a> from Bilkent University, and <a href="http://www.cse.iitd.ac.in/~srsarangi/"><b>Prof. Smruti Ranjan Saranji</b></a> from IIT Delhi were invited to have a talk on memory systems, coherence and consistency, on-chip-network, temperature and power management, and architecture for emerging workloads.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Aug. 2019</span>
-            </div>
-          </div>
-		  
-		    <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">• <a href = "https://hpc.ipm.ac.ir/">8th IPM-HPC Workshop</a></h3>
-              <div class="subheading mb-3">Multi-Core Systems and parallel platforms</div>
-              <p>This workshop was held in the Institute for Research in Fundamental Sciences <a href="http://www.ipm.ac.ir/"><b>(IPM)</b></a>.</br> It covered coherence and consistency, <b>OpenMP</b>, and <b>CUDA</b> programming.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2019</span>
-            </div>
-          </div>
-		  
-		  <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">• Introduction to FPGA</h3>
-              <div class="subheading mb-3">Co-design and hardware implementation</div>
-              <p>This workshop was held at the <a href = "https://ce.aut.ac.ir/en"><b>Amirkabir University of Technology</b></a>.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Mar. 2016</span>
-            </div>
-          </div>
-
-		<div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">• LOCAL ACM ICPC CONTEST PARTICIPANT</h3>
-              <div class="subheading mb-3">Ceit, aut</div>
-              <p>West Asian Regional Contest has been held since 1999. This regional contest is held every year in Tehran hosted by Sharif University of Technology.
-Amirkabir University of Technology has accomplished to advance for the world final in 7 years out of the whole 9 years.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2015</span>
-            </div>
-          </div>
-		         <hr class="m-0"></br>
 		  <h3>Teaching Experiences </h3>
 		  </br>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">• Teaching Assistant, University of Tehran</h3>
-              <div class="subheading mb-3">Computer Aided Digital System Design (CAD)</div>
-              <p>This course was under the supervision of <a href="https://ece.ut.ac.ir/en/~modarressi"><b>Dr. Mehdi Modarressi</b></a>. </br>I was responsible for designing and grading homework and projects.</p>
+              <h3 class="mb-0">Lecturer - Stevens Institute of Technology</h3>
+              <div class="subheading mb-3">Programming With MATLAB And Sensor Integration</div>
+              <p>Organized and delivered lectures on programming with MATLAB to graduate-level students interested in sensor integration using MATLAB environment, such as FLIR thermal cameras, CCTV cameras, 3D printers, G-code manipulation, etc...</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Sep. 2019</span>
+              <span class="text-primary">January 2020 - Present</span>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">• Lab instructor, Amirkabir University</h3>
-              <div class="subheading mb-3">Logic Circuit Lab</div>
-              <p>I was responsible for teaching the Logic Circuit Laboratory course, homework, and the final project. This course was under the supervision of <a href="https://aut.ac.ir/cv/2365/Mehdi%20Sedighi"><b>Dr. Mehdi Sedighi</b></a> and <a href="http://ceit.aut.ac.ir/~szamani/"><b>Dr. Morteza Sahebzamani</b></a>.</p>
+              <h3 class="mb-0">Teaching Assistant - Stevens Institute of Technology</h3>
+              <div class="subheading mb-3">Introduction To Robotics & Mechatronics Course</div>
+              <p><ul style=“list-style-type:square”>
+<li>Proctoring laboratory sessions involved various robot programming, circuit design, and teamwork.</li><li>
+Holding office hours to help students and give guidance on their project progress.</li></p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Sep. 2018</span>
+              <span class="text-primary">January 2020 - Present</span>
             </div>
           </div>
-      <h3 class="mb-0">• Teaching Assistant, Amirkabir University</h3>
+      <h3 class="mb-0">Iranian Association at Stevens (IAS) - Stevens Institute of Technology </h3>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
         
-              <div class="subheading mb-3">Computer Networks</div>
-              <p>This course was under the supervision of <a href="http://ceit.aut.ac.ir/~khorsandi/"><b>Dr. Siavash Khorsandi</b></a>.</p>
+              <div class="subheading mb-3">President and Treasurer</div>
+              <p><ul style=“list-style-type:square”>
+<li>Manage the staffing process, including recruiting, interviewing, and onboarding the officers.</li>
+<li>Ensure role descriptions are up to date and compliant with all campus regulations.</li>
+<li>Budget planning and allocation for events and negotiation with contractors.</li>
+</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Feb. 2017</span>
+              <span class="text-primary">January 2020 - May 2020</span>
             </div>
           </div>
+      <h3 class="mb-0">LECTURER - Trinity Educational Center </h3>
 
 		  <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <div class="subheading mb-3">Digital Design Automation</div>
-              <p><a href ="https://ceit.aut.ac.ir/~szamani/index_files/design_automation.htm">This course</a> was under the supervision of  <a href="http://ceit.aut.ac.ir/~szamani/"><b>Dr. Morteza Sahebzamani</b></a>. I was responsible for preparing homework, projects, and grading</p>
+              <div class="subheading mb-3">SAT Exam Quant</div>
+              <p><ul style=“list-style-type:square”>
+<li>Prepare and deliver lectures to participants of the SAT exam on linear algebra, single and system of linear equations, statistics, and advanced mathematics.</li></p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Feb. 2017</span>
+              <span class="text-primary">May 2018 – January 2019</span>
+            </div>
+          </div>
+		        <h3 class="mb-0">Teaching Assistants Manager - Sharif University of Technology</h3>
+
+		  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <div class="subheading mb-3">Mechanism Design Course</div>
+              <p><ul style=“list-style-type:square”>
+<li>Facilitated and coordinated students for projects and coursework.</li>
+<li>Creation and delivery of lectures on Simulink and Adams applications for dynamically simulating various mechanisms.</li></p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2015 – January 2019</span>
             </div>
           </div>
 		  
 		  <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <div class="subheading mb-3">Electronic Circuits 1</div>
-              <p>This course was under the supervision of  <a href="http://ceit.aut.ac.ir/~khorsandi/"><b>Dr. Siavash Khorsandi</b></a>. </br>I was responsible for grading projects and homework.</p>
+              <div class="subheading mb-3">Numerical Computations Course</div>
+              <p><ul style=“list-style-type:square”>
+<li>Designed and developed an auto-grading application to automate homework gradings in various domains.</li>
+<li>Teaching MATLAB, numerical methods for linear and nonlinear equations, numerical integration, and differentiation.</li>
+<li>Led and organized TAs for class activities and homework.</li> </p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Sep. 2016</span>
-            </div>
-          </div>
-		  
-		  <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <div class="subheading mb-3">Logic Circuits</div>
-              <p>This course was under the supervision of <a href="https://aut.ac.ir/cv/2365/Mehdi%20Sedighi"><b>Dr. Mehdi Sedighi</b></a>. </br>I was responsible for grading projects and homework.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Sep. 2016</span>
+              <span class="text-primary">August 2015 – January 2019</span>
             </div>
           </div>
 
@@ -387,71 +372,31 @@ Amirkabir University of Technology has accomplished to advance for the world fin
       <hr class="m-0">
 
   
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects" style="background-color:#F2F3F4">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Publications" style="background-color:#F2F3F4">
         <div class="my-auto">
-          <h2 class="mb-5">Academic Projects</h2>
-          <p><b>• Accelerating CNN Inference, <a href="https://github.com/NegarNd/Multi-Core-Embedded-Systems">
-              <i class="fab fa-github"></i>
+          <h2 class="mb-5">Publications</h2>
+          <p><b><a href="https://scholar.google.com/scholar?oi=bibs&cluster=1916402560499059483&btnI=1&hl=en">A Deep Learning Solution for Real-time Quality Assessment and Control in Additive Manufacturing Using Point Cloud Data  (Under Review) 
+              <i class="fab scholar"></i>
             </a></b></br>
-          Utilizing Software techniques, OpenMP, & CUDA to speed up CNN inference.</p>
-          <p>Multicore Embedded Systems Course by <a href="https://github.com/NegarNd/CNN-Inference-Acceleration"><b>Dr. Mostafa Ersali</b></a>-2020</p></br>
+          </p></br>
 
-          <p><b>• RNN Project</b></br>
-          Forecasting the number of taxi requests by RNN.</p>
-          <p>Deep Neural Networks Course by <a href="https://profile.ut.ac.ir/en/~akalhor"><b>Dr. Ahmad Kalhor</b></a> - 2019</p></br>
+          <p><b><a href="https://doi.org/10.1115/DETC2021-69436"> In-situ laser-based process monitoring and in-plane surface anomaly identification for additive manufacturing using point cloud and machine learning <i class="fab scholar"></i>
+            </a></b></br></p></br>
 
-	  <p><b>• Approximate Multiplier</b></br>
-          Implementing an approximate multiplier using VHDL.</p>
-          <p>Computer Arithmetics Course by <a href="https://profile.ut.ac.ir/en/~saeed"><b>Dr. Saeed Safari</b></a> - 2019</p></br>
-          
-   
-          <p><b>• Template Matching</b></br>
-          Implementing the template matching algorithm in Cuda & <a href="https://www.openmp.org/">OpenMP</a>, on a dataset of coin/face images.</p>
-          <p>Multi-Core Programming Course by <a href="http://ceit.aut.ac.ir/~momtazpour/"><b>Dr. Mahmoud Momtazpour</b></a> - 2018</p></br>
-		  
-		  <p><b>• Matrix Multiplication</b></br>
-          Accelerating Matrix Multiplication Using CUDA.</p>
-          <p>Multi-Core Programming Course by <a href="http://ceit.aut.ac.ir/~momtazpour/"><b>Dr. Mahmoud Momtazpour</b></a> - 2018</p></br>
-          
-          <p><b>• Temperature controller</b></br>
-          Using Wi-Fi development board (WEMOS D1) and LM35 to measure the room temperature and transfer to our Android-Smartphone</p>
-          <p>Computer Interface Design Course by <a href="https://aut.ac.ir/cv/2365/Mehdi%20Sedighi"><b>Dr. Mehdi Sedighi</b></a> - 2018</p></br>
-          
-          <p><b>• Implementation of various projects for FRDM-KL25Z board, <a href="https://github.com/NegarNd/Embedded-Systems">
-              <i class="fab fa-github"></i>
-            </a></b></br>
-		  - Implementing the derived state diagram for Taleghani cross-section</br>
-		  - Using and Implementing RTX operating system to facilitate multi-tasking, task communication, and synchronization</br>
-		  - Playing Fur Elise Beethoven track using FRDM-KL25Z</p>
-          <p>Embedded Systems Course by <a href="https://aut.ac.ir/cv/2603/Hossein-Pedram?slc_lang=en&&cv=2603&mod=scv"><b>Dr. Hossein Pedram</b></a> - 2018</p></br>
-          
-		  <p><b>• Implementing a home environment controller</b></br>
-          Co-design of a system including lighting control, temperature control and voice recognition using Xilinx MicroBlaze Soft Processor Core</p>
-          <p>Digital Design Automation Course by <a href="http://ceit.aut.ac.ir/~szamani/"><b>Dr. Morteza Sahebzamani</b></a> - 2017</p></br>
-		  
-		  <p><b>• Implementing a process migration on xv6 OS</b></br>
-          <p>Operation System Course - 2017</p></br>
-		  
-		  <p><b>• Implementing an SRAM </b></br>
-          Designing a 16*4 SRAM and a 2:4 address decoder Using HSpice </p>
-          <p>Digital Electronics Course by <a href="https://aut.ac.ir/cv/2365/Mehdi%20Sedighi"><b>Dr. Mehdi Sedighi</b></a> - 2016</p></br>
-		  
-		   <p><b>• Implementing an Engineering Calculator, <a href="https://github.com/NegarNd/Engineering_Calculator">
-              <i class="fab fa-github"></i>
-            </a></b></br>
-          Using VHDL and CORDIC IP Core - 2016</p></br>
-		  
-		  <p><b>• Implementing a Basic Computer, Cache and RAM, <a href="https://github.com/NegarNd/Computer_Architecture_Projects">
-              <i class="fab fa-github"></i>
-            </a></b></br>
-          Using VHDL </p>
-          <p>Computer Architecture Course by <a href="https://aut.ac.ir/cv/2188/Hamid-R.-Zarandi?slc_lang=en&&cv=2188&mod=scv"><b>Dr. Hamid R. Zarandi</b></a> - 2016</p></br>
-		  
-		  <p><b>• Robo Kill Game</b></br>
-          Implementing Robo Kill Game, Using JAVA </p>
-          <p>Advanced Programming 	Course by <a href="https://scholar.google.com/citations?user=CzprDjIAAAAJ&hl=en"><b>Dr. Seyed Majid Noorhosseini</b></a> - 2015</p></br>
-		  
-		  
+                      <p><b><a href="https://doi.org/10.1016/j.dib.2022.107852">Image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning <i class="fab scholar"></i>
+            </a></b></br></p></br>
+
+<p><b><a href="https://assets.researchsquare.com/files/rs-2413996/v1_covered.pdf?c=1672852486">Thermal history based prediction of interlayer bond strength in parts manufactured by material extrusion additive manufacturing (Under Review)<i class="fab scholar"></i>
+            </a></b></br></p></br>
+<p><b>Realtime coaxial monitoring and print cross-section's image dataset of Direct Energy Deposition fabrication.
+<i class="fab scholar"></i>
+            </b></br></p></br>
+
+
+                      <p><b><a href="https://doi.org/10.1109/IEMTRONICS55184.2022.9795815">Sensory Data Fusion Using Machine Learning Methods For In-Situ Defect Registration In Additive Manufacturing: A Review <i class="fab scholar"></i>
+            </a></b></br></p></br>
+            <p><b>Real-time monitoring and gaussian process-based estimation of the melt pool profile in direct energy deposition. (Accepted)
+</b></br></p></br>
         </div>
       </section>
 
@@ -577,13 +522,13 @@ Amirkabir University of Technology has accomplished to advance for the world fin
 
       <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="language">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Test_Scores">
         <div class="my-auto">
-          <h2 class="mb-5">Languages</h2>
-          <h3>Persian</h3>
-          <p>Native</p>
-          <h3>English</h3>
-          <p>IELTS: Overall 7.5 (L:8, R:7.5, S:7.5, W:7.5)</p>
+          <h2 class="mb-5">Test Scores:</h2>
+          <h3>TOEFL: Overall 98</h3>
+          
+          <h3>GRE: Overall 322 (Quant: 170/170, Verbal: 152/170) </h3>
+          
         </div>
       </section>
 
