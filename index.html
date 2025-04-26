@@ -1,187 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>AI Image Captioning + Command</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #74ebd5, #acb6e5);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 40px;
-    }
-    h1 {
-      color: #333;
-      margin-bottom: 20px;
-      font-size: 2.5em;
-    }
-    form {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    input[type="file"], input[type="text"], textarea, button {
-      width: 300px;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1em;
-    }
-    textarea {
-      height: 80px;
-      resize: none;
-    }
-    button {
-      background-color: #6c63ff;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s;
-      border: none;
-    }
-    button:hover {
-      background-color: #5548c8;
-    }
-    #previewContainer, #result {
-      background: white;
-      margin-top: 30px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      width: 90%;
-      max-width: 600px;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      margin-top: 15px;
-    }
-    .spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #6c63ff;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 20px auto;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Javid Akhavan</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="css/resume.min.css" rel="stylesheet">
+
+<base target="_blank">
+
 </head>
-<body>
 
-  <h1>🖼️ AI Image + Command Processor</h1>
+<body id="page-top">
 
-  <form id="uploadForm">
-    <input type="text" id="tokenInput" placeholder="Paste your HuggingFace token" required>
-    <input type="file" id="imageInput" accept="image/*" required>
-    <textarea id="promptInput" placeholder="Enter your custom prompt/command here..." required></textarea>
-    <button type="submit">Send to AI</button>
-  </form>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+<a class="navbar-brand js-scroll-trigger" href="#page-top">
+<span class="d-block d-lg-none">Javid Akhavan</span>
+<span class="d-none d-lg-block">
+<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+</span>
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#about">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#education">Education</a>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#research">Research</a>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#experience">Experiences</a>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#Publications">Publications</a>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+</li>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+</li>
 
-  <div id="previewContainer" style="display:none;">
-    <h2>Uploaded Image:</h2>
-    <img id="preview" src="#" alt="Image Preview">
-  </div>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#publication">Certificates</a>
+</li>
 
-  <div id="result" style="display:none;">
-    <h2>Generated Response:</h2>
-    <div id="spinner" class="spinner" style="display:none;"></div>
-    <p id="caption"></p>
-  </div>
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#Test_Scores">Test Scores</a>
+</li>          
+<li class="nav-item">
+<a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+</li>
+</ul>
+</div>
+</nav>
 
-<script>
-const API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip2-opt-2.7b";  // <-- This model accepts prompt + image
+<div class="container-fluid p-0">
 
-document.getElementById('uploadForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
+<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+<div class="my-auto">
+<h1 class="mb-0">Javid
+<span class="text-primary">Akhavan</span>
+</h1>
+<div class="subheading mb-5"><a href="https://www.stevens.edu/school-engineering-science/departments/mechanical-engineering">School of Engineering & Science</a>, <a href="https://stevens.edu">Stevens Institute of Technology</a>, Hoboken, New Jersey</br> <a href="mailto:jakhavan@stevens.edu">jakhavan@stevens.edu</a>
+</div>
+<p  class="lead mb-5"  style="color:black;"><ul style=“list-style-type:square”>
+<li  style="color:black;">Experienced Creative Model Developer Focused on Autonomous, Self-Aware Monitoring, and Control Systems.</li>
+<li style="color:black;">5+ years of combined industrial and academic experience in Computer Vision and Machine Learning.</li>
+<li style="color:black;">Hands-on expertise in a variety of products and deep models within the control field.</li>
+<li style="color:black;">Proven ability to consistently achieve results and meet project goals.</li>
+<li style="color:black;">Ph.D. in Robotics and Artificial Intelligence from ME@SIT.</li>
+<li style="color:black;">Strong intuition in Automation and Autonomous Control Systems.</li>
+<li style="color:black;">Excellent interpersonal and team collaboration skills.</li>
+<li style="color:black;">Proficient in Data Science and Statistics.</li>
+<li style="color:black;">Advanced working knowledge of Python, MATLAB, and related libraries</li>
+<li style="color:black;">Available for an immediate start. (Authorization: Green Card)</li>
+</p>
+          
+<a href="/file/Akhavan_Resume_v7_2.pdf"  target="_blank">
+<i class="fa fa-download"></i><font size="4"><b> Download my CV here!</b></font></a>
+</br></br></br>
 
-  const fileInput = document.getElementById('imageInput');
-  const tokenInput = document.getElementById('tokenInput');
-  const promptInput = document.getElementById('promptInput');
-  const file = fileInput.files[0];
-  const userToken = tokenInput.value.trim();
-  const userPrompt = promptInput.value.trim();
+<div class="social-icons">
+<a href="https://www.linkedin.com/in/javid-akhavan-94b700151/"  target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a href="https://github.com/JavidAkhavan"  target="_blank">
+<i class="fab fa-github"></i>
+</a>
+<a href="https://scholar.google.com/citations?hl=en&user=hTwbmPUAAAAJ" target="_blank">
+<i class="fab fa-google fa-xs"></i>
+</a>
 
-  if (!file || !userToken || !userPrompt) return alert("Please provide image, token, and a prompt.");
 
-  // Show preview
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    document.getElementById('preview').src = e.target.result;
-    document.getElementById('previewContainer').style.display = 'block';
-  };
-  reader.readAsDataURL(file);
+</div>
+</div>
+</section>
 
-  // Prepare for loading
-  document.getElementById('result').style.display = 'block';
-  document.getElementById('caption').innerText = '';
-  document.getElementById('spinner').style.display = 'block';
+<hr class="m-0">
 
-  // Convert image to Base64
-  const base64Image = await fileToBase64(file);
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" style="background-color:#F2F3F4">
+<div class="my-auto">
+<h2 class="mb-5">Education</h2>
 
-  // Prepare payload
-  const payload = {
-    inputs: {
-      image: base64Image.split(',')[1],
-      prompt: userPrompt
-    }
-  };
+<div class="resume-item d-flex flex-column flex-md-row">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Stevens Institute of Technology</h3>
+<div class="subheading mb-3"><a href="https://www.stevens.edu/school-engineering-science/departments/mechanical-engineering">Department of Mechanical Engineering</a></br style="color:black;" > Ph.D. </div>
+<div><b style="color:black;">Robotics & Artificial Intelligence</div>
+<div>Advisor: <a href = "https://www.stevens.edu/profile/smanooch"><b>Professor Souran Manoochehri</b></a></div>
 
-  // Send POST request
-  try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer " + userToken,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
-    });
+<p>Current GPA: <b style="color:black;">4/4 </b>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">August 2019 - Present</span>
+</div></div></br></br>
 
-    const result = await response.json();
-    console.log(result);
+<div class="resume-item d-flex flex-column flex-md-row">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Stevens Institute of Technology</h3>
+<div class="subheading mb-3"><a href="https://www.stevens.edu/school-engineering-science/departments/mechanical-engineering">Department of Mechanical Engineering</a></br>Master of Engineering</div>
+<div><b style="color:black;">Robotics & Artificial Intelligence</div>
+<div>Advisor: <a href = "https://www.stevens.edu/profile/smanooch"><b>Professor Souran Manoochehri</b></a></div>
+<p>Current GPA: <b style="color:black;">4/4 </b>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">August 2019 - May 2021</span>
+</div></div></br></br>
 
-    if (result.error) {
-      document.getElementById('caption').innerText = "Error: " + result.error;
-    } else if (Array.isArray(result) && result.length > 0) {
-      document.getElementById('caption').innerText = result[0].generated_text || "No caption generated.";
-    } else {
-      document.getElementById('caption').innerText = "Unexpected response.";
-    }
 
-  } catch (error) {
-    document.getElementById('caption').innerText = "Failed to reach API.";
-  }
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Stevens Institute of Technology</h3>
+<div class="subheading mb-3"><a href="https://www.stevens.edu/school-engineering-science/departments/computer-science">Department of Computer Science</a></br>Graduate Certificate</div>
+<div><b style="color:black;">Machine Learning</div>
+<p>GPA: <b style="color:black;">4/4</b>
 
-  document.getElementById('spinner').style.display = 'none';
-});
+</p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">August 2021 - December 2022</span>
+</div>
+</div>
 
-// Helper to convert file to base64
-function fileToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-</script>
+
+</div>
+
+</div>
+</section>
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="research">
+<div class="mr-auto">
+<h2 class="mb-5">Research</h2>
+
+<p>My research stands out in the field as it effectively integrates the expertise of multiple disciplines, including Mechanical Engineering, Computer Science, and Electrical Engineering, to bridge existing gaps. In contrast to recent works that focus primarily on mechanical engineering approaches to create a solution, my research leverages the latest tools and ideas from computer science to deliver significant improvements in efficacy. My research aligns with the Industry 4.0 movement, striving to create self-aware automated manufacturing systems that minimize reliance on human labor and interaction with the minimum material and time waste.
+</p>
+<p>
+My unique skillset is the result of a deep understanding of both mechanical engineering and computer science, allowing me to identify and propose optimal solutions to the engineering problems at hand. While many peers rely on conventional methods, my research goes beyond such limitations by applying state-of-the-art machine learning and artificial intelligence concepts to engineering practices.
+</p>
+<p>
+As a researcher specializing in the application of machine learning in mechanical engineering, my primary objective is to design self-aware machinery that can function independently, even in the presence of defects or environmental anomalies. My research has significant practical implications for industries such as manufacturing, robotics, autonomous driving, as well as mass consumer goods and household appliances. Among my most noteworthy research contributions are:
+<ul style=“list-style-type:square”>
+<li>
+The development of an autonomous defect detection system for 3D printing manufacturing units, which ensures production resilience and quality assurance without any human intervention.
+</li>
+<li>
+The creation of an artificial intelligence-based application for real-time melt pool analysis and quality estimation in direct energy deposition additive manufacturing machines.
+</li> 
+<li>
+The implementation of an autonomous process adjustment algorithm for additive manufacturing machines, enabling rapid real-time adaptation to anomalies and machine faults and guaranteeing successful manufacturing in the event of an out-of-order machine.
+</li>
+<li>
+The establishment of two publicly accessible databases to facilitate data accessibility for researchers in the field of smart manufacturing, thereby promoting knowledge dissemination and scientific advancement.
+</li>
+</p>
+
+</div>
+</div>
+</section>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience" style="background-color:#F2F3F4>
+       <div class="my-auto">
+<h2 class="mb-5">Experiences</h2>
+<h3>Professional and Research Experiences</h3></br>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Software Engineer Intern</h3>
+<div class="subheading mb-3">Johnson and Johnson - Jansen Research</div>
+<p>
+<ul style=“list-style-type:square”>
+
+<li>Designed web-based dashboard using dash Plotly for real-time visualization of finances and budgets across various Therapeutic Areas, offering valuable insights into expenditures and project status.</li>
+<li>Created an Azure-based web application to automate database integration and automated web app access to SharePoint, resulting in seamless data aggregation and visualization.</li>
+<li>Established ODBC connections to Teradata and Denodo data lakes for Johnson & Johnson, facilitating live data integration into web applications for real-time corporate data and metric visualization.</li>
+<li>Developed various creative data visualizations and dashboard designs for J&J teams, leading to an API establishment for enhanced data accessibility being used by multiple teams.</li>
+<li>Developing a Linux-based Rich Text Format (RTF) convertor to PDF for a web app to facilitate confidential data online preview considering data privacies and securities leading to a seamless RTF visualization.</li>
+<li>Gained hands-on experience in application development using git and bit-bucket space for seamless collaboration.</li></p>
+
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">May 2023 - September 2023</span>
+</div>
+</div>
+
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Machine Learning Engineer and Researcher</h3>
+<div class="subheading mb-3">Stevens Institute of Technology</div>
+<p>
+<ul style=“list-style-type:square”>
+<li>Design of a labeling assistant dashboard for database creation and assessment for ML-related projects with MATLAB, resulting in a
+10x efficiency increase and manual labor reduction.</li>
+<li>Design and development of a deep learning model for melt pool image processing using customized TensorFlow models, resulting in 
+a significant data processing time reduction from 120s to <1s.</li>
+<li>Implementation of Machine Learning methods for feature extraction, from various data sources such as point clouds and images 
+using Hybrid Convolutional Auto Encoder-Decoders, resulting in an autonomous anomaly identification and prevention system.</li>
+<li>Implementation of a Reinforcement Learning-based controller, to automate anomaly detection and error mitigation using advanced 
+deep learning techniques in TensorFlow, resulting in real-time fault detection and parameter tuning. (Patent in progress)</li>
+<li>Carrying out a multi-language (Python, MATLAB, C#) command exchange to automate data and command exchange streamline to 
+sync various APIs.</li>
+<li>Gained proficient hands-on experience with various sensors and data acquisition modules such as cameras and laser surface 
+profilometers.</li></p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">August 2019 - Present</span>
+</div>
+</div>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Software and Hardware Developer</h3>
+<div class="subheading mb-3">Sharif University of Technology</div>
+<p>
+<ul style=“list-style-type:square”>
+<li>Designed and implemented an auto-irrigation system in Arduino, resulting in an $8,000 funding raise and a start-up foundation.</li>
+<li>Providing technical support to employees regarding software design, model fabrication, testing, and documentation.</li>
+<li>Developed an auto-grading application to automate homework grading in various domains in MATLAB UI, resulting in a start-up 
+foundation.</li></p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary"> August 2018 – January 2019</span>
+</div>
+</div>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Virtual Reality Programmer and Research Intern</h3>
+<div class="subheading mb-3">Dr. Robot</div>
+
+<p>
+<ul style=“list-style-type:square”>
+<li>Supervised and implemented the Virtual Reality (VR) equipment and synchronization of the auxiliary sensors and devices.</li>
+<li>Designed and developed 10 interactive VR-based software programs in Unity engine, to train and examine pronunciation skills for 
+children aged 7-10.</li>
+<li>Proctored 10 in-field software tests with VR equipment and developed applications with 58 subjects, leading to a successful proof of 
+concept.</li>
+<li>Established assorted libraries for automation and task creation, including Text-To-Speech (TTS) conversion, animation creation, 
+scenario compilation, and Console-VR program Synchronization in C#/Java/Python. </li></p>
+
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">January 2018 – August 2018</span>
+</div>
+</div>
+<hr class="m-0"></br>
+<h3>Teaching Experiences </h3>
+</br>
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Lecturer - Stevens Institute of Technology</h3>
+<div class="subheading mb-3">Programming With MATLAB And Sensor Integration</div>
+<p>Organized and delivered lectures on programming with MATLAB to graduate-level students interested in sensor integration using MATLAB environment, such as FLIR thermal cameras, CCTV cameras, 3D printers, G-code manipulation, etc...</p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">January 2020 - Present</span>
+</div>
+</div>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">Teaching Assistant - Stevens Institute of Technology</h3>
+<div class="subheading mb-3">Introduction To Robotics & Mechatronics Course</div>
+<p><ul style=“list-style-type:square”>
+<li>Proctoring laboratory sessions involved various robot programming, circuit design, and teamwork.</li><li>
+Holding office hours to help students and give guidance on their project progress.</li></p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">January 2020 - Present</span>
+</div>
+</div>
+<h3 class="mb-0">Iranian Association at Stevens (IAS) - Stevens Institute of Technology </h3>
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+
+<div class="subheading mb-3">President and Treasurer</div>
+<p><ul style=“list-style-type:square”>
+<li>Manage the staffing process, including recruiting, interviewing, and onboarding the officers.</li>
+<li>Ensure role descriptions are up to date and compliant with all campus regulations.</li>
+<li>Budget planning and allocation for events and negotiation with contractors.</li>
+</p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">January 2020 - May 2020</span>
+</div>
+</div>
+<h3 class="mb-0">LECTURER - Trinity Educational Center </h3>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<div class="subheading mb-3">SAT Exam Quant</div>
+<p><ul style=“list-style-type:square”>
+<li>Prepare and deliver lectures to participants of the SAT exam on linear algebra, single and system of linear equations, statistics, and advanced mathematics.</li></p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">May 2018 – January 2019</span>
+</div>
+</div>
+<h3 class="mb-0">Teaching Assistants Manager - Sharif University of Technology</h3>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<div class="subheading mb-3">Mechanism Design Course</div>
+<p><ul style=“list-style-type:square”>
+<li>Facilitated and coordinated students for projects and coursework.</li>
+<li>Creation and delivery of lectures on Simulink and Adams applications for dynamically simulating various mechanisms.</li></p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">August 2015 – January 2019</span>
+</div>
+</div>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<div class="subheading mb-3">Numerical Computations Course</div>
+<p><ul style=“list-style-type:square”>
+<li>Designed and developed an auto-grading application to automate homework gradings in various domains.</li>
+<li>Teaching MATLAB, numerical methods for linear and nonlinear equations, numerical integration, and differentiation.</li>
+<li>Led and organized TAs for class activities and homework.</li> </p>
+</div>
+<div class="resume-date text-md-right">
+<span class="text-primary">August 2015 – January 2019</span>
+</div>
+</div>
+
+
+</div>
+</section> 
+
+
+<hr class="m-0">
+
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Publications" style="background-color:#F2F3F4">
+<div class="my-auto">
+<h2 class="mb-5">Publications</h2>
+<ol type="1">
+<li><p><b><a href="https://scholar.google.com/scholar?oi=bibs&cluster=1916402560499059483&btnI=1&hl=en">A Deep Learning Solution for Real-time Quality Assessment and Control in Additive Manufacturing Using Point Cloud Data  (Under Review) 
+<i class="fab scholar"></i>
+</a></b></br>
+</p></br></li>
+<div style='height: auto; width: auto;'>
+<img style='height: 100%; width: 100%; object-fit: contain' src='img/Deep1.svg'/> 
+</div>
+<hr style="border-top: 3px solid black;">
+
+
+
+<li><p><b><a href="https://doi.org/10.1115/DETC2021-69436"> In-situ laser-based process monitoring and in-plane surface anomaly identification for additive manufacturing using point cloud and machine learning <i class="fab scholar"></i>
+</a></b></p></li><div style='height: auto; width: auto;'>
+<img style='height: 100%; width: 100%; object-fit: contain' src='img/Deep3.svg'/> 
+</div>
+<hr style="border-top: 3px solid black;">
+
+<li><p><b><a href="https://doi.org/10.1016/j.dib.2022.107852">Image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning <i class="fab scholar"></i>
+</a></b></p></li><div style='height: auto; width: auto;'>
+<img style='height: 100%; width: 100%; object-fit: contain' src='img/Deep2.svg'/> 
+</div>
+
+<hr style="border-top: 3px solid black;">
+
+<li><p><b><a href="https://assets.researchsquare.com/files/rs-2413996/v1_covered.pdf?c=1672852486">Thermal history based prediction of interlayer bond strength in parts manufactured by material extrusion additive manufacturing (Under Review)<i class="fab scholar"></i>
+</a></p></li>
+
+<div style='height: auto; width: auto;'>
+<img style='height: 100%; width: 100%; object-fit: contain' src='img/Deep7.svg'/> 
+</div>
+<hr style="border-top: 3px solid black;">
+<li><p><b>Realtime coaxial monitoring and print cross-section's image dataset of Direct Energy Deposition fabrication.
+<i class="fab scholar"></i>
+</b></p></li>
+<div style='height: auto; width: auto;'>
+<img style='height: 100%; width: 100%; object-fit: contain' src='img/Deep5.svg'/> 
+</div>
+<hr style="border-top: 3px solid black;">
+
+<li><p><b><a href="https://doi.org/10.1109/IEMTRONICS55184.2022.9795815">Sensory Data Fusion Using Machine Learning Methods For In-Situ Defect Registration In Additive Manufacturing: A Review <i class="fab scholar"></i>
+</a></b></p></li>
+<div style='height: auto; width: auto;'>
+<img style='height: 60%; width: 100%; object-fit: contain' src='img/Deep6.svg'/> 
+</div>
+<hr style="border-top: 3px solid black;">
+<li> <p><b>Real-time monitoring and gaussian process-based estimation of the melt pool profile in direct energy deposition. (Accepted)
+</b></p></li>
+<div style='height: auto; width: auto;'>
+<img style='height: 100%; width: 100%; object-fit: contain' src='img/Deep4.svg'/> 
+</div></ol>
+</div>
+</section>
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" style="background-color:#F2F3F4">
+<div class="my-auto">
+<h2 class="mb-5">Skills</h2>
+
+<div class="subheading mb-3">Programming</div>
+<ul style=“list-style-type:square”>
+<p align="justify"> 
+<li>Python . . . . . Proficient . . advanced work experience</li>
+<li>TensorFlow . Proficient . . advanced work experience</li>
+<li>Scikit-learn . Proficient . . advanced work experience</li>
+<li>MATLAB . . . .Proficient . . advanced work experience</li>
+<li>SQL . . . .Proficient . . Intermediate work experience</li>
+<li>C++/C# . . . . . Proficient . . Intermediate work experience</li>
+<li>Plotly Dash . . . . . Proficient . . Intermediate work experience</li></p></ul>
+
+</br><div class="subheading mb-3">CAD Modeling</div>
+<ul style=“list-style-type:square”>
+<p align="justify"> 
+<li>SolidWorks . Proficient . . Intermediate work experience</li></p></ul>
+
+</br><div class="subheading mb-3">Game Engine</div>
+<ul style=“list-style-type:square”>
+<p align="justify"> 
+<li>Unity . . . . . Proficient . . Intermediate work experience</li>
+<li>Steam VR . Proficient . . Intermediate work experience</li></p></ul>
+</br><div class="subheading mb-3">Operating Systems</div>
+<P>Microsoft Windows, Linux, Mac OS</P>
+
+</br><div class="subheading mb-3">Typesetting Tools</div>
+<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>, Microsoft office (Word, Powerpoint, Excel)
+
+
+
+</section>
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests" style="background-color:#F2F3F4">
+<div class="my-auto">
+<h2 class="mb-5">Interests</h2>
+<p>My interests are as follows:
+
+<b><div style="float: left; width: 50%;">
+<ul><li>Deep Methods for Computer Vision</li>
+<li>Data Acquisition & Visualization</li>
+<li>Autonomous Defect Detection, Classification, and Elimination </li>
+
+</ul></div>
+
+<div style="float: right; width: 50%;">
+
+<ul><li>Deep Neural Networks</li>
+<li>Machine Learning</li>
+<li>Reinforcment Learning for Pattern recognition & Control</li>
+<!-- <li>High-performance Computing</li> -->
+<!-- <li>Imitation Learning</li> -->
+</ul></div>
+</b></p></div>
+</div>
+</section>
+
+
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publication">
+<div class="my-auto">
+<h2 class="mb-5">certificates</h2>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0"><a href = "https://coursera.org/share/e3a25b11af40918160349e9b6c000e38">Fundamentals of Reinforcement Learning</a></h3>
+<p>University of Alberta</p>
+</div>
+</div>
+
+<div class="resume-item d-flex flex-column flex-md-row">
+<div class="resume-content mr-auto">
+<h3 class="mb-0"><a href="https://coursera.org/share/59ea430a5ebe99ce4cd2d1329705fd26">Custom Models, Layers, and Loss Functions with TensorFlow</a></h3>
+<p>DeepLearning.AI</p>
+</div>
+</div>
+
+</br></br>
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+<h3 class="mb-0">HSE (Health, Safety, and Environment)</h3>
+<p>Isfahan Oil Refinery Company</p>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Test_Scores">
+<div class="my-auto">
+<h2 class="mb-5">Test Scores:</h2>
+<h3>TOEFL: Overall 98</h3>
+
+<h3>GRE: Overall 322 (Quant: 170/170, Verbal: 152/170) </h3>
+<h3><a href="/file/Official_transcript.pdf">
+<i class="fa fa-download"></i><font size="6"><b> Download my Official Transcript here!</b></font></a>
+</br></br></br> </h3>
+</div>
+</section>
+
+<hr class="m-0">
+
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards" style="background-color:#F2F3F4">
+<div class="my-auto">
+<h2 class="mb-5">Honors &amp; Awards</h2>
+<ul class="fa-ul mb-0">
+
+
+</ul>
+</div>
+</section>
+
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/resume.min.js"></script>
 
 </body>
+
 </html>
