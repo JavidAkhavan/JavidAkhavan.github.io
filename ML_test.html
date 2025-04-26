@@ -4,82 +4,18 @@
   <meta charset="UTF-8">
   <title>AI Image Captioning + Command</title>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #74ebd5, #acb6e5);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 40px;
-    }
-    h1 {
-      color: #333;
-      margin-bottom: 20px;
-      font-size: 2.5em;
-    }
-    form {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    input[type="file"], input[type="text"], textarea, button {
-      width: 300px;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 1em;
-    }
-    textarea {
-      height: 80px;
-      resize: none;
-    }
-    button {
-      background-color: #6c63ff;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s;
-      border: none;
-    }
-    button:hover {
-      background-color: #5548c8;
-    }
-    #previewContainer, #result {
-      background: white;
-      margin-top: 30px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      width: 90%;
-      max-width: 600px;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      margin-top: 15px;
-    }
-    .spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #6c63ff;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 20px auto;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+    /* (your same beautiful CSS here, unchanged) */
+    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: linear-gradient(to right, #74ebd5, #acb6e5); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 40px; }
+    h1 { color: #333; margin-bottom: 20px; font-size: 2.5em; }
+    form { background: white; padding: 30px 40px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); display: flex; flex-direction: column; align-items: center; }
+    input[type="file"], input[type="text"], textarea, button { width: 300px; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 1em; }
+    textarea { height: 80px; resize: none; }
+    button { background-color: #6c63ff; color: white; cursor: pointer; transition: background 0.3s; border: none; }
+    button:hover { background-color: #5548c8; }
+    #previewContainer, #result { background: white; margin-top: 30px; padding: 20px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); width: 90%; max-width: 600px; text-align: center; }
+    img { max-width: 100%; border-radius: 15px; margin-top: 15px; }
+    .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #6c63ff; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
@@ -106,7 +42,8 @@
 
 <script>
 
-const API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base";
+const CAPTION_API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base";
+const TEXT_MODEL_API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-small";
 
 document.getElementById('uploadForm').addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -133,41 +70,65 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
   document.getElementById('caption').innerText = '';
   document.getElementById('spinner').style.display = 'block';
 
-  // Convert image to Base64
-  const base64Image = await fileToBase64(file);
-
-  // Prepare payload
-  const payload = {
-    inputs: {
-      image: base64Image.split(',')[1],
-      prompt: userPrompt
-    }
-  };
-
-  // Send POST request
   try {
-    const response = await fetch(API_URL, {
+    // Step 1: Generate caption
+    const base64Image = await fileToBase64(file);
+    const captionPayload = {
+      inputs: {
+        image: base64Image.split(',')[1]
+      }
+    };
+
+    const captionResponse = await fetch(CAPTION_API_URL, {
       method: "POST",
       headers: {
         "Authorization": "Bearer " + userToken,
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(captionPayload)
     });
 
-    const result = await response.json();
-    console.log(result);
+    const captionResult = await captionResponse.json();
+    console.log("Caption result:", captionResult);
 
-    if (result.error) {
-      document.getElementById('caption').innerText = "Error: " + result.error;
-    } else if (Array.isArray(result) && result.length > 0) {
-      document.getElementById('caption').innerText = result[0].generated_text || "No caption generated.";
+    let captionText = "";
+    if (Array.isArray(captionResult) && captionResult.length > 0) {
+      captionText = captionResult[0].generated_text;
+    } else {
+      throw new Error("Caption generation failed");
+    }
+
+    // Step 2: Build the new input for text model
+    const combinedPrompt = `Based on this image caption with no extra words, just answer this command: "${userPrompt}". The image description is: "${captionText}"`;
+
+    const textPayload = {
+      inputs: combinedPrompt
+    };
+
+    // Step 3: Send to text model
+    const textResponse = await fetch(TEXT_MODEL_API_URL, {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + userToken,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(textPayload)
+    });
+
+    const textResult = await textResponse.json();
+    console.log("Text model result:", textResult);
+
+    if (textResult.error) {
+      document.getElementById('caption').innerText = "Error: " + textResult.error;
+    } else if (Array.isArray(textResult) && textResult.length > 0) {
+      document.getElementById('caption').innerText = textResult[0].generated_text || "No answer generated.";
     } else {
       document.getElementById('caption').innerText = "Unexpected response.";
     }
 
   } catch (error) {
-    document.getElementById('caption').innerText = "Failed to reach API.";
+    console.error(error);
+    document.getElementById('caption').innerText = "Failed to process AI pipeline.";
   }
 
   document.getElementById('spinner').style.display = 'none';
