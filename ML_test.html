@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AI Image Captioning ✨</title>
+  <title>AI Image Captioning + Command</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -14,7 +14,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding-top: 50px;
+      padding-top: 40px;
     }
     h1 {
       color: #333;
@@ -30,13 +30,17 @@
       flex-direction: column;
       align-items: center;
     }
-    input[type="file"], input[type="text"], button {
+    input[type="file"], input[type="text"], textarea, button {
       width: 300px;
       padding: 10px;
       margin: 10px 0;
       border: 1px solid #ddd;
       border-radius: 8px;
       font-size: 1em;
+    }
+    textarea {
+      height: 80px;
+      resize: none;
     }
     button {
       background-color: #6c63ff;
@@ -80,11 +84,13 @@
 </head>
 <body>
 
-  <h1>🖼️ AI Image Captioning</h1>
+  <h1>🖼️ AI Image + Command Processor</h1>
 
   <form id="uploadForm">
+    <input type="text" id="tokenInput" placeholder="Paste your HuggingFace token" required>
     <input type="file" id="imageInput" accept="image/*" required>
-    <button type="submit">Generate Caption</button>
+    <textarea id="promptInput" placeholder="Enter your custom prompt/command here..." required></textarea>
+    <button type="submit">Send to AI</button>
   </form>
 
   <div id="previewContainer" style="display:none;">
@@ -93,21 +99,25 @@
   </div>
 
   <div id="result" style="display:none;">
-    <h2>Generated Caption:</h2>
+    <h2>Generated Response:</h2>
     <div id="spinner" class="spinner" style="display:none;"></div>
     <p id="caption"></p>
   </div>
 
 <script>
-const API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base";
-const HF_TOKEN = "Bearer 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"; // Replace YOUR TOKEN
+const API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip2-opt-2.7b";  // <-- This model accepts prompt + image
 
 document.getElementById('uploadForm').addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const fileInput = document.getElementById('imageInput');
+  const tokenInput = document.getElementById('tokenInput');
+  const promptInput = document.getElementById('promptInput');
   const file = fileInput.files[0];
-  if (!file) return;
+  const userToken = tokenInput.value.trim();
+  const userPrompt = promptInput.value.trim();
+
+  if (!file || !userToken || !userPrompt) return alert("Please provide image, token, and a prompt.");
 
   // Show preview
   const reader = new FileReader();
@@ -128,7 +138,8 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
   // Prepare payload
   const payload = {
     inputs: {
-      image: base64Image.split(',')[1]
+      image: base64Image.split(',')[1],
+      prompt: userPrompt
     }
   };
 
@@ -137,7 +148,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     const response = await fetch(API_URL, {
       method: "POST",
       headers: {
-        "Authorization": HF_TOKEN,
+        "Authorization": "Bearer " + userToken,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(payload)
