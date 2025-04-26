@@ -43,7 +43,7 @@
 <script>
 
 const CAPTION_API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base";
-const TEXT_MODEL_API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-small";
+const TEXT_MODEL_API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-base";
 
 document.getElementById('uploadForm').addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -99,7 +99,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     }
 
     // Step 2: Build the new input for text model
-    const combinedPrompt = `Based on this image caption with no extra words, just answer this command: "${userPrompt}". The image description is: "${captionText}"`;
+    const combinedPrompt = `Based on this image caption, just answer this command: "${userPrompt}". The image description is: "${captionText}"`;
 
     const textPayload = {
       inputs: combinedPrompt
