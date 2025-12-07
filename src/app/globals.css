@@ -76,6 +76,36 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Design Tokens - Semantic Colors */
+  --color-success: #22c55e;
+  --color-success-light: #86efac;
+  --color-success-dark: #16a34a;
+  --color-warning: #eab308;
+  --color-warning-light: #fde047;
+  --color-warning-dark: #ca8a04;
+  --color-error: #ef4444;
+  --color-error-light: #fca5a5;
+  --color-error-dark: #dc2626;
+  --color-info: #3b82f6;
+  --color-info-light: #93c5fd;
+  --color-info-dark: #2563eb;
+
+  /* Transitions */
+  --transition-fast: 100ms;
+  --transition-base: 150ms;
+  --transition-slow: 300ms;
+  --transition-slower: 500ms;
+
+  /* Z-index layers */
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-fixed: 1200;
+  --z-modal-backdrop: 1300;
+  --z-modal: 1400;
+  --z-popover: 1500;
+  --z-tooltip: 1600;
 }
 
 .dark {
