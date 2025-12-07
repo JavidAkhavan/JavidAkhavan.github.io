@@ -25,3 +25,7 @@ export type {
 } from './components/Footer';
 export { Layout } from './components/Layout';
 export type { LayoutProps } from './components/Layout';
+export { ThemeProvider } from './components/ThemeProvider';
+export type { ThemeProviderProps } from './components/ThemeProvider';
+export { ThemeToggle } from './components/ThemeToggle';
+export type { ThemeToggleProps } from './components/ThemeToggle';

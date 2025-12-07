@@ -8,6 +8,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './ThemeToggle';
 
 export interface NavItem {
   label: string;
@@ -58,6 +59,7 @@ export function Header({
                 {item.label}
               </Link>
             ))}
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Button */}
