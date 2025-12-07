@@ -1,0 +1,36 @@
+/**
+ * Hero Section Component
+ * Content-agnostic - accepts data via props
+ */
+
+import React from 'react';
+import { HeroSectionProps } from '../types';
+import { Button } from '@/components/ui/button';
+
+export function HeroSection({ data, className = '' }: HeroSectionProps) {
+  return (
+    <section className={`hero-section ${className}`} data-testid="hero-section">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-5xl font-bold mb-4">{data.title}</h1>
+        {data.subtitle && (
+          <h2 className="text-2xl text-gray-600 mb-4">{data.subtitle}</h2>
+        )}
+        <p className="text-lg mb-8">{data.description}</p>
+
+        {data.cta && data.cta.length > 0 && (
+          <div className="flex gap-4">
+            {data.cta.map((cta, index) => (
+              <Button
+                key={index}
+                variant={cta.variant === 'primary' ? 'default' : 'outline'}
+                asChild
+              >
+                <a href={cta.href}>{cta.label}</a>
+              </Button>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

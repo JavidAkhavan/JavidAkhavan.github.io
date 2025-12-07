@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Javid Akhavan - Portfolio",
+    "description": "Professional portfolio and resume",
+    "author": "Javid Akhavan",
+    "keywords": ["portfolio", "resume", "professional"],
+    "siteUrl": "https://javidakhavan.github.io",
+    "locale": "en-US"
+  },
+  "hero": {
+    "title": "Javid Akhavan",
+    "subtitle": "Professional Title",
+    "description": "Brief professional introduction",
+    "cta": [
+      {
+        "label": "View Resume",
+        "href": "#experience",
+        "variant": "primary"
+      },
+      {
+        "label": "Contact Me",
+        "href": "#contact",
+        "variant": "outline"
+      }
+    ]
+  },
+  "about": {
+    "heading": "About Me",
+    "bio": "Professional biography goes here",
+    "highlights": ["Key highlight 1", "Key highlight 2", "Key highlight 3"]
+  },
+  "experience": [],
+  "education": [],
+  "skills": [],
+  "projects": [],
+  "contact": {
+    "heading": "Get In Touch",
+    "description": "Let's connect",
+    "email": "contact@example.com",
+    "social": [
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/example"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/example"
+      }
+    ],
+    "formEnabled": true
+  }
+}
