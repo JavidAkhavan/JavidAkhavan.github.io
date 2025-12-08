@@ -1,11 +1,11 @@
-echo "🔍 Running pre-commit checks..."
+echo "Running pre-commit checks..."
 
 # Format with Prettier
-echo "💅 Formatting with Prettier..."
+echo "Formatting with Prettier..."
 npm run format
 
 # Type check
-echo "📝 Type checking..."
+echo "Type checking..."
 npm run type-check || exit 1
 
-echo "✅ Pre-commit checks passed!"
+echo "Pre-commit checks passed!"
