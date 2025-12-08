@@ -32,6 +32,24 @@ export default function Home() {
   // Load publications from YAML
   const publicationsYamlData = loadPublications();
 
+  // Calculate dynamic metrics from data
+  const totalPublications = publicationsYamlData.publications.length;
+  const featuredPublications = publicationsYamlData.publications.filter(
+    (pub) => pub.featured
+  ).length;
+
+  // Extract years of experience from experience data
+  const currentYear = new Date().getFullYear();
+  const firstJobYear = content.experience[0]?.startDate
+    ? parseInt(content.experience[0].startDate.split(' ')[1])
+    : currentYear - 6; // fallback to 6 years
+  const yearsExperience = currentYear - firstJobYear;
+
+  // Extract education info for badges
+  const phd = content.education.find(
+    (edu) => edu.degree === 'Doctor of Philosophy (Ph.D.)'
+  );
+
   const moduleComponents: Record<string, React.ReactNode> = {
     hero: <HeroSection key="hero" data={content.hero} />,
     about: <AboutSection key="about" data={content.about} />,
@@ -78,8 +96,29 @@ export default function Home() {
             return (
               <React.Fragment key="hero-with-enhancements">
                 {moduleComponents[module.id]}
-                <SocialProofBadges />
-                <ResearchMetrics />
+                <SocialProofBadges
+                  education={{
+                    label: phd?.degree || 'PhD in Robotics & AI',
+                    highlight: phd?.institution || 'Stevens Institute of Technology',
+                  }}
+                  gpa={{
+                    label: `Perfect ${phd?.gpa || '4.0'} GPA`,
+                    highlight: 'Graduate Studies',
+                  }}
+                  experience={{
+                    label: `${yearsExperience}+ Years Experience`,
+                    highlight: 'ML & Computer Vision',
+                  }}
+                  location={{
+                    label: 'Based in NJ, USA',
+                    highlight: 'Immediate Start Available',
+                  }}
+                />
+                <ResearchMetrics
+                  totalPublications={totalPublications}
+                  featuredPublications={featuredPublications}
+                  yearsExperience={yearsExperience}
+                />
               </React.Fragment>
             );
           }

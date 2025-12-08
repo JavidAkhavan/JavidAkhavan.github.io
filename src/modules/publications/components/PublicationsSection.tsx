@@ -140,13 +140,16 @@ export function PublicationsSection({
                 <span className="rounded-full bg-primary/10 px-2.5 py-1 font-medium text-primary transition-all group-hover:bg-primary/20">
                   {publication.type}
                 </span>
-                <span className="text-muted-foreground">{publication.year}</span>
-                {publication.citations !== undefined && publication.citations > 0 && (
-                  <span className="flex items-center gap-1 rounded-full bg-blue-500/10 px-2.5 py-1 font-medium text-blue-600 dark:text-blue-400">
-                    <TrendingUp className="h-3 w-3" />
-                    {publication.citations} citations
-                  </span>
-                )}
+                <span className="text-muted-foreground">
+                  {publication.year}
+                </span>
+                {publication.citations !== undefined &&
+                  publication.citations > 0 && (
+                    <span className="flex items-center gap-1 rounded-full bg-blue-500/10 px-2.5 py-1 font-medium text-blue-600 dark:text-blue-400">
+                      <TrendingUp className="h-3 w-3" />
+                      {publication.citations} citations
+                    </span>
+                  )}
                 {publication.featured && (
                   <span className="flex items-center gap-1 rounded-full bg-yellow-500/10 px-2.5 py-1 font-semibold text-yellow-600 dark:text-yellow-400">
                     <Award className="h-3 w-3" />
@@ -232,8 +235,12 @@ export function PublicationsSection({
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5"
                   >
-                    {link.type === 'doi' && <FileText className="h-3.5 w-3.5" />}
-                    {link.type === 'pdf' && <FileText className="h-3.5 w-3.5" />}
+                    {link.type === 'doi' && (
+                      <FileText className="h-3.5 w-3.5" />
+                    )}
+                    {link.type === 'pdf' && (
+                      <FileText className="h-3.5 w-3.5" />
+                    )}
                     {link.type !== 'doi' && link.type !== 'pdf' && (
                       <ExternalLink className="h-3.5 w-3.5" />
                     )}

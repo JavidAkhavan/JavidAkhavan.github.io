@@ -114,9 +114,7 @@ export function getPublicationStats(publications: YAMLPublication[]) {
 /**
  * Get unique years from publications
  */
-export function getPublicationYears(
-  publications: YAMLPublication[]
-): number[] {
+export function getPublicationYears(publications: YAMLPublication[]): number[] {
   const years = publications.map((p) => p.year);
   return Array.from(new Set(years)).sort((a, b) => b - a);
 }

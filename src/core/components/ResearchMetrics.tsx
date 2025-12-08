@@ -15,7 +15,17 @@ interface Metric {
   icon: React.ReactNode;
 }
 
-export function ResearchMetrics() {
+interface ResearchMetricsProps {
+  totalPublications: number;
+  featuredPublications: number;
+  yearsExperience: number;
+}
+
+export function ResearchMetrics({
+  totalPublications,
+  featuredPublications,
+  yearsExperience,
+}: ResearchMetricsProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({
     publications: 0,
@@ -27,17 +37,17 @@ export function ResearchMetrics() {
   const metrics: Metric[] = [
     {
       label: 'Publications',
-      value: 7,
+      value: totalPublications,
       icon: <BookOpen className="h-5 w-5" />,
     },
     {
       label: 'Featured',
-      value: 3,
+      value: featuredPublications,
       icon: <Award className="h-5 w-5" />,
     },
     {
       label: 'Experience',
-      value: 6,
+      value: yearsExperience,
       suffix: '+ years',
       icon: <TrendingUp className="h-5 w-5" />,
     },
@@ -73,19 +83,23 @@ export function ResearchMetrics() {
       const progress = currentStep / steps;
 
       setCounts({
-        publications: Math.floor(7 * progress),
-        featured: Math.floor(3 * progress),
-        years: Math.floor(6 * progress),
+        publications: Math.floor(totalPublications * progress),
+        featured: Math.floor(featuredPublications * progress),
+        years: Math.floor(yearsExperience * progress),
       });
 
       if (currentStep >= steps) {
         clearInterval(interval);
-        setCounts({ publications: 7, featured: 3, years: 6 });
+        setCounts({
+          publications: totalPublications,
+          featured: featuredPublications,
+          years: yearsExperience,
+        });
       }
     }, stepDuration);
 
     return () => clearInterval(interval);
-  }, [isVisible]);
+  }, [isVisible, totalPublications, featuredPublications, yearsExperience]);
 
   return (
     <div ref={ref} className="w-full bg-secondary/30 py-8">

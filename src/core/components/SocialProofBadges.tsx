@@ -14,27 +14,44 @@ interface Badge {
   highlight: string;
 }
 
-export function SocialProofBadges() {
+interface BadgeData {
+  label: string;
+  highlight: string;
+}
+
+interface SocialProofBadgesProps {
+  education: BadgeData;
+  gpa: BadgeData;
+  experience: BadgeData;
+  location: BadgeData;
+}
+
+export function SocialProofBadges({
+  education,
+  gpa,
+  experience,
+  location,
+}: SocialProofBadgesProps) {
   const badges: Badge[] = [
     {
       icon: <GraduationCap className="h-5 w-5" />,
-      label: 'PhD in Robotics & AI',
-      highlight: 'Stevens Institute of Technology',
+      label: education.label,
+      highlight: education.highlight,
     },
     {
       icon: <Award className="h-5 w-5" />,
-      label: 'Perfect 4.0 GPA',
-      highlight: 'Graduate Studies',
+      label: gpa.label,
+      highlight: gpa.highlight,
     },
     {
       icon: <Briefcase className="h-5 w-5" />,
-      label: '6+ Years Experience',
-      highlight: 'ML & Computer Vision',
+      label: experience.label,
+      highlight: experience.highlight,
     },
     {
       icon: <MapPin className="h-5 w-5" />,
-      label: 'Based in NJ, USA',
-      highlight: 'Immediate Start Available',
+      label: location.label,
+      highlight: location.highlight,
     },
   ];
 
