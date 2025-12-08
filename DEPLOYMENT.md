@@ -29,6 +29,7 @@ git push origin main
 ```
 
 The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically:
+
 - Install dependencies
 - Build the project
 - Deploy to GitHub Pages
@@ -36,6 +37,7 @@ The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically:
 ### Step 3: View Your Site
 
 After deployment completes (usually 2-3 minutes), your site will be available at:
+
 - **https://javidakhavan.github.io**
 
 ## Manual Deployment (Alternative)
@@ -72,6 +74,7 @@ npx gh-pages -d out -b gh-pages
 To use a custom domain:
 
 1. Add a `CNAME` file to the `public/` directory with your domain:
+
 ```
 yourdomain.com
 ```
@@ -129,6 +132,7 @@ To update content and redeploy:
 1. Edit `src/data/site-content.json` with your content
 2. Test locally: `npm run dev`
 3. Commit and push:
+
 ```bash
 git add .
 git commit -m "update: content changes"
@@ -136,6 +140,7 @@ git push origin develop
 ```
 
 4. Merge to main:
+
 ```bash
 git checkout main
 git merge develop
@@ -187,6 +192,7 @@ git push origin main --force
 ---
 
 For more information, see:
+
 - [Next.js Static Exports](https://nextjs.org/docs/app/building-your-application/deploying/static-exports)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)

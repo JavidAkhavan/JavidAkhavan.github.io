@@ -18,9 +18,7 @@ function EducationCard({ education }: EducationCardProps) {
           <p className="font-semibold">{education.institution}</p>
           {education.location && <p>{education.location}</p>}
           <p>{dateRange}</p>
-          {education.gpa && (
-            <p className="font-medium">GPA: {education.gpa}</p>
-          )}
+          {education.gpa && <p className="font-medium">GPA: {education.gpa}</p>}
         </div>
       </CardHeader>
       <CardContent className="space-y-4">

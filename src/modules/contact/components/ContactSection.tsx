@@ -17,9 +17,7 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
       <div className="container mx-auto px-4">
         <Card>
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">
-              {data.heading}
-            </CardTitle>
+            <CardTitle className="text-3xl font-bold">{data.heading}</CardTitle>
             {data.description && (
               <p className="text-lg text-muted-foreground">
                 {data.description}
