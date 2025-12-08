@@ -14,6 +14,7 @@ import { ProjectsSection } from '@/modules/projects';
 import { PublicationsSection } from '@/modules/publications';
 import { TeachingSection } from '@/modules/teaching';
 import { ContactSection } from '@/modules/contact';
+import { SidebarNav } from '@/core/components/SidebarNav';
 
 export default function Home() {
   const content = getContent().getSiteContent();
@@ -36,8 +37,11 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen">
-      {enabledModules.map((module) => moduleComponents[module.id])}
-    </main>
+    <>
+      <SidebarNav />
+      <main className="min-h-screen">
+        {enabledModules.map((module) => moduleComponents[module.id])}
+      </main>
+    </>
   );
 }
