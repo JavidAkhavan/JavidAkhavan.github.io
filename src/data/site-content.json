@@ -1,26 +1,29 @@
 {
   "metadata": {
-    "title": "Javid Akhavan - Portfolio",
-    "description": "Professional portfolio showcasing software engineering expertise and projects",
+    "title": "Javid Akhavan - PhD Candidate in Robotics & AI",
+    "description": "PhD candidate specializing in Machine Learning, Computer Vision, and Autonomous Manufacturing Systems at Stevens Institute of Technology",
     "author": "Javid Akhavan",
     "keywords": [
-      "portfolio",
-      "software engineer",
-      "full stack developer",
-      "react",
-      "typescript",
-      "next.js"
+      "machine learning",
+      "computer vision",
+      "robotics",
+      "artificial intelligence",
+      "deep learning",
+      "additive manufacturing",
+      "python",
+      "tensorflow",
+      "reinforcement learning"
     ],
     "siteUrl": "https://javidakhavan.github.io",
     "locale": "en-US"
   },
   "hero": {
     "title": "Javid Akhavan",
-    "subtitle": "Full Stack Software Engineer",
-    "description": "Passionate about building scalable web applications and innovative solutions. Experienced in modern JavaScript frameworks, cloud architecture, and agile development.",
+    "subtitle": "PhD Candidate in Robotics & Artificial Intelligence",
+    "description": "Experienced Machine Learning Engineer and Researcher focused on autonomous, self-aware monitoring and control systems. Specializing in Computer Vision, Deep Learning, and Smart Manufacturing with 5+ years of combined industrial and academic experience.",
     "cta": [
       {
-        "label": "View My Work",
+        "label": "View Publications",
         "href": "#projects",
         "variant": "primary"
       },
@@ -33,248 +36,356 @@
   },
   "about": {
     "heading": "About Me",
-    "bio": "I'm a full stack software engineer with a passion for creating elegant solutions to complex problems. With expertise in modern web technologies and a strong foundation in computer science, I specialize in building scalable, user-centric applications. I thrive in collaborative environments and am constantly learning new technologies to stay at the forefront of software development.",
+    "bio": "I am a PhD candidate in Robotics and Artificial Intelligence at Stevens Institute of Technology, with a strong focus on developing autonomous systems for smart manufacturing. My research integrates Mechanical Engineering, Computer Science, and Electrical Engineering expertise to create self-aware automated manufacturing systems aligned with Industry 4.0. I have extensive hands-on experience in Computer Vision, Deep Learning, and Reinforcement Learning, with proven ability to consistently achieve results in both academic research and industrial applications.",
     "highlights": [
-      "5+ years of experience in full stack web development",
-      "Expert in React, TypeScript, Node.js, and cloud platforms",
-      "Strong advocate for clean code, TDD, and agile methodologies",
-      "Published open-source contributor with 1000+ GitHub stars"
+      "PhD in Robotics & AI from Stevens Institute of Technology (GPA: 4.0/4.0)",
+      "5+ years combined industrial and academic experience in ML and Computer Vision",
+      "Published researcher with multiple peer-reviewed papers in top conferences",
+      "Proven expertise in TensorFlow, Python, MATLAB, and Reinforcement Learning",
+      "Strong background in autonomous defect detection and control systems",
+      "Green Card holder available for immediate start"
     ]
   },
   "experience": [
     {
       "id": "exp-1",
-      "title": "Senior Software Engineer",
-      "company": "Tech Solutions Inc.",
-      "location": "San Francisco, CA",
-      "startDate": "Jan 2022",
+      "title": "Machine Learning Engineer and Researcher",
+      "company": "Stevens Institute of Technology",
+      "location": "Hoboken, NJ",
+      "startDate": "Aug 2019",
       "current": true,
-      "description": "Leading development of enterprise-scale web applications using React, TypeScript, and Node.js. Architecting microservices and implementing CI/CD pipelines.",
+      "description": "Leading research in autonomous manufacturing systems using Deep Learning and Reinforcement Learning. Developing real-time defect detection and control algorithms for additive manufacturing processes.",
       "highlights": [
-        "Reduced application load time by 60% through performance optimization",
-        "Led migration from monolith to microservices architecture serving 1M+ users",
-        "Mentored team of 5 junior developers, improving code quality by 40%",
-        "Implemented automated testing suite increasing code coverage to 85%"
+        "Designed labeling assistant dashboard for database creation with MATLAB achieving 10x efficiency increase",
+        "Developed deep learning model for melt pool image processing using TensorFlow reducing processing time from 120s to <1s",
+        "Implemented Machine Learning methods for feature extraction using Hybrid Convolutional Auto Encoder-Decoders",
+        "Developed Reinforcement Learning-based controller for anomaly detection and error mitigation (Patent in progress)",
+        "Automated multi-language command exchange between Python, MATLAB, and C#",
+        "Established two publicly accessible databases for smart manufacturing research"
       ],
       "technologies": [
-        "React",
-        "TypeScript",
-        "Node.js",
-        "AWS",
-        "Docker",
-        "PostgreSQL",
-        "Redis",
-        "GraphQL"
+        "Python",
+        "TensorFlow",
+        "MATLAB",
+        "Machine Learning",
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Computer Vision",
+        "Data Acquisition"
       ]
     },
     {
       "id": "exp-2",
-      "title": "Full Stack Developer",
-      "company": "Startup Ventures",
-      "location": "Remote",
-      "startDate": "Jun 2020",
-      "endDate": "Dec 2021",
-      "description": "Developed and maintained multiple client-facing applications using modern web stack. Collaborated with design and product teams to deliver features on tight deadlines.",
+      "title": "Software Engineer Intern",
+      "company": "Johnson & Johnson (Janssen Research)",
+      "location": "Titusville, NJ",
+      "startDate": "May 2023",
+      "endDate": "Sep 2023",
+      "description": "Developed web-based data visualization dashboards and automation tools for financial analytics and database integration across therapeutic areas.",
       "highlights": [
-        "Built 3 production applications from scratch serving 50K+ users",
-        "Implemented real-time features using WebSockets and Redis",
-        "Reduced infrastructure costs by 30% through AWS optimization",
-        "Established coding standards and review processes"
+        "Designed web-based dashboard using Dash Plotly for real-time visualization of finances and budgets across various Therapeutic Areas",
+        "Created Azure-based web application to automate database integration with SharePoint",
+        "Established ODBC connections to Teradata and Denodo data lakes for live data integration",
+        "Developed various creative data visualizations and dashboard designs with API for enhanced data accessibility",
+        "Implemented Linux-based Rich Text Format (RTF) converter to PDF for confidential data online preview",
+        "Gained hands-on experience with Git and Bitbucket for team collaboration"
       ],
       "technologies": [
-        "React",
-        "Next.js",
-        "Express.js",
-        "MongoDB",
-        "AWS Lambda",
-        "Stripe API"
+        "Python",
+        "Dash Plotly",
+        "Azure",
+        "SQL",
+        "Teradata",
+        "SharePoint",
+        "Git",
+        "Bitbucket",
+        "Data Visualization"
       ]
     },
     {
       "id": "exp-3",
-      "title": "Software Developer",
-      "company": "Digital Agency Co.",
-      "location": "New York, NY",
-      "startDate": "Aug 2019",
-      "endDate": "May 2020",
-      "description": "Developed responsive web applications for various clients across different industries. Worked closely with UX designers to implement pixel-perfect interfaces.",
+      "title": "Software and Hardware Developer",
+      "company": "Sharif University of Technology",
+      "location": "Tehran, Iran",
+      "startDate": "Aug 2018",
+      "endDate": "Jan 2019",
+      "description": "Developed IoT and automation systems including auto-irrigation and educational software applications.",
       "highlights": [
-        "Delivered 10+ client projects on time and within budget",
-        "Improved site performance scores from 60 to 95+ on Lighthouse",
-        "Implemented accessibility standards (WCAG 2.1 AA compliance)"
+        "Designed and implemented auto-irrigation system in Arduino with $8,000 funding raise and startup foundation",
+        "Provided technical support for software design, model fabrication, testing, and documentation",
+        "Developed auto-grading application in MATLAB UI leading to startup foundation"
       ],
-      "technologies": ["HTML/CSS", "JavaScript", "Vue.js", "PHP", "MySQL"]
+      "technologies": [
+        "Arduino",
+        "MATLAB",
+        "IoT",
+        "Embedded Systems",
+        "Hardware Integration"
+      ]
+    },
+    {
+      "id": "exp-4",
+      "title": "Virtual Reality Programmer and Research Intern",
+      "company": "Dr. Robot",
+      "location": "Tehran, Iran",
+      "startDate": "Jan 2018",
+      "endDate": "Aug 2018",
+      "description": "Developed VR-based educational software for pronunciation training with comprehensive testing and validation.",
+      "highlights": [
+        "Supervised and implemented Virtual Reality equipment and sensor synchronization",
+        "Designed and developed 10 interactive VR-based software programs in Unity for pronunciation training",
+        "Proctored 10 in-field software tests with 58 subjects achieving successful proof of concept",
+        "Established libraries for automation including Text-To-Speech conversion, animation creation, and VR synchronization"
+      ],
+      "technologies": [
+        "Unity",
+        "C#",
+        "Virtual Reality",
+        "Steam VR",
+        "Text-to-Speech APIs"
+      ]
     }
-  ],
+  },
   "education": [
     {
       "id": "edu-1",
-      "degree": "Bachelor of Science in Computer Science",
-      "institution": "University of California, Berkeley",
-      "location": "Berkeley, CA",
-      "startDate": "2015",
-      "endDate": "2019",
-      "gpa": "3.8",
+      "degree": "Doctor of Philosophy (PhD) in Robotics & Artificial Intelligence",
+      "institution": "Stevens Institute of Technology",
+      "location": "Hoboken, NJ",
+      "startDate": "2019",
+      "endDate": "Present",
+      "gpa": "4.0",
       "honors": [
-        "Dean's List (All Semesters)",
-        "Computer Science Department Award",
-        "Graduated Magna Cum Laude"
+        "Perfect 4.0 GPA",
+        "Research focus on autonomous defect detection in additive manufacturing",
+        "Multiple peer-reviewed publications in top conferences",
+        "Patent pending for Reinforcement Learning-based controller"
       ],
       "coursework": [
-        "Data Structures & Algorithms",
-        "Database Systems",
-        "Web Development",
+        "Deep Learning",
+        "Computer Vision",
+        "Reinforcement Learning",
+        "Advanced Machine Learning",
+        "Autonomous Systems",
+        "Smart Manufacturing"
+      ]
+    },
+    {
+      "id": "edu-2",
+      "degree": "Master of Engineering in Robotics & Artificial Intelligence",
+      "institution": "Stevens Institute of Technology",
+      "location": "Hoboken, NJ",
+      "startDate": "2019",
+      "endDate": "2021",
+      "gpa": "4.0",
+      "honors": [
+        "Perfect 4.0 GPA"
+      ],
+      "coursework": [
         "Machine Learning",
-        "Software Engineering",
-        "Computer Networks"
+        "Robotics",
+        "Control Systems",
+        "Mechatronics"
+      ]
+    },
+    {
+      "id": "edu-3",
+      "degree": "Graduate Certificate in Machine Learning",
+      "institution": "Stevens Institute of Technology - Department of Computer Science",
+      "location": "Hoboken, NJ",
+      "startDate": "2021",
+      "endDate": "2022",
+      "gpa": "4.0",
+      "honors": [
+        "Perfect 4.0 GPA"
+      ],
+      "coursework": [
+        "Deep Neural Networks",
+        "Statistical Learning",
+        "Data Mining",
+        "Advanced Algorithms"
       ]
     }
   ],
   "skills": [
     {
-      "id": "skill-frontend",
-      "category": "Frontend Development",
+      "id": "skill-ml-ai",
+      "category": "Machine Learning & AI",
       "skills": [
-        { "name": "React", "level": "expert", "years": 5 },
-        { "name": "TypeScript", "level": "expert", "years": 4 },
-        { "name": "Next.js", "level": "advanced", "years": 3 },
-        { "name": "Vue.js", "level": "advanced", "years": 2 },
-        { "name": "HTML/CSS", "level": "expert", "years": 6 },
-        { "name": "Tailwind CSS", "level": "advanced", "years": 3 },
-        { "name": "Redux", "level": "advanced", "years": 3 }
+        { "name": "TensorFlow", "level": "expert", "years": 5 },
+        { "name": "Python", "level": "expert", "years": 6 },
+        { "name": "Deep Learning", "level": "expert", "years": 5 },
+        { "name": "Computer Vision", "level": "expert", "years": 5 },
+        { "name": "Reinforcement Learning", "level": "advanced", "years": 4 },
+        { "name": "Scikit-learn", "level": "expert", "years": 5 },
+        { "name": "PyTorch", "level": "advanced", "years": 3 }
       ]
     },
     {
-      "id": "skill-backend",
-      "category": "Backend Development",
+      "id": "skill-programming",
+      "category": "Programming & Development",
       "skills": [
-        { "name": "Node.js", "level": "expert", "years": 5 },
-        { "name": "Express.js", "level": "advanced", "years": 4 },
-        { "name": "GraphQL", "level": "advanced", "years": 2 },
-        { "name": "REST APIs", "level": "expert", "years": 5 },
-        { "name": "PostgreSQL", "level": "advanced", "years": 3 },
-        { "name": "MongoDB", "level": "advanced", "years": 3 },
-        { "name": "Redis", "level": "intermediate", "years": 2 }
+        { "name": "MATLAB", "level": "expert", "years": 7 },
+        { "name": "Python", "level": "expert", "years": 6 },
+        { "name": "C++/C#", "level": "advanced", "years": 4 },
+        { "name": "SQL", "level": "advanced", "years": 3 },
+        { "name": "Git", "level": "advanced", "years": 5 },
+        { "name": "Linux", "level": "advanced", "years": 5 }
       ]
     },
     {
-      "id": "skill-devops",
-      "category": "DevOps & Cloud",
+      "id": "skill-data-viz",
+      "category": "Data Science & Visualization",
       "skills": [
-        { "name": "AWS", "level": "advanced", "years": 3 },
-        { "name": "Docker", "level": "advanced", "years": 3 },
-        { "name": "CI/CD", "level": "advanced", "years": 3 },
-        { "name": "GitHub Actions", "level": "advanced", "years": 2 },
-        { "name": "Kubernetes", "level": "intermediate", "years": 1 },
-        { "name": "Terraform", "level": "intermediate", "years": 1 }
+        { "name": "Plotly Dash", "level": "advanced", "years": 2 },
+        { "name": "Data Acquisition", "level": "expert", "years": 5 },
+        { "name": "Statistical Analysis", "level": "expert", "years": 5 },
+        { "name": "Azure", "level": "intermediate", "years": 1 },
+        { "name": "Teradata", "level": "intermediate", "years": 1 }
       ]
     },
     {
-      "id": "skill-tools",
-      "category": "Tools & Practices",
+      "id": "skill-other",
+      "category": "Additional Skills",
       "skills": [
-        { "name": "Git", "level": "expert", "years": 6 },
-        { "name": "Jest", "level": "advanced", "years": 3 },
-        { "name": "Testing Library", "level": "advanced", "years": 3 },
-        { "name": "Agile/Scrum", "level": "advanced", "years": 4 },
-        { "name": "Webpack", "level": "advanced", "years": 3 },
-        { "name": "Figma", "level": "intermediate", "years": 2 }
+        { "name": "Unity", "level": "advanced", "years": 3 },
+        { "name": "SolidWorks", "level": "advanced", "years": 4 },
+        { "name": "Arduino", "level": "advanced", "years": 3 },
+        { "name": "LaTeX", "level": "advanced", "years": 5 },
+        { "name": "MATLAB UI Design", "level": "expert", "years": 5 }
       ]
     }
-  ],
+  },
   "projects": [
     {
       "id": "proj-1",
-      "title": "E-Commerce Platform",
-      "description": "Full-featured e-commerce platform with real-time inventory, payment processing, and admin dashboard. Built with Next.js and Stripe integration.",
+      "title": "Deep Learning Solution for Real-time Quality Assessment in Additive Manufacturing",
+      "description": "Developed AI-based application for real-time melt pool analysis using point cloud data in direct energy deposition additive manufacturing. Achieved processing time reduction from 120 seconds to less than 1 second using deep learning models.",
       "technologies": [
-        "Next.js",
-        "TypeScript",
-        "Prisma",
-        "PostgreSQL",
-        "Stripe",
-        "Tailwind CSS"
+        "TensorFlow",
+        "Python",
+        "Computer Vision",
+        "Point Cloud Processing",
+        "Real-time Systems"
       ],
       "links": [
-        { "type": "github", "url": "https://github.com/example/ecommerce" },
-        { "type": "live", "url": "https://demo-ecommerce.example.com" }
+        {
+          "type": "other",
+          "url": "https://scholar.google.com/scholar?oi=bibs&cluster=1916402560499059483&btnI=1&hl=en",
+          "label": "Google Scholar"
+        }
       ],
       "featured": true,
-      "startDate": "2023",
-      "endDate": "2024"
+      "startDate": "2021",
+      "endDate": "2023"
     },
     {
       "id": "proj-2",
-      "title": "Task Management App",
-      "description": "Collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.",
+      "title": "Autonomous Defect Detection System for 3D Printing",
+      "description": "Implemented Reinforcement Learning-based controller for anomaly detection and error mitigation in additive manufacturing processes. Patent pending for the autonomous process adjustment algorithm.",
       "technologies": [
-        "React",
-        "Node.js",
-        "Socket.io",
-        "MongoDB",
-        "Express",
-        "Material-UI"
+        "Reinforcement Learning",
+        "Python",
+        "TensorFlow",
+        "Control Systems",
+        "IoT Sensors"
       ],
-      "links": [
-        { "type": "github", "url": "https://github.com/example/taskmanager" },
-        { "type": "demo", "url": "https://demo-tasks.example.com" }
-      ],
+      "links": [],
       "featured": true,
-      "startDate": "2022",
+      "startDate": "2020",
       "endDate": "2023"
     },
     {
       "id": "proj-3",
-      "title": "Weather Dashboard",
-      "description": "Beautiful weather dashboard with 7-day forecast, interactive maps, and location-based alerts. Integrates with multiple weather APIs.",
-      "technologies": ["Vue.js", "Chart.js", "OpenWeather API", "Mapbox"],
+      "title": "In-situ Laser-based Process Monitoring Using Machine Learning",
+      "description": "Developed machine learning solution for in-plane surface anomaly identification in additive manufacturing using point cloud data and advanced ML techniques.",
+      "technologies": [
+        "Machine Learning",
+        "Point Cloud",
+        "Python",
+        "Data Processing"
+      ],
       "links": [
-        { "type": "github", "url": "https://github.com/example/weather" },
-        { "type": "live", "url": "https://weather.example.com" }
+        {
+          "type": "other",
+          "url": "https://doi.org/10.1115/DETC2021-69436",
+          "label": "DOI"
+        }
       ],
       "featured": true,
-      "startDate": "2023"
+      "startDate": "2020",
+      "endDate": "2021"
     },
     {
       "id": "proj-4",
-      "title": "Developer Portfolio Template",
-      "description": "Open-source portfolio template for developers with modular architecture, dark mode, and CMS integration options.",
-      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
-      "links": [
-        { "type": "github", "url": "https://github.com/example/portfolio" }
+      "title": "Image-based Dataset for Additive Manufacturing ML Applications",
+      "description": "Created and published comprehensive image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning research.",
+      "technologies": [
+        "Dataset Creation",
+        "Computer Vision",
+        "Python",
+        "Data Curation"
       ],
-      "featured": false,
-      "startDate": "2024"
+      "links": [
+        {
+          "type": "other",
+          "url": "https://doi.org/10.1016/j.dib.2022.107852",
+          "label": "DOI"
+        }
+      ],
+      "featured": true,
+      "startDate": "2021",
+      "endDate": "2022"
     },
     {
       "id": "proj-5",
-      "title": "API Rate Limiter Library",
-      "description": "NPM package for implementing flexible rate limiting in Node.js applications. Supports Redis and in-memory stores.",
-      "technologies": ["Node.js", "TypeScript", "Redis", "Jest"],
-      "links": [
-        { "type": "github", "url": "https://github.com/example/rate-limiter" },
-        { "type": "other", "url": "https://npmjs.com/package/example" }
+      "title": "Johnson & Johnson Financial Analytics Dashboard",
+      "description": "Designed and deployed web-based dashboard using Dash Plotly for real-time visualization of finances and budgets across various Therapeutic Areas with Azure integration and live data lake connections.",
+      "technologies": [
+        "Dash Plotly",
+        "Python",
+        "Azure",
+        "SQL",
+        "Data Visualization"
       ],
+      "links": [],
       "featured": false,
-      "startDate": "2023"
+      "startDate": "2023",
+      "endDate": "2023"
+    },
+    {
+      "id": "proj-6",
+      "title": "VR-based Pronunciation Training System",
+      "description": "Developed 10 interactive VR-based software programs in Unity for pronunciation training with successful proof of concept validated through testing with 58 subjects.",
+      "technologies": [
+        "Unity",
+        "C#",
+        "Virtual Reality",
+        "Steam VR",
+        "Text-to-Speech"
+      ],
+      "links": [],
+      "featured": false,
+      "startDate": "2018",
+      "endDate": "2018"
     }
   ],
   "contact": {
     "heading": "Get In Touch",
-    "description": "I'm always interested in hearing about new opportunities and exciting projects. Feel free to reach out!",
-    "email": "javid@example.com",
+    "description": "I'm interested in research collaborations, consulting opportunities, and positions in Machine Learning, AI, and Autonomous Systems. Green Card holder available for immediate start.",
+    "email": "jakhavan@stevens.edu",
     "social": [
       {
-        "platform": "GitHub",
-        "url": "https://github.com/javidakhavan"
-      },
-      {
         "platform": "LinkedIn",
-        "url": "https://linkedin.com/in/javidakhavan"
+        "url": "https://www.linkedin.com/in/javid-akhavan-94b700151/"
       },
       {
-        "platform": "Twitter",
-        "url": "https://twitter.com/javidakhavan"
+        "platform": "GitHub",
+        "url": "https://github.com/JavidAkhavan"
+      },
+      {
+        "platform": "Google Scholar",
+        "url": "https://scholar.google.com/citations?hl=en&user=hTwbmPUAAAAJ"
       }
     ],
     "formEnabled": true
