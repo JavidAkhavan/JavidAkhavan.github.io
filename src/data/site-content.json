@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Javid Akhavan - PhD Candidate in Robotics & AI",
-    "description": "PhD candidate specializing in Machine Learning, Computer Vision, and Autonomous Manufacturing Systems at Stevens Institute of Technology",
+    "title": "Javid Akhavan - PhD in Robotics & AI",
+    "description": "PhD in Machine Learning, Computer Vision, and Autonomous Manufacturing Systems from Stevens Institute of Technology",
     "author": "Javid Akhavan",
     "keywords": [
       "machine learning",
@@ -19,8 +19,8 @@
   },
   "hero": {
     "title": "Javid Akhavan",
-    "subtitle": "PhD Candidate in Robotics & Artificial Intelligence",
-    "description": "Experienced Machine Learning Engineer and Researcher focused on autonomous, self-aware monitoring and control systems. Specializing in Computer Vision, Deep Learning, and Smart Manufacturing with 5+ years of combined industrial and academic experience.",
+    "subtitle": "PhD in Robotics & Artificial Intelligence",
+    "description": "Experienced Machine Learning Engineer and Researcher focused on autonomous, self-aware monitoring and control systems. Specializing in Computer Vision, Deep Learning, and Smart Manufacturing with 6+ years of combined industrial and academic experience.",
     "cta": [
       {
         "label": "View Publications",
@@ -43,7 +43,7 @@
     },
     "highlights": [
       "PhD in Robotics & AI from Stevens Institute of Technology (GPA: 4.0/4.0)",
-      "5+ years combined industrial and academic experience in ML and Computer Vision",
+      "6+ years combined industrial and academic experience in ML and Computer Vision",
       "Published researcher with multiple peer-reviewed papers in top conferences",
       "Proven expertise in TensorFlow, Python, MATLAB, and Reinforcement Learning",
       "Strong background in autonomous defect detection and control systems",
@@ -536,7 +536,7 @@
   },
   "contact": {
     "heading": "Get In Touch",
-    "description": "I'm interested in research collaborations, consulting opportunities, and positions in Machine Learning, AI, and Autonomous Systems. Green Card holder available for immediate start.",
+    "description": "I'm interested in research collaborations, and projects in Machine Learning, AI, and Autonomous Systems. Feel free to reach out to me using the contact form below or via email.",
     "email": "jakhavan@stevens.edu",
     "social": [
       {
