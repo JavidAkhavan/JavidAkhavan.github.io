@@ -49,11 +49,25 @@ export const moduleRegistry: Record<string, ModuleConfig> = {
     order: 6,
     path: '@/modules/projects',
   },
+  publications: {
+    id: 'publications',
+    name: 'Publications Section',
+    enabled: true,
+    order: 7,
+    path: '@/modules/publications',
+  },
+  teaching: {
+    id: 'teaching',
+    name: 'Teaching Section',
+    enabled: true,
+    order: 8,
+    path: '@/modules/teaching',
+  },
   contact: {
     id: 'contact',
     name: 'Contact Section',
     enabled: true,
-    order: 7,
+    order: 9,
     path: '@/modules/contact',
   },
 };

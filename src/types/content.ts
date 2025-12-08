@@ -101,6 +101,48 @@ export interface MediaAsset {
   height?: number;
 }
 
+export interface Publication {
+  id: string;
+  title: string;
+  authors?: string[];
+  venue: string;
+  year: number;
+  type: 'journal' | 'conference' | 'preprint' | 'dataset';
+  status?: 'published' | 'under-review' | 'accepted';
+  abstract?: string;
+  links?: {
+    type: 'doi' | 'pdf' | 'scholar' | 'arxiv' | 'github' | 'other';
+    url: string;
+    label?: string;
+  }[];
+  featured?: boolean;
+}
+
+export interface PublicationsContent {
+  heading: string;
+  description?: string;
+  publications: Publication[];
+}
+
+export interface TeachingPosition {
+  id: string;
+  title: string;
+  institution: string;
+  location: string;
+  course?: string;
+  startDate: string;
+  endDate?: string;
+  current?: boolean;
+  description?: string;
+  responsibilities?: string[];
+}
+
+export interface TeachingContent {
+  heading: string;
+  description?: string;
+  positions: TeachingPosition[];
+}
+
 /**
  * Site-wide content structure
  * All content externalized - easily replaceable for different projects
@@ -113,6 +155,8 @@ export interface SiteContent {
   education: EducationItem[];
   skills: SkillCategory[];
   projects: ProjectItem[];
+  publications: PublicationsContent;
+  teaching: TeachingContent;
   contact: ContactContent;
 }
 
