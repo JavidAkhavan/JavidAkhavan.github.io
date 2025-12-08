@@ -26,16 +26,31 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
     setFormState('submitting');
 
     try {
-      // Use Formspree (free for static sites) or a simple mailto fallback
-      // For now, we'll use mailto as a fallback
-      const mailtoLink = `mailto:${data.email}?subject=Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
-      window.location.href = mailtoLink;
+      // Submit to Formspree - replace with your Formspree endpoint
+      // Get your endpoint at: https://formspree.io/
+      const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID';
 
-      setFormState('success');
-      setFormData({ name: '', email: '', message: '' });
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `Portfolio Contact from ${formData.name}`,
+        }),
+      });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => setFormState('idle'), 5000);
+      if (response.ok) {
+        setFormState('success');
+        setFormData({ name: '', email: '', message: '' });
+        // Reset success message after 5 seconds
+        setTimeout(() => setFormState('idle'), 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       setFormState('error');
@@ -206,7 +221,8 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
                     )}
                   </form>
                   <p className="text-xs text-muted-foreground">
-                    Your default email client will open to send the message.
+                    Messages are sent securely via Formspree. You&apos;ll receive
+                    a confirmation email.
                   </p>
                 </div>
               )}
