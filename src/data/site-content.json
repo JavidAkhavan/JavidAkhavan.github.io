@@ -23,9 +23,14 @@
     "description": "Experienced Machine Learning Engineer and Researcher focused on autonomous, self-aware monitoring and control systems. Specializing in Computer Vision, Deep Learning, and Smart Manufacturing with 6+ years of combined industrial and academic experience.",
     "cta": [
       {
+        "label": "Download CV",
+        "href": "/Javid_Akhavan_Resume.pdf",
+        "variant": "primary"
+      },
+      {
         "label": "View Publications",
         "href": "#publications",
-        "variant": "primary"
+        "variant": "secondary"
       },
       {
         "label": "Contact Me",

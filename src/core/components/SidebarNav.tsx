@@ -29,6 +29,7 @@ const navItems: NavItem[] = [
 export function SidebarNav() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     // Show sidebar after initial scroll
@@ -40,9 +41,19 @@ export function SidebarNav() {
       }
     };
 
+    // Calculate scroll progress
+    const updateScrollProgress = () => {
+      const progress = Math.min(
+        100,
+        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      );
+      setScrollProgress(progress);
+    };
+
     // Scroll spy - detect which section is in view
     const handleScroll = () => {
       handleInitialScroll();
+      updateScrollProgress();
 
       const sections = navItems.map((item) => {
         const element = document.querySelector(`[data-testid="${item.id}-section"]`);
@@ -143,10 +154,7 @@ export function SidebarNav() {
           <div
             className="absolute left-0 top-0 w-full bg-primary transition-all duration-300"
             style={{
-              height: `${Math.min(
-                100,
-                (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-              )}%`,
+              height: `${scrollProgress}%`,
             }}
           />
         </div>

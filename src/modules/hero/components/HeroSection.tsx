@@ -18,16 +18,33 @@ export function HeroSection({ data, className = '' }: HeroSectionProps) {
         <p className="text-lg mb-8">{data.description}</p>
 
         {data.cta && data.cta.length > 0 && (
-          <div className="flex gap-4">
-            {data.cta.map((cta, index) => (
-              <Button
-                key={index}
-                variant={cta.variant === 'primary' ? 'default' : 'outline'}
-                asChild
-              >
-                <a href={cta.href}>{cta.label}</a>
-              </Button>
-            ))}
+          <div className="flex flex-wrap gap-4">
+            {data.cta.map((cta, index) => {
+              const variant =
+                cta.variant === 'primary'
+                  ? 'default'
+                  : cta.variant === 'secondary'
+                    ? 'secondary'
+                    : 'outline';
+
+              // Check if it's a download link
+              const isDownload = cta.href.endsWith('.pdf');
+
+              return (
+                <Button key={index} variant={variant} asChild>
+                  <a
+                    href={cta.href}
+                    {...(isDownload && {
+                      download: true,
+                      target: '_blank',
+                      rel: 'noopener noreferrer',
+                    })}
+                  >
+                    {cta.label}
+                  </a>
+                </Button>
+              );
+            })}
           </div>
         )}
       </div>

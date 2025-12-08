@@ -3,6 +3,7 @@
  * Renders all enabled modules from the module registry
  */
 
+import React from 'react';
 import { getContent } from '@/lib/content-adapter';
 import { getEnabledModules } from '@/registry/module-registry';
 import { HeroSection } from '@/modules/hero';
@@ -15,6 +16,8 @@ import { PublicationsSection } from '@/modules/publications';
 import { TeachingSection } from '@/modules/teaching';
 import { ContactSection } from '@/modules/contact';
 import { SidebarNav } from '@/core/components/SidebarNav';
+import { ResearchMetrics } from '@/core/components/ResearchMetrics';
+import { ScrollToTop } from '@/core/components/ScrollToTop';
 
 export default function Home() {
   const content = getContent().getSiteContent();
@@ -39,8 +42,20 @@ export default function Home() {
   return (
     <>
       <SidebarNav />
+      <ScrollToTop />
       <main className="min-h-screen">
-        {enabledModules.map((module) => moduleComponents[module.id])}
+        {enabledModules.map((module) => {
+          // Insert ResearchMetrics after Hero section
+          if (module.id === 'hero') {
+            return (
+              <React.Fragment key="hero-with-metrics">
+                {moduleComponents[module.id]}
+                <ResearchMetrics />
+              </React.Fragment>
+            );
+          }
+          return moduleComponents[module.id];
+        })}
       </main>
     </>
   );
