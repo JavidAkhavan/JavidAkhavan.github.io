@@ -37,6 +37,10 @@
   "about": {
     "heading": "About Me",
     "bio": "I am a PhD candidate in Robotics and Artificial Intelligence at Stevens Institute of Technology, with a strong focus on developing autonomous systems for smart manufacturing. My research integrates Mechanical Engineering, Computer Science, and Electrical Engineering expertise to create self-aware automated manufacturing systems aligned with Industry 4.0. I have extensive hands-on experience in Computer Vision, Deep Learning, and Reinforcement Learning, with proven ability to consistently achieve results in both academic research and industrial applications.",
+    "image": {
+      "src": "/profile.jpg",
+      "alt": "Javid Akhavan - PhD Candidate in Robotics & AI"
+    },
     "highlights": [
       "PhD in Robotics & AI from Stevens Institute of Technology (GPA: 4.0/4.0)",
       "5+ years combined industrial and academic experience in ML and Computer Vision",
@@ -178,9 +182,7 @@
       "startDate": "2019",
       "endDate": "2021",
       "gpa": "4.0",
-      "honors": [
-        "Perfect 4.0 GPA"
-      ],
+      "honors": ["Perfect 4.0 GPA"],
       "coursework": [
         "Machine Learning",
         "Robotics",
@@ -196,9 +198,7 @@
       "startDate": "2021",
       "endDate": "2022",
       "gpa": "4.0",
-      "honors": [
-        "Perfect 4.0 GPA"
-      ],
+      "honors": ["Perfect 4.0 GPA"],
       "coursework": [
         "Deep Neural Networks",
         "Statistical Learning",
@@ -370,6 +370,170 @@
       "endDate": "2018"
     }
   ],
+  "publications": {
+    "heading": "Publications",
+    "description": "Peer-reviewed research publications in additive manufacturing, machine learning, and computer vision",
+    "publications": [
+      {
+        "id": "pub-1",
+        "title": "A Deep Learning Solution for Real-time Quality Assessment and Control in Additive Manufacturing Using Point Cloud Data",
+        "venue": "Under Review",
+        "year": 2023,
+        "type": "journal",
+        "status": "under-review",
+        "abstract": "Developed AI-based application for real-time melt pool analysis using point cloud data in direct energy deposition additive manufacturing. Achieved processing time reduction from 120 seconds to less than 1 second using deep learning models.",
+        "links": [
+          {
+            "type": "scholar",
+            "url": "https://scholar.google.com/scholar?oi=bibs&cluster=1916402560499059483&btnI=1&hl=en",
+            "label": "Google Scholar"
+          }
+        ],
+        "featured": true
+      },
+      {
+        "id": "pub-2",
+        "title": "In-situ laser-based process monitoring and in-plane surface anomaly identification for additive manufacturing using point cloud and machine learning",
+        "venue": "ASME 2021 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference",
+        "year": 2021,
+        "type": "conference",
+        "status": "published",
+        "links": [
+          {
+            "type": "doi",
+            "url": "https://doi.org/10.1115/DETC2021-69436",
+            "label": "DOI"
+          }
+        ],
+        "featured": true
+      },
+      {
+        "id": "pub-3",
+        "title": "Image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning",
+        "venue": "Data in Brief, Elsevier",
+        "year": 2022,
+        "type": "dataset",
+        "status": "published",
+        "abstract": "Created and published comprehensive image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning research.",
+        "links": [
+          {
+            "type": "doi",
+            "url": "https://doi.org/10.1016/j.dib.2022.107852",
+            "label": "DOI"
+          }
+        ],
+        "featured": true
+      },
+      {
+        "id": "pub-4",
+        "title": "Thermal history based prediction of interlayer bond strength in parts manufactured by material extrusion additive manufacturing",
+        "venue": "Under Review",
+        "year": 2023,
+        "type": "journal",
+        "status": "under-review",
+        "links": [
+          {
+            "type": "pdf",
+            "url": "https://assets.researchsquare.com/files/rs-2413996/v1_covered.pdf?c=1672852486",
+            "label": "PDF"
+          }
+        ],
+        "featured": false
+      },
+      {
+        "id": "pub-5",
+        "title": "Realtime coaxial monitoring and print cross-section's image dataset of Direct Energy Deposition fabrication",
+        "venue": "Dataset Publication",
+        "year": 2022,
+        "type": "dataset",
+        "status": "published",
+        "featured": false
+      },
+      {
+        "id": "pub-6",
+        "title": "Sensory Data Fusion Using Machine Learning Methods For In-Situ Defect Registration In Additive Manufacturing: A Review",
+        "venue": "IEEE International Conference on Electro Information Technology (EIT)",
+        "year": 2022,
+        "type": "conference",
+        "status": "published",
+        "links": [
+          {
+            "type": "doi",
+            "url": "https://doi.org/10.1109/IEMTRONICS55184.2022.9795815",
+            "label": "DOI"
+          }
+        ],
+        "featured": false
+      },
+      {
+        "id": "pub-7",
+        "title": "Real-time monitoring and gaussian process-based estimation of the melt pool profile in direct energy deposition",
+        "venue": "Journal Publication",
+        "year": 2023,
+        "type": "journal",
+        "status": "accepted",
+        "featured": false
+      }
+    ]
+  },
+  "teaching": {
+    "heading": "Teaching Experience",
+    "description": "Academic teaching and mentorship positions in robotics, mechatronics, and computational methods",
+    "positions": [
+      {
+        "id": "teach-1",
+        "title": "Teaching Assistant",
+        "institution": "Stevens Institute of Technology",
+        "location": "Hoboken, NJ",
+        "course": "Introduction To Robotics & Mechatronics Course",
+        "startDate": "Jan 2020",
+        "current": true,
+        "responsibilities": [
+          "Proctoring laboratory sessions involved various robot programming, circuit design, and teamwork",
+          "Holding office hours to help students and give guidance on their project progress"
+        ]
+      },
+      {
+        "id": "teach-2",
+        "title": "Lecturer",
+        "institution": "Trinity Educational Center",
+        "location": "Tehran, Iran",
+        "course": "SAT Exam Quantitative Reasoning",
+        "startDate": "May 2018",
+        "endDate": "Jan 2019",
+        "responsibilities": [
+          "Prepare and deliver lectures to participants of the SAT exam on linear algebra, single and system of linear equations, statistics, and advanced mathematics"
+        ]
+      },
+      {
+        "id": "teach-3",
+        "title": "Teaching Assistants Manager",
+        "institution": "Sharif University of Technology",
+        "location": "Tehran, Iran",
+        "course": "Mechanism Design Course",
+        "startDate": "Aug 2015",
+        "endDate": "Jan 2019",
+        "responsibilities": [
+          "Facilitated and coordinated students for projects and coursework",
+          "Creation and delivery of lectures on Simulink and Adams applications for dynamically simulating various mechanisms"
+        ]
+      },
+      {
+        "id": "teach-4",
+        "title": "Teaching Assistant",
+        "institution": "Sharif University of Technology",
+        "location": "Tehran, Iran",
+        "course": "Numerical Computations Course",
+        "startDate": "Aug 2015",
+        "endDate": "Jan 2019",
+        "responsibilities": [
+          "Designed and developed an auto-grading application to automate homework gradings in various domains",
+          "Teaching MATLAB, numerical methods for linear and nonlinear equations, numerical integration, and differentiation",
+          "Led and organized TAs for class activities and homework"
+        ]
+      }
+    ]
+  },
   "contact": {
     "heading": "Get In Touch",
     "description": "I'm interested in research collaborations, consulting opportunities, and positions in Machine Learning, AI, and Autonomous Systems. Green Card holder available for immediate start.",
