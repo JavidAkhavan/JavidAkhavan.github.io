@@ -52,7 +52,15 @@
       "Published researcher with multiple peer-reviewed papers in top conferences",
       "Proven expertise in TensorFlow, Python, MATLAB, and Reinforcement Learning",
       "Strong background in autonomous defect detection and control systems",
-      "Green Card holder available for immediate start"
+      "Available for immediate start"
+    ],
+    "interests": [
+      "Deep Methods for Computer Vision",
+      "Data Acquisition & Visualization",
+      "Autonomous Defect Detection, Classification, and Elimination",
+      "Deep Neural Networks",
+      "Machine Learning",
+      "Reinforcement Learning for Pattern Recognition & Control"
     ]
   },
   "experience": [
@@ -187,7 +195,9 @@
       "startDate": "2019",
       "endDate": "2021",
       "gpa": "4.0",
-      "honors": ["Perfect 4.0 GPA"],
+      "honors": [
+        "Perfect 4.0 GPA"
+      ],
       "coursework": [
         "Machine Learning",
         "Robotics",
@@ -203,7 +213,9 @@
       "startDate": "2021",
       "endDate": "2022",
       "gpa": "4.0",
-      "honors": ["Perfect 4.0 GPA"],
+      "honors": [
+        "Perfect 4.0 GPA"
+      ],
       "coursework": [
         "Deep Neural Networks",
         "Statistical Learning",
@@ -217,47 +229,139 @@
       "id": "skill-ml-ai",
       "category": "Machine Learning & AI",
       "skills": [
-        { "name": "TensorFlow", "level": "expert", "years": 5 },
-        { "name": "Python", "level": "expert", "years": 6 },
-        { "name": "Deep Learning", "level": "expert", "years": 5 },
-        { "name": "Computer Vision", "level": "expert", "years": 5 },
-        { "name": "Reinforcement Learning", "level": "advanced", "years": 4 },
-        { "name": "Scikit-learn", "level": "expert", "years": 5 },
-        { "name": "PyTorch", "level": "advanced", "years": 3 }
+        {
+          "name": "TensorFlow",
+          "level": "expert",
+          "years": 5
+        },
+        {
+          "name": "Python",
+          "level": "expert",
+          "years": 6
+        },
+        {
+          "name": "Deep Learning",
+          "level": "expert",
+          "years": 5
+        },
+        {
+          "name": "Computer Vision",
+          "level": "expert",
+          "years": 5
+        },
+        {
+          "name": "Reinforcement Learning",
+          "level": "advanced",
+          "years": 4
+        },
+        {
+          "name": "Scikit-learn",
+          "level": "expert",
+          "years": 5
+        },
+        {
+          "name": "PyTorch",
+          "level": "advanced",
+          "years": 3
+        }
       ]
     },
     {
       "id": "skill-programming",
       "category": "Programming & Development",
       "skills": [
-        { "name": "MATLAB", "level": "expert", "years": 7 },
-        { "name": "Python", "level": "expert", "years": 6 },
-        { "name": "C++/C#", "level": "advanced", "years": 4 },
-        { "name": "SQL", "level": "advanced", "years": 3 },
-        { "name": "Git", "level": "advanced", "years": 5 },
-        { "name": "Linux", "level": "advanced", "years": 5 }
+        {
+          "name": "MATLAB",
+          "level": "expert",
+          "years": 7
+        },
+        {
+          "name": "Python",
+          "level": "expert",
+          "years": 6
+        },
+        {
+          "name": "C++/C#",
+          "level": "advanced",
+          "years": 4
+        },
+        {
+          "name": "SQL",
+          "level": "advanced",
+          "years": 3
+        },
+        {
+          "name": "Git",
+          "level": "advanced",
+          "years": 5
+        },
+        {
+          "name": "Linux",
+          "level": "advanced",
+          "years": 5
+        }
       ]
     },
     {
       "id": "skill-data-viz",
       "category": "Data Science & Visualization",
       "skills": [
-        { "name": "Plotly Dash", "level": "advanced", "years": 2 },
-        { "name": "Data Acquisition", "level": "expert", "years": 5 },
-        { "name": "Statistical Analysis", "level": "expert", "years": 5 },
-        { "name": "Azure", "level": "intermediate", "years": 1 },
-        { "name": "Teradata", "level": "intermediate", "years": 1 }
+        {
+          "name": "Plotly Dash",
+          "level": "advanced",
+          "years": 2
+        },
+        {
+          "name": "Data Acquisition",
+          "level": "expert",
+          "years": 5
+        },
+        {
+          "name": "Statistical Analysis",
+          "level": "expert",
+          "years": 5
+        },
+        {
+          "name": "Azure",
+          "level": "intermediate",
+          "years": 1
+        },
+        {
+          "name": "Teradata",
+          "level": "intermediate",
+          "years": 1
+        }
       ]
     },
     {
       "id": "skill-other",
       "category": "Additional Skills",
       "skills": [
-        { "name": "Unity", "level": "advanced", "years": 3 },
-        { "name": "SolidWorks", "level": "advanced", "years": 4 },
-        { "name": "Arduino", "level": "advanced", "years": 3 },
-        { "name": "LaTeX", "level": "advanced", "years": 5 },
-        { "name": "MATLAB UI Design", "level": "expert", "years": 5 }
+        {
+          "name": "Unity",
+          "level": "advanced",
+          "years": 3
+        },
+        {
+          "name": "SolidWorks",
+          "level": "advanced",
+          "years": 4
+        },
+        {
+          "name": "Arduino",
+          "level": "advanced",
+          "years": 3
+        },
+        {
+          "name": "LaTeX",
+          "level": "advanced",
+          "years": 5
+        },
+        {
+          "name": "MATLAB UI Design",
+          "level": "expert",
+          "years": 5
+        }
       ]
     }
   ],

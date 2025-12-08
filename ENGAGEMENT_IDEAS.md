@@ -31,7 +31,7 @@
 
 - "Perfect 4.0 GPA" badge
 - "Stevens Institute PhD Candidate" badge
-- "Green Card Holder - Immediate Start" badge
+- "GC - Immediate Start" badge
 - **Impact**: Key qualifications stand out immediately
 - **Effort**: 20 minutes
 

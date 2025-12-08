@@ -3,6 +3,7 @@
 ## 🎯 What is Formspree?
 
 Formspree is a free form backend service that handles form submissions for static sites. It will:
+
 - Send form submissions directly to your email
 - No server-side code required
 - SPAM protection included
@@ -28,6 +29,7 @@ Formspree is a free form backend service that handles form submissions for stati
 ### Step 3: Get Your Form Endpoint
 
 After creating the form, you'll see your form endpoint URL:
+
 ```
 https://formspree.io/f/YOUR_FORM_ID
 ```
@@ -42,6 +44,7 @@ Example: `https://formspree.io/f/xwpkvngl`
 4. Save the file
 
 Example:
+
 ```typescript
 const formspreeEndpoint = 'https://formspree.io/f/xwpkvngl';
 ```
@@ -71,6 +74,7 @@ const formspreeEndpoint = 'https://formspree.io/f/xwpkvngl';
 ### Email Templates
 
 In Formspree dashboard, you can customize:
+
 - Email subject line
 - Reply-to address
 - Email template
@@ -79,6 +83,7 @@ In Formspree dashboard, you can customize:
 ### SPAM Protection
 
 Formspree includes:
+
 - reCAPTCHA integration (optional)
 - Honeypot fields
 - Rate limiting
@@ -87,6 +92,7 @@ Formspree includes:
 ### Notifications
 
 Configure:
+
 - Email notifications on/off
 - Slack notifications
 - Webhook integrations
@@ -94,6 +100,7 @@ Configure:
 ## 🆓 Free vs Paid Plans
 
 ### Free Plan (Unlimited)
+
 - ✅ 50 submissions per month
 - ✅ Email notifications
 - ✅ SPAM filtering
@@ -101,6 +108,7 @@ Configure:
 - ✅ File uploads (10MB)
 
 ### Gold Plan ($10/month)
+
 - Everything in Free
 - 1,000 submissions/month
 - Custom email templates
@@ -113,17 +121,20 @@ Configure:
 If you prefer other services:
 
 ### 1. **Web3Forms** (Free)
+
 - https://web3forms.com/
 - 250 submissions/month free
 - No account required
 - Similar setup process
 
 ### 2. **Netlify Forms** (If using Netlify)
+
 - Built into Netlify hosting
 - 100 submissions/month free
 - Just add `netlify` attribute to form
 
 ### 3. **EmailJS** (Free tier available)
+
 - https://www.emailjs.com/
 - Send emails directly from JavaScript
 - 200 emails/month free
@@ -146,11 +157,13 @@ Before deploying to production:
 **Form Location:** `src/modules/contact/components/ContactSection.tsx`
 
 **Form Fields:**
+
 - Name (text, required)
 - Email (email, required)
 - Message (textarea, required)
 
 **Form Features:**
+
 - Loading state with spinner
 - Success message (green)
 - Error message (red)
@@ -161,18 +174,21 @@ Before deploying to production:
 ## 🛠️ Troubleshooting
 
 ### Form not submitting?
+
 1. Check browser console for errors
 2. Verify form endpoint URL is correct
 3. Ensure fetch API is available (modern browsers)
 4. Check network tab in DevTools
 
 ### Not receiving emails?
+
 1. Check Formspree dashboard for submissions
 2. Verify email address in Formspree settings
 3. Check spam/junk folder
 4. Confirm email is verified in Formspree
 
 ### Getting 429 errors?
+
 - You've exceeded the rate limit (50/month on free plan)
 - Upgrade to Gold plan or wait for monthly reset
 - Check for bots/spam causing excess submissions

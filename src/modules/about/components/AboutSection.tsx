@@ -57,6 +57,23 @@ export function AboutSection({ data, className = '' }: AboutSectionProps) {
                 </div>
               )}
             </div>
+
+            {data.interests && data.interests.length > 0 && (
+              <div className="mt-6 border-t pt-6">
+                <h3 className="mb-4 text-xl font-semibold">Research Interests</h3>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {data.interests.map((interest, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 rounded-lg bg-secondary/50 p-3 transition-all hover:bg-secondary"
+                    >
+                      <span className="text-primary">•</span>
+                      <span className="text-sm font-medium">{interest}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>

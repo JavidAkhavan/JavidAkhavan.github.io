@@ -15,10 +15,14 @@ import { ProjectsSection } from '@/modules/projects';
 import { PublicationsSection } from '@/modules/publications';
 import { TeachingSection } from '@/modules/teaching';
 import { ContactSection } from '@/modules/contact';
+import { CertificatesSection } from '@/modules/certificates';
+import { TestScoresSection } from '@/modules/test-scores';
 import { SidebarNav } from '@/core/components/SidebarNav';
 import { ResearchMetrics } from '@/core/components/ResearchMetrics';
 import { ScrollToTop } from '@/core/components/ScrollToTop';
 import { SocialProofBadges } from '@/core/components/SocialProofBadges';
+import { certificatesData } from '@/data/certificates';
+import { testScoresData, transcriptUrl } from '@/data/test-scores';
 
 export default function Home() {
   const content = getContent().getSiteContent();
@@ -37,6 +41,16 @@ export default function Home() {
       <PublicationsSection key="publications" data={content.publications} />
     ),
     teaching: <TeachingSection key="teaching" data={content.teaching} />,
+    certificates: (
+      <CertificatesSection key="certificates" data={certificatesData} />
+    ),
+    'test-scores': (
+      <TestScoresSection
+        key="test-scores"
+        data={testScoresData}
+        transcriptUrl={transcriptUrl}
+      />
+    ),
     contact: <ContactSection key="contact" data={content.contact} />,
   };
 

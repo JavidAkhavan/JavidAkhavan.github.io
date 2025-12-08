@@ -33,7 +33,7 @@ export function SocialProofBadges() {
     },
     {
       icon: <MapPin className="h-5 w-5" />,
-      label: 'Green Card Holder',
+      label: 'Based in NJ, USA',
       highlight: 'Immediate Start Available',
     },
   ];

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Javid Akhavan - PhD in Robotics & AI | ML Engineer',
   description:
-    'PhD in Robotics & AI specializing in Machine Learning, Computer Vision, and Autonomous Manufacturing. 6+ years experience in ML/AI research and development. Green Card holder available for immediate start.',
+    'PhD in Robotics & AI specializing in Machine Learning, Computer Vision, and Autonomous Manufacturing. 6+ years experience in ML/AI research and development. Available for immediate start.',
   keywords: [
     'Machine Learning',
     'Artificial Intelligence',

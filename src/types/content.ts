@@ -16,6 +16,7 @@ export interface AboutContent {
   bio: string;
   image?: MediaAsset;
   highlights?: string[];
+  interests?: string[];
 }
 
 export interface ExperienceItem {

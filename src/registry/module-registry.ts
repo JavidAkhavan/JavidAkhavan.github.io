@@ -63,11 +63,25 @@ export const moduleRegistry: Record<string, ModuleConfig> = {
     order: 8,
     path: '@/modules/teaching',
   },
+  certificates: {
+    id: 'certificates',
+    name: 'Certificates Section',
+    enabled: true,
+    order: 9,
+    path: '@/modules/certificates',
+  },
+  'test-scores': {
+    id: 'test-scores',
+    name: 'Test Scores Section',
+    enabled: true,
+    order: 10,
+    path: '@/modules/test-scores',
+  },
   contact: {
     id: 'contact',
     name: 'Contact Section',
     enabled: true,
-    order: 9,
+    order: 11,
     path: '@/modules/contact',
   },
 };
