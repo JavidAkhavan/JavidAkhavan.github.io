@@ -14,8 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Javid Akhavan - Portfolio',
-  description: 'Professional portfolio and resume',
+  title: 'Javid Akhavan - PhD Candidate in Robotics & AI',
+  description:
+    'PhD candidate specializing in Machine Learning, Computer Vision, and Autonomous Manufacturing Systems at Stevens Institute of Technology',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

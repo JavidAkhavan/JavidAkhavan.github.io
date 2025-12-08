@@ -24,7 +24,7 @@
     "cta": [
       {
         "label": "View Publications",
-        "href": "#projects",
+        "href": "#publications",
         "variant": "primary"
       },
       {
