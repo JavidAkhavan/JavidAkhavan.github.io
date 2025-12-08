@@ -145,7 +145,7 @@
         "Text-to-Speech APIs"
       ]
     }
-  },
+  ],
   "education": [
     {
       "id": "edu-1",
@@ -255,7 +255,7 @@
         { "name": "MATLAB UI Design", "level": "expert", "years": 5 }
       ]
     }
-  },
+  ],
   "projects": [
     {
       "id": "proj-1",
