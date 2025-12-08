@@ -6,7 +6,17 @@
  */
 
 import React, { useEffect, useState } from 'react';
-import { Home, User, Briefcase, GraduationCap, Code, Folder, BookOpen, Users, Mail } from 'lucide-react';
+import {
+  Home,
+  User,
+  Briefcase,
+  GraduationCap,
+  Code,
+  Folder,
+  BookOpen,
+  Users,
+  Mail,
+} from 'lucide-react';
 
 interface NavItem {
   id: string;
@@ -17,11 +27,23 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: 'hero', label: 'Home', icon: <Home className="h-4 w-4" /> },
   { id: 'about', label: 'About', icon: <User className="h-4 w-4" /> },
-  { id: 'experience', label: 'Experience', icon: <Briefcase className="h-4 w-4" /> },
-  { id: 'education', label: 'Education', icon: <GraduationCap className="h-4 w-4" /> },
+  {
+    id: 'experience',
+    label: 'Experience',
+    icon: <Briefcase className="h-4 w-4" />,
+  },
+  {
+    id: 'education',
+    label: 'Education',
+    icon: <GraduationCap className="h-4 w-4" />,
+  },
   { id: 'skills', label: 'Skills', icon: <Code className="h-4 w-4" /> },
   { id: 'projects', label: 'Projects', icon: <Folder className="h-4 w-4" /> },
-  { id: 'publications', label: 'Publications', icon: <BookOpen className="h-4 w-4" /> },
+  {
+    id: 'publications',
+    label: 'Publications',
+    icon: <BookOpen className="h-4 w-4" />,
+  },
   { id: 'teaching', label: 'Teaching', icon: <Users className="h-4 w-4" /> },
   { id: 'contact', label: 'Contact', icon: <Mail className="h-4 w-4" /> },
 ];
@@ -45,7 +67,9 @@ export function SidebarNav() {
     const updateScrollProgress = () => {
       const progress = Math.min(
         100,
-        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+        (window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight)) *
+          100
       );
       setScrollProgress(progress);
     };
@@ -56,7 +80,9 @@ export function SidebarNav() {
       updateScrollProgress();
 
       const sections = navItems.map((item) => {
-        const element = document.querySelector(`[data-testid="${item.id}-section"]`);
+        const element = document.querySelector(
+          `[data-testid="${item.id}-section"]`
+        );
         if (!element) return null;
 
         const rect = element.getBoundingClientRect();
@@ -76,7 +102,9 @@ export function SidebarNav() {
           .reduce((closest, current) => {
             if (!closest) return current;
             if (!current) return closest;
-            return Math.abs(current.top) < Math.abs(closest.top) ? current : closest;
+            return Math.abs(current.top) < Math.abs(closest.top)
+              ? current
+              : closest;
           });
         if (closestSection) {
           setActiveSection(closestSection.id);
@@ -91,7 +119,9 @@ export function SidebarNav() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.querySelector(`[data-testid="${sectionId}-section"]`);
+    const element = document.querySelector(
+      `[data-testid="${sectionId}-section"]`
+    );
     if (element) {
       const offset = 80; // Offset for fixed header if any
       const elementPosition = element.getBoundingClientRect().top;
@@ -129,7 +159,9 @@ export function SidebarNav() {
                 <div className="absolute left-0 top-0 h-full w-1 rounded-l-md bg-primary-foreground" />
               )}
 
-              <span className={`transition-transform ${isActive ? 'scale-110' : ''}`}>
+              <span
+                className={`transition-transform ${isActive ? 'scale-110' : ''}`}
+              >
                 {item.icon}
               </span>
 

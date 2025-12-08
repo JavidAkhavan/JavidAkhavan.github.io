@@ -17,7 +17,11 @@ interface Metric {
 
 export function ResearchMetrics() {
   const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({ publications: 0, featured: 0, years: 0 });
+  const [counts, setCounts] = useState({
+    publications: 0,
+    featured: 0,
+    years: 0,
+  });
   const ref = useRef<HTMLDivElement>(null);
 
   const metrics: Metric[] = [
@@ -110,7 +114,9 @@ export function ResearchMetrics() {
                 </div>
                 <div className="text-3xl font-bold text-foreground md:text-4xl">
                   {countValue}
-                  {metric.suffix && <span className="text-2xl">{metric.suffix}</span>}
+                  {metric.suffix && (
+                    <span className="text-2xl">{metric.suffix}</span>
+                  )}
                 </div>
                 <div className="mt-1 text-sm font-medium text-muted-foreground md:text-base">
                   {metric.label}
