@@ -11,24 +11,26 @@ import Image from 'next/image';
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col">
+    <Card className="group flex h-full flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
       {project.image && (
         <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
           <Image
             src={project.image.src}
             alt={project.image.alt}
             fill
-            className="object-cover transition-transform hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
           {project.featured && (
-            <div className="absolute right-2 top-2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+            <div className="absolute right-2 top-2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-lg">
               Featured
             </div>
           )}
         </div>
       )}
       <CardHeader>
-        <CardTitle className="text-xl">{project.title}</CardTitle>
+        <CardTitle className="text-xl transition-colors group-hover:text-primary">
+          {project.title}
+        </CardTitle>
         {(project.startDate || project.endDate) && (
           <p className="text-sm text-muted-foreground">
             {project.startDate}
@@ -44,7 +46,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="rounded-full bg-secondary px-3 py-1 text-xs font-medium"
+                className="rounded-full bg-secondary px-3 py-1 text-xs font-medium transition-colors hover:bg-primary/20"
               >
                 {tech}
               </span>
@@ -55,7 +57,13 @@ function ProjectCard({ project }: ProjectCardProps) {
         {project.links && project.links.length > 0 && (
           <div className="mt-auto flex flex-wrap gap-2 pt-4">
             {project.links.map((link, index) => (
-              <Button key={index} variant="outline" size="sm" asChild>
+              <Button
+                key={index}
+                variant="outline"
+                size="sm"
+                asChild
+                className="transition-all hover:scale-105"
+              >
                 <a
                   href={link.url}
                   target="_blank"

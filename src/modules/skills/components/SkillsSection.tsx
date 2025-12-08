@@ -3,34 +3,84 @@
  * Content-agnostic - accepts data via props
  */
 
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
 import { SkillsSectionProps, SkillCategoryCardProps } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+// Map skill levels to proficiency percentages
+const getLevelPercentage = (level?: string): number => {
+  const levelMap: Record<string, number> = {
+    beginner: 25,
+    intermediate: 50,
+    advanced: 75,
+    expert: 95,
+  };
+  return level ? levelMap[level.toLowerCase()] || 50 : 50;
+};
+
 function SkillCategoryCard({ category }: SkillCategoryCardProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [isVisible]);
+
   return (
-    <Card>
+    <Card ref={ref} className="transition-all hover:shadow-lg">
       <CardHeader>
         <CardTitle className="text-xl">{category.category}</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-wrap gap-2">
-          {category.skills.map((skill, index) => (
-            <div key={index} className="group relative">
-              <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/20">
-                {skill.name}
-              </span>
-              {(skill.level || skill.years) && (
-                <div className="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 whitespace-nowrap rounded bg-popover px-2 py-1 text-xs text-popover-foreground shadow-md group-hover:block">
-                  {skill.level && (
-                    <span className="capitalize">{skill.level}</span>
-                  )}
-                  {skill.level && skill.years && <span> • </span>}
-                  {skill.years && <span>{skill.years} years</span>}
+        <div className="space-y-4">
+          {category.skills.map((skill, index) => {
+            const percentage = getLevelPercentage(skill.level);
+            return (
+              <div key={index} className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="font-medium">{skill.name}</span>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    {skill.level && (
+                      <span className="capitalize">{skill.level}</span>
+                    )}
+                    {skill.years && (
+                      <span className="rounded-full bg-primary/10 px-2 py-0.5">
+                        {skill.years}y
+                      </span>
+                    )}
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+                <div className="relative h-2 overflow-hidden rounded-full bg-secondary">
+                  <div
+                    className="h-full bg-gradient-to-r from-primary to-primary/80 transition-all duration-1000 ease-out"
+                    style={{
+                      width: isVisible ? `${percentage}%` : '0%',
+                      transitionDelay: `${index * 100}ms`,
+                    }}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </CardContent>
     </Card>

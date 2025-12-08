@@ -16,20 +16,28 @@ export function PublicationsSection({
   const otherPublications = data.publications.filter((pub) => !pub.featured);
 
   const renderPublication = (publication: Publication) => (
-    <Card key={publication.id} className="mb-6">
+    <Card
+      key={publication.id}
+      className="group mb-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+    >
       <CardHeader>
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
-            <CardTitle className="text-xl leading-tight">
+            <CardTitle className="text-xl leading-tight transition-colors group-hover:text-primary">
               {publication.title}
             </CardTitle>
             <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-              <span className="rounded-full bg-primary/10 px-3 py-1 font-medium text-primary">
+              <span className="rounded-full bg-primary/10 px-3 py-1 font-medium text-primary transition-all group-hover:bg-primary/20">
                 {publication.type}
               </span>
               <span>{publication.year}</span>
               {publication.status && publication.status !== 'published' && (
                 <span className="italic">({publication.status})</span>
+              )}
+              {publication.featured && (
+                <span className="rounded-full bg-yellow-500/10 px-3 py-1 text-xs font-semibold text-yellow-600 dark:text-yellow-400">
+                  Featured
+                </span>
               )}
             </div>
           </div>
@@ -38,7 +46,7 @@ export function PublicationsSection({
       <CardContent className="space-y-4">
         {publication.venue && (
           <div className="flex items-start gap-2">
-            <BookOpen className="mt-1 h-4 w-4 flex-shrink-0 text-muted-foreground" />
+            <BookOpen className="mt-1 h-4 w-4 flex-shrink-0 text-muted-foreground transition-transform group-hover:scale-110" />
             <span className="text-sm italic text-muted-foreground">
               {publication.venue}
             </span>
@@ -59,7 +67,7 @@ export function PublicationsSection({
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-md bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/80"
+                className="inline-flex items-center gap-1 rounded-md bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground transition-all hover:scale-105 hover:bg-secondary/80 hover:shadow-md"
               >
                 {link.type === 'doi' && <FileText className="h-3 w-3" />}
                 {link.type === 'pdf' && <FileText className="h-3 w-3" />}

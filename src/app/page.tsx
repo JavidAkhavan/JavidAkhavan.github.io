@@ -18,6 +18,7 @@ import { ContactSection } from '@/modules/contact';
 import { SidebarNav } from '@/core/components/SidebarNav';
 import { ResearchMetrics } from '@/core/components/ResearchMetrics';
 import { ScrollToTop } from '@/core/components/ScrollToTop';
+import { SocialProofBadges } from '@/core/components/SocialProofBadges';
 
 export default function Home() {
   const content = getContent().getSiteContent();
@@ -45,11 +46,12 @@ export default function Home() {
       <ScrollToTop />
       <main className="min-h-screen">
         {enabledModules.map((module) => {
-          // Insert ResearchMetrics after Hero section
+          // Insert SocialProofBadges and ResearchMetrics after Hero section
           if (module.id === 'hero') {
             return (
-              <React.Fragment key="hero-with-metrics">
+              <React.Fragment key="hero-with-enhancements">
                 {moduleComponents[module.id]}
+                <SocialProofBadges />
                 <ResearchMetrics />
               </React.Fragment>
             );
