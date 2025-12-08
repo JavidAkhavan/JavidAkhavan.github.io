@@ -62,8 +62,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Javid Akhavan - PhD in Robotics & AI',
-    description:
-      'PhD in Robotics & AI | ML Engineer | 6+ years experience | Green Card holder',
+    description: 'PhD in Robotics & AI | ML Engineer | 6+ years experience',
     images: ['/profile.jpg'],
   },
   robots: {

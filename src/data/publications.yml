@@ -1,0 +1,605 @@
+profile:
+  name: Javid Akhavan
+  affiliation: Stevens Institute of Technology
+  scholar_id: hTwbmPUAAAAJ
+  citations: 294
+  h_index: 9
+  i10_index: 7
+publications:
+  - id: pub-blknAaTinKkC
+    title: >-
+      MIMO system identification and uncertainty calibration with a limited amount of data using
+      transfer learning
+    authors:
+      - Mostafa Rahmani Dehaghani
+      - Pouyan Sajadi
+      - Yifan Tang
+      - J Akhavan
+      - G Gary Wang
+    venue: International Journal of Systems Science
+    year: 2025
+    citations: 3
+    abstract: >-
+      Multiple-input multiple-output (MIMO) systems are fundamental in numerous advanced engineering
+      applications, from aerospace to telecommunications, where precise system identification is
+      critical for optimal performance. However, the identification of such systems often faces
+      significant hurdles due to data scarcity, with existing approaches typically requiring
+      substantial amounts of data for effective training. Addressing this challenge, this paper
+      introduces a novel transfer learning framework designed specifically for MIMO system
+      identification under conditions of limited data and inherent uncertainties. The proposed
+      framework is applied to two case studies: the first in metal additive manufacturing,
+      specifically the laser-blown powder-directed energy deposition as the source domain and the
+      laser hot wire-directed energy deposition as the target domain, and the second involving a
+      nonlinear case study of a …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://www.tandfonline.com/doi/abs/10.1080/00207721.2024.2408526
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=2230014495767493689
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 56, No. 3
+    pageInfo: pp. 598-617
+  - id: pub-O3NaXMp0MMsC
+    title: Enhancing Surface Quality in Hybrid FFF Using Real-Time Monitoring and Point Cloud Analysis
+    authors:
+      - Javid Akhavan
+      - Chaitanya Krishna Vallabh
+      - Souran Manoochehri
+    venue: ''
+    year: 2025
+    citations: 0
+    abstract: >-
+      This study presents an active surface quality enhancement methodology for Fused Filament
+      Fabrication (FFF), leveraging a laser engraver module to address real-time surface quality
+      issues. Typical FFF prints suffer from surface quality issues such as uneven surfaces, rough
+      surfaces, and stringing. Traditional passive quality control methods, which mainly focus on
+      adjusting process parameters for future print layers to mitigate anomalies, often fail to
+      ensure consistent part quality and integrity. In contrast, the proposed active approach
+      integrates auxiliary equipment to detect and rectify surface deviations during fabrication,
+      improving overall process robustness. The developed system consists of a laser profilometer
+      and a laser engraver module integrated into the FFF printer. The methodology employs a laser
+      surface profilometer to acquire precise heightmap data, enabling the identification of surface
+      …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: >-
+          https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2025/89206/1225816
+        label: View Paper
+    featured: false
+    volumeInfo: Vol. 89206
+    pageInfo: pp. V02AT02A060
+  - id: pub-BqipwSGYUEgC
+    title: Online melt pool monitoring using a deep transformer image processing solution
+    authors:
+      - Javid Akhavan
+      - Jiaqi Lyu
+      - Souran Manoochehri
+    venue: 'Imaging Science: Computer Vision, Image and Signal Processing, Pattern Recognition'
+    year: 2025
+    citations: 0
+    abstract: >-
+      In the Industry 4.0 era, additive manufacturing (AM), particularly metal AM, has become a
+      transformative technology due to its ability to efficiently produce complex geometries.
+      Despite its potential, the industry still faces challenges in implementing robust real-time
+      process monitoring algorithms. Recent advancements highlight that melt pool (MP) signatures
+      during fabrication provide critical insights into process dynamics and quality. To capture
+      this data, sensory systems such as high-speed camera-based vision modules are utilized for
+      online monitoring. However, conventional analysis methods often struggle to process large
+      volumes of data simultaneously. While traditional image processing (ImP) techniques offer a
+      tunable approach, they present a trade-off between speed and accuracy, making them unsuitable
+      for dynamic applications like MP monitoring. This work proposes the tunable deep transformer
+      image processing (TDTIP) method, which integrates a hybrid convolutional auto-encoder (HCAE)
+      architecture with a vision transformer (ViT) framework to meet the real-time demands of
+      data-intensive monitoring. The model is trained in three phases: first, to replicate ImP
+      algorithms with tunable features; second, to incorporate MP geometries; and third, to evaluate
+      fabrication quality based on visual input and process parameters. TDTIP achieves over 94%
+      estimation accuracy, with an R2 score exceeding 96% for the estimation and isolation of
+      quality, geometry, and MP signatures. Additionally, the model processes data at an average
+      rate of 500 frames per second (fps), a dramatic improvement over the time-consuming
+      conventional methods …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: >-
+          https://books.google.com/books?hl=en&lr=&id=qyxiEQAAQBAJ&oi=fnd&pg=PA153&dq=info:2c8fpdWTbqYJ:scholar.google.com&ots=hZ4jjvf3VW&sig=i80-HPMeTiXSw4FP8KONoZFD9oQ
+        label: View Paper
+    featured: false
+    volumeInfo: Vol. 3
+    pageInfo: pp. 153
+  - id: pub-GnPB-g6toBAC
+    title: >-
+      Integration of Sensor Modules and Machine Learning Methods for Real-Time Quality Monitoring in
+      Additive Manufacturing
+    authors:
+      - Javid Akhavan
+    venue: ''
+    year: 2025
+    citations: 0
+    abstract: >-
+      Additive manufacturing (AM) has great advances in industries such as aerospace, healthcare,
+      and automotive, due to its capability to fabricate intricate parts through layer-by-layer
+      material deposition. Ensuring high-quality production remains a challenge due to the
+      complexity of AM processes and the lack of effective real-time monitoring and data analysis.
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: >-
+          https://search.proquest.com/openview/44abdfb58fa72547002932512675f577/1?pq-origsite=gscholar&cbl=18750&diss=y
+        label: View Paper
+    featured: false
+  - id: pub-e5wmG9Sq2KIC
+    title: >-
+      REAL-TIME PRINT TRACKING IN METAL ADDITIVE MANUFACTURING USING ACOUSTIC EMISSION SENSORS AND
+      VISION TRANSFORMER ALGORITHMS
+    authors:
+      - Javid Akhavan
+      - Ke Xu
+      - Chaitanya Krishna
+      - Prasad Vallabh
+      - Souran Manoochehri
+    venue: ''
+    year: 2024
+    citations: 3
+    abstract: >-
+      Directed Energy Deposition (DED) is an additive manufacturing (AM) method with applications in
+      the aerospace, automotive, and healthcare sectors. In such complex and high-stakes
+      applications, accurate and reliable monitoring is indispensable for assuring fabrication
+      quality. Conventional monitoring systems using mechanical encoders and optical devices have
+      limitations such as wear susceptibility and line-of-sight issues respectively, thereby
+      necessitating alternative monitoring systems. One crucial aspect often overlooked in
+      conventional monitoring systems is the real-time printing process tracking. Achieving high
+      accuracy in tracking is paramount for identifying and mitigating defects in real-time,
+      ultimately leading to improvements in fabrication quality. To address this problem, this
+      research employs acoustic emission sensors for real-time monitoring in Laser DED. These
+      sensors augment existing …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://asmedigitalcollection.asme.org/MSEC/proceedings-abstract/MSEC2024/88117/1203302
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=14391777866508133765
+        label: Google Scholar
+    featured: false
+  - id: pub-j3f4tGmQtD8C
+    title: >-
+      Binocular Model: A deep learning solution for online melt pool temperature analysis using
+      dual-wavelength Imaging Pyrometry
+    authors:
+      - Javid Akhavan
+      - Chaitanya Krishna Vallabh
+      - Xiayun Zhao
+      - Souran Manoochehri
+    venue: arXiv preprint arXiv:2408.11126
+    year: 2024
+    citations: 1
+    abstract: >-
+      In metal Additive Manufacturing (AM), monitoring the temperature of the Melt Pool (MP) is
+      crucial for ensuring part quality, process stability, defect prevention, and overall process
+      optimization. Traditional methods, are slow to converge and require extensive manual effort to
+      translate data into actionable insights, rendering them impractical for real-time monitoring
+      and control. To address this challenge, we propose an Artificial Intelligence (AI)-based
+      solution aimed at reducing manual data processing reliance and improving the efficiency of
+      transitioning from data to insight. In our study, we utilize a dataset comprising
+      dual-wavelength real-time process monitoring data and corresponding temperature maps. We
+      introduce a deep learning model called the "Binocular model," which exploits dual input
+      observations to perform a precise analysis of MP temperature in Laser Powder Bed Fusion
+      (L-PBF). Through advanced deep learning techniques, we seamlessly convert raw data into
+      temperature maps, significantly streamlining the process and enabling batch processing at a
+      rate of up to 750 frames per second, approximately 1000 times faster than conventional
+      methods. Our Binocular model achieves high accuracy in temperature estimation, evidenced by a
+      0.95 R-squared score, while simultaneously enhancing processing efficiency by a factor of 
+      times. This model directly addresses the challenge of real-time MP temperature monitoring and
+      offers insights into the encountered constraints and the benefits of our Deep Learning-based
+      approach. By combining efficiency and precision, our work contributes to the advancement of
+      temperature …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://arxiv.org/abs/2408.11126
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=13549542783498620549
+        label: Google Scholar
+    featured: false
+  - id: pub-3fE2CSJIrl8C
+    title: >-
+      A deep learning solution for real-time quality assessment and control in additive
+      manufacturing using point cloud data
+    authors:
+      - Javid Akhavan
+      - Jiaqi Lyu
+      - Souran Manoochehri
+    venue: Journal of Intelligent Manufacturing
+    year: 2023
+    citations: 68
+    abstract: >-
+      This work presents an in-situ quality assessment and improvement technique using point cloud
+      and AI for data processing and smart decision making in Additive Manufacturing (AM)
+      fabrication to improve the quality and accuracy of fabricated artifacts. The top surface
+      point-cloud containing top surface geometry and quality information is pre-processed and
+      passed to an improved deep Hybrid Convolutional Auto-Encoder decoder (HCAE) model used to
+      statistically describe the artifact's quality. The HCAE’s output is comprised of 9 × 9
+      segments, each including four channels with the segment's probability to contain one of four
+      labels, Under-printed, Normally-printed, Over-printed, or Empty region. This data structure
+      plays a significant role in command generation for fabrication process optimization. The
+      HCAE’s accuracy and repeatability were measured by a multi-label multi-output metric developed
+      in this study. The …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://link.springer.com/article/10.1007/s10845-023-02121-4
+        label: View Paper
+      - type: scholar
+        url: >-
+          https://scholar.google.com/scholar?hl=en&cites=14680061701551407096,1066850014767567962,17071237081284619596,17975989912205450792,4235692536778344515,15245406244350891153
+        label: Google Scholar
+    featured: false
+    pageInfo: pp. 1-18
+  - id: pub-hMod-77fHWUC
+    title: >-
+      Privacy-preserving federated learning: Application to behind-the-meter solar photovoltaic
+      generation forecasting
+    authors:
+      - Paniz Hosseini
+      - Saman Taheri
+      - Javid Akhavan
+      - Ali Razban
+    venue: Energy Conversion and Management
+    year: 2023
+    citations: 43
+    abstract: >-
+      The growing usage of decentralized renewable energy sources has made accurate estimation of
+      their aggregated generation crucial for maintaining grid flexibility and reliability. However,
+      the majority of distributed photovoltaic (PV) systems are behind-the-meter (BTM) and invisible
+      to utilities, leading to three challenges in obtaining an accurate forecast of their
+      aggregated output. Firstly, traditional centralized prediction algorithms used in previous
+      studies may not be appropriate due to privacy concerns. There is therefore a need for
+      decentralized forecasting methods, such as federated learning (FL), to protect privacy.
+      Secondly, there has been no comparison between localized, centralized, and decentralized
+      forecasting methods for BTM PV production, and the trade-off between prediction accuracy and
+      privacy has not been explored. Lastly, the computational time of data-driven prediction
+      algorithms has not been …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://www.sciencedirect.com/science/article/pii/S0196890423002467
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=16012180871804884596
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 283
+    pageInfo: pp. 116900
+  - id: pub-YFjsv_pBGBYC
+    title: Energy-aware workflow scheduling in fog computing using a hybrid chaotic algorithm
+    authors:
+      - Ali Mohammadzadeh
+      - Mahdi Akbari Zarkesh
+      - Pouria Haji Shahmohamd
+      - Javid Akhavan
+      - Amit Chhabra
+    venue: The Journal of Supercomputing
+    year: 2023
+    citations: 32
+    abstract: >-
+      Fog computing paradigm attempts to provide diverse processing at the edge of IoT networks.
+      Energy usage being one of the important elements that may have a direct influence on the
+      performance of fog environment. Effective scheduling systems, in which activities are mapped
+      on the greatest feasible resources to meet various competing priorities, can reduce energy
+      use. Consequently, a hybrid discrete optimization method called HDSOS-GOA, which uses the
+      Dynamic voltage and frequency scaling (DVFS) approach, is proposed to handle scientific
+      workflow scheduling challenges in the fog computing environment. HDSOS-GOA combines the search
+      qualities of Symbiotic Organisms Search (SOS) and the Grasshopper Optimization Algorithm (GOA)
+      algorithms and the selection of these algorithms for performing workflow scheduling is based
+      on the probability calculated by the learning automata. The HEFT …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://link.springer.com/article/10.1007/s11227-023-05330-z
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=17802376050063514998
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 79, No. 16
+    pageInfo: pp. 18569-18604
+  - id: pub-YOwf2qJgpHMC
+    title: >-
+      Thermal history based prediction of interlayer bond strength in parts manufactured by material
+      extrusion additive manufacturing
+    authors:
+      - Youmna Mahmoud
+      - Jiaqi Lyu
+      - Javid Akhavan
+      - Ke Xu
+      - Souran Manoochehri
+    venue: The International Journal of Advanced Manufacturing Technology
+    year: 2023
+    citations: 11
+    abstract: >-
+      Material extrusion additive manufacturing, also known as fused filament fabrication (FFF), is
+      currently one of the most widely used technologies. Although promising, the technology is
+      prone to several defects including poor surface quality, low dimensional accuracy, and
+      inadequate mechanical performance caused by weak bonds between successively deposited layers.
+      Studies have shown that bonding between filaments forms above the material’s glass transition
+      temperature which makes it essential to study the thermal history of the printing process.
+      Since interlayer bonding is thermally driven, this study has focused on the development of a
+      regression model to predict the average interlayer bonding strength of a part using the
+      thermal history of the printed layers and the process parameter settings. The process
+      parameters studied are deposition temperature, print speed, and layer thickness. This study
+      relies on …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://link.springer.com/article/10.1007/s00170-023-11364-7
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=13322910120559861540
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 126, No. 9
+    pageInfo: pp. 3813-3829
+  - id: pub-7PzlFSSx8tAC
+    title: >-
+      Dataset of in-situ coaxial monitoring and print’s cross-section images by Direct Energy
+      Deposition fabrication
+    authors:
+      - Javid Akhavan
+      - Jiaqi Lyu
+      - Youmna Mahmoud
+      - Ke Xu
+      - Chaitanya Krishna Prasad Vallabh
+      - Souran Manoochehri
+    venue: Scientific Data
+    year: 2023
+    citations: 9
+    abstract: >-
+      Coaxial monitoring of the Direct Energy Deposition (DED) machines enables a real-time material
+      deposition study. Coaxial-images contain substantial melt-pool information and incorporate
+      situational information including the sparks’ intensity, numbers, etc. Recent studies have
+      shown that melt-pool observations correlate directly with machine parameters and artifact
+      properties. Therefore, the melt-pool information not only can assist in measuring the
+      machine’s working condition and determining machine operation parameters’ reliability but also
+      facilitates the deposition characteristics studies like print’s regime and dimensions. This
+      information is gathered during the fabrication and can be expanded to perform various process
+      studies and fault registration. This paper utilizes the Optomec DED machine to fabricate
+      single-track prints with multiple process parameters, while a coaxial camera records the
+      deposition …
+    type: dataset
+    status: published
+    links:
+      - type: other
+        url: https://www.nature.com/articles/s41597-023-02672-4
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=1322066105832355443
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 10, No. 1
+    pageInfo: pp. 776
+  - id: pub-4TOpqqG69KYC
+    title: >-
+      Real-time monitoring and Gaussian process-based estimation of the melt pool profile in direct
+      energy deposition
+    authors:
+      - Jiaqi Lyu
+      - Javid Akhavan
+      - Youmna Mahmoud
+      - Ke Xu
+      - Chaitanya Krishna Prasad Vallabh
+      - Souran Manoochehri
+    venue: ''
+    year: 2023
+    citations: 9
+    abstract: >-
+      A comprehensive understanding of the melt pool behavior during directed energy deposition
+      (DED) has become essential in identifying process anomalies and controlling the process
+      quality. Previous studies focused on predicting the melt pool characteristics by solely using
+      the process parameters, in this study we use real-time melt pool images to predict the melt
+      pool characteristics. A CMOS camera is used to capture coaxial images of the melt pool during
+      the deposition of single-track prints to improve the prediction model.Multiple regression
+      models are trained and compared to estimate the melt pool profile (width, depth, and height)
+      as a function of process parameters (namely, the laser power, the powder feed rate, and the
+      scanning speed) and features from the ellipse fitting of the real-time melt pool images. A
+      novel image processing algorithm is proposed to extract the major axis, minor axis, and tilt …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://asmedigitalcollection.asme.org/MSEC/proceedings-abstract/MSEC2023/87233/1168676
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=11713177483264229592
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 87233
+    pageInfo: pp. V001T01A024
+  - id: pub-NMxIlDl6LWMC
+    title: >-
+      Wavelet-artificial neural network to predict the acetone sensing by indium oxide/iron oxide
+      nanocomposites
+    authors:
+      - Reza Iranmanesh
+      - Afham Pourahmad
+      - Danial Soltani Shabestani
+      - Seyed Sajjad Jazayeri
+      - Hamed Sadeqi
+      - Javid Akhavan
+      - Abdelouahed Tounsi
+    venue: Scientific Reports
+    year: 2023
+    citations: 8
+    abstract: >-
+      This study applies a hybridized wavelet transform-artificial neural network (WT-ANN) model to
+      simulate the acetone detecting ability of the Indium oxide/Iron oxide (In2O3/Fe2O3)
+      nanocomposite sensors. The WT-ANN has been constructed to extract the sensor resistance ratio
+      (SRR) in the air with respect to the acetone from the nanocomposite chemistry, operating
+      temperature, and acetone concentration. The performed sensitivity analyses demonstrate that a
+      single hidden layer WT-ANN with nine nodes is the highest accurate model for automating the
+      acetone-detecting ability of the In2O3/Fe2O3 sensors. Furthermore, the genetic algorithm has
+      fine-tuned the shape-related parameters of the B-spline wavelet transfer function. This model
+      accurately predicts the SRR of the 119 nanocomposite sensors with a mean absolute error of
+      0.7, absolute average relative deviation of 10.12%, root mean squared error of 1.14 …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://www.nature.com/articles/s41598-023-29898-x
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=17539696783416194137
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 13, No. 1
+    pageInfo: pp. 4266
+  - id: pub-MXK_kJrjxJIC
+    title: 'TDIP: Tunable Deep Image Processing, a Real Time Melt Pool Monitoring Solution'
+    authors:
+      - Javid Akhavan
+      - Youmna Mahmoud
+      - Ke Xu
+      - Jiaqi Lyu
+      - Souran Manoochehri
+    venue: ''
+    year: 2023
+    citations: 3
+    abstract: >-
+      In the era of Industry 4.0, Additive Manufacturing (AM), particularly metal AM, has emerged as
+      a significant contributor due to its innovative and cost-effective approach to fabricate
+      highly intricate geometries. Despite its potential, this industry still lacks real-time
+      capable process monitoring algorithms. Recent advancements in this field suggest that Melt
+      Pool (MP) signatures during the fabrication process contain crucial information about process
+      dynamics and quality. To obtain this information, various sensory approaches, such as
+      high-speed cameras-based vision modules are employed for online fabrication monitoring.
+      However, many conventional in-depth analyses still cannot process all the recorded data
+      simultaneously. Although conventional Image Processing (ImP) solutions provide a targeted
+      tunable approach, they pose a trade-off between convergence certainty and convergence speed.
+      As a result …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://ieeexplore.ieee.org/abstract/document/10487391/
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=3107200446821147366
+        label: Google Scholar
+    featured: false
+  - id: pub-zYLM7Y9cAGgC
+    title: >-
+      Sensory Data Fusion Using Machine Learning Methods For In-Situ Defect Registration In Additive
+      Manufacturing: A Review
+    authors:
+      - Javid Akhavan
+      - Souran Manoochehri
+    venue: ''
+    year: 2022
+    citations: 51
+    abstract: >-
+      In-situ control to predict and mitigate defects in Additive Manufacturing (AM) could
+      significantly increase these technologies’ quality and reliability. Thorough knowledge of the
+      AM processes is needed to develop such a controller. Recent studies utilized various methods
+      to acquire data from the process, build insight into the process, and detect anomalies within
+      the process. However, each sensory method has its unique limitations and capabilities. Sensor
+      fusion techniques based on Machine Learning (ML) methods can combine all the data acquisition
+      sources to form a holistic monitoring system for better data aggregation and enhanced
+      detection. This holistic approach could also be used to train a controller on top of the
+      fusion system to master the AM production and increase its reliance. This article summarizes
+      recent studies on sensor utilization, followed by ML-based sensor fusion and control
+      strategies.
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: https://ieeexplore.ieee.org/abstract/document/9795815/
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=10955966904538255023,9395448782778865694
+        label: Google Scholar
+    featured: false
+    pageInfo: pp. 1-10
+  - id: pub-UeHWp8X0CEIC
+    title: >-
+      Image-based dataset of artifact surfaces fabricated by additive manufacturing with
+      applications in machine learning
+    authors:
+      - Jiaqi Lyu
+      - Javid Akhavan
+      - Souran Manoochehri
+    venue: Data in brief
+    year: 2022
+    citations: 24
+    abstract: >-
+      Fused Deposition Modeling (FDM), also known as Fused Filament Fabrication (FFF), is the most
+      widely used type of Additive Manufacturing (AM) technology at the consumer level. This
+      technology severely suffers from a lack of online quality assessment and process adjustment.
+      To fill up this gap, a high-speed 2D Laser Profiler KEYENCE LJ-V7000 series is equipped above
+      an FDM machine and performs a scan after each print layer. The point cloud of the upper
+      surface will be processed and transformed into a 2D depth map to analyze the in-plane
+      anomalies during the FDM fabrication process. The author used the above data to categorize the
+      surface quality into four categories: under printing, over printing, normal, and empty
+      regions. The author showed the effectiveness of data in detecting print anomalies, and further
+      work can be done to show the application of more advanced algorithms towards a better …
+    type: dataset
+    status: published
+    links:
+      - type: other
+        url: https://www.sciencedirect.com/science/article/pii/S2352340922000646
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=14971573496391509529
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 41
+    pageInfo: pp. 107852
+  - id: pub-qjMakFHDy7sC
+    title: >-
+      In-situ laser-based process monitoring and in-plane surface anomaly identification for
+      additive manufacturing using point cloud and machine learning
+    authors:
+      - Jiaqi Lyu
+      - Javid Akhavan
+      - Souran Manoochehri
+    venue: ''
+    year: 2021
+    citations: 29
+    abstract: >-
+      Additive Manufacturing (AM) is a trending technology with great potential in manufacturing.
+      In-situ process monitoring is a critical part of quality assurance for AM process. Anomalies
+      need to be identified early to avoid further deterioration of the part quality. This paper
+      presents an in-situ laser-based process monitoring and anomaly identification system to assure
+      fabrication quality of Fused Filament Fabrication (FFF) machine. The proposed data processing
+      and communication architecture of the monitoring system establishes the data transformation
+      between workstation, FFF machine, and laser scanner control system. The data processing
+      performs calibration, filtering, and segmentation for the point cloud of each layer acquired
+      from a 3D laser scanner during the fabrication process. The point cloud dataset with in-plane
+      surface depth information is converted into a 2D depth image. Each depth image is discretized
+      …
+    type: conference
+    status: published
+    links:
+      - type: other
+        url: >-
+          https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2021/85376/1128410
+        label: View Paper
+      - type: scholar
+        url: https://scholar.google.com/scholar?hl=en&cites=9829887100886130033
+        label: Google Scholar
+    featured: false
+    volumeInfo: Vol. 85376
+    pageInfo: pp. V002T02A030

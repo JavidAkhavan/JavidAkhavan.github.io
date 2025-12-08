@@ -60,9 +60,7 @@ export function CertificatesSection({
               <CertificateCard key={certificate.id} certificate={certificate} />
             ))
           ) : (
-            <p className="text-muted-foreground">
-              No certificates available.
-            </p>
+            <p className="text-muted-foreground">No certificates available.</p>
           )}
         </div>
       </div>

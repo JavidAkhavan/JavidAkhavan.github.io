@@ -30,7 +30,7 @@
 ### 3. **Social Proof Badges** 🏆
 
 - "Perfect 4.0 GPA" badge
-- "Stevens Institute PhD Candidate" badge
+- "Stevens Institute Ph.D." badge
 - "GC - Immediate Start" badge
 - **Impact**: Key qualifications stand out immediately
 - **Effort**: 20 minutes

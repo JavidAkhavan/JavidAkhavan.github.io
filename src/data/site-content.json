@@ -41,10 +41,10 @@
   },
   "about": {
     "heading": "About Me",
-    "bio": "I am a PhD candidate in Robotics and Artificial Intelligence at Stevens Institute of Technology, with a strong focus on developing autonomous systems for smart manufacturing. My research integrates Mechanical Engineering, Computer Science, and Electrical Engineering expertise to create self-aware automated manufacturing systems aligned with Industry 4.0. I have extensive hands-on experience in Computer Vision, Deep Learning, and Reinforcement Learning, with proven ability to consistently achieve results in both academic research and industrial applications.",
+    "bio": "I am a Machine Learning Engineer with extensive experience and Ph.D. in Robotics and Artificial Intelligence from Stevens Institute of Technology, with a strong focus on developing autonomous systems for smart manufacturing. My research integrates Mechanical Engineering, Computer Science, and Electrical Engineering expertise to create self-aware automated manufacturing systems aligned with Industry 4.0. I have extensive hands-on experience in Computer Vision, Deep Learning, and Reinforcement Learning, with proven ability to consistently achieve results in both academic research and industrial applications.",
     "image": {
       "src": "/profile.jpg",
-      "alt": "Javid Akhavan - PhD Candidate in Robotics & AI"
+      "alt": "Javid Akhavan - Ph.D. in Robotics & AI"
     },
     "highlights": [
       "PhD in Robotics & AI from Stevens Institute of Technology (GPA: 4.0/4.0)",
@@ -195,9 +195,7 @@
       "startDate": "2019",
       "endDate": "2021",
       "gpa": "4.0",
-      "honors": [
-        "Perfect 4.0 GPA"
-      ],
+      "honors": ["Perfect 4.0 GPA"],
       "coursework": [
         "Machine Learning",
         "Robotics",
@@ -213,9 +211,7 @@
       "startDate": "2021",
       "endDate": "2022",
       "gpa": "4.0",
-      "honors": [
-        "Perfect 4.0 GPA"
-      ],
+      "honors": ["Perfect 4.0 GPA"],
       "coursework": [
         "Deep Neural Networks",
         "Statistical Learning",

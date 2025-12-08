@@ -60,7 +60,9 @@ export function AboutSection({ data, className = '' }: AboutSectionProps) {
 
             {data.interests && data.interests.length > 0 && (
               <div className="mt-6 border-t pt-6">
-                <h3 className="mb-4 text-xl font-semibold">Research Interests</h3>
+                <h3 className="mb-4 text-xl font-semibold">
+                  Research Interests
+                </h3>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {data.interests.map((interest, index) => (
                     <div

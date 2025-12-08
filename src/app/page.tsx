@@ -23,10 +23,14 @@ import { ScrollToTop } from '@/core/components/ScrollToTop';
 import { SocialProofBadges } from '@/core/components/SocialProofBadges';
 import { certificatesData } from '@/data/certificates';
 import { testScoresData, transcriptUrl } from '@/data/test-scores';
+import { loadPublications } from '@/lib/publications-loader';
 
 export default function Home() {
   const content = getContent().getSiteContent();
   const enabledModules = getEnabledModules();
+
+  // Load publications from YAML
+  const publicationsYamlData = loadPublications();
 
   const moduleComponents: Record<string, React.ReactNode> = {
     hero: <HeroSection key="hero" data={content.hero} />,
@@ -38,7 +42,16 @@ export default function Home() {
     skills: <SkillsSection key="skills" data={content.skills} />,
     projects: <ProjectsSection key="projects" data={content.projects} />,
     publications: (
-      <PublicationsSection key="publications" data={content.publications} />
+      <PublicationsSection
+        key="publications"
+        data={{
+          heading: 'Publications',
+          description:
+            'Selected publications from my research in additive manufacturing, machine learning, and quality control.',
+          publications: publicationsYamlData.publications,
+          profile: publicationsYamlData.profile,
+        }}
+      />
     ),
     teaching: <TeachingSection key="teaching" data={content.teaching} />,
     certificates: (

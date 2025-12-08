@@ -28,8 +28,8 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
     try {
       // Submit to Formspree - replace with your Formspree endpoint
       // Get your endpoint at: https://formspree.io/
-      const formspreeEndpoint = 'https://formspree.io/f/xpwvjljw'
-            const response = await fetch(formspreeEndpoint, {
+      const formspreeEndpoint = 'https://formspree.io/f/xpwvjljw';
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
