@@ -7,6 +7,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
 import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
@@ -117,9 +118,19 @@ export function Header({
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-3 text-2xl font-bold text-foreground hover:text-primary transition-colors group"
           >
-            {logo}
+            <div className="relative w-10 h-10 transition-transform group-hover:scale-110">
+              <Image
+                src="/logo.svg"
+                alt="Javid Akhavan Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span className="hidden sm:inline">{logo}</span>
           </Link>
 
           {/* Desktop Navigation */}
