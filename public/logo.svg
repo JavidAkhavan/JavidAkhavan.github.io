@@ -1,29 +1,21 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Circle -->
-  <circle cx="100" cy="100" r="95" fill="#1e40af" opacity="0.1"/>
-  
-  <!-- Outer Ring -->
-  <circle cx="100" cy="100" r="85" fill="none" stroke="#1e40af" stroke-width="2" opacity="0.3"/>
-  
-  <!-- Neural Network Nodes (representing AI/ML) -->
-  <circle cx="70" cy="70" r="8" fill="#1e40af"/>
-  <circle cx="130" cy="70" r="8" fill="#1e40af"/>
-  <circle cx="70" cy="130" r="8" fill="#1e40af"/>
-  <circle cx="130" cy="130" r="8" fill="#1e40af"/>
-  <circle cx="100" cy="100" r="12" fill="#1e40af"/>
-  
-  <!-- Connections (Neural Network) -->
-  <line x1="70" y1="70" x2="100" y2="100" stroke="#1e40af" stroke-width="2" opacity="0.6"/>
-  <line x1="130" y1="70" x2="100" y2="100" stroke="#1e40af" stroke-width="2" opacity="0.6"/>
-  <line x1="70" y1="130" x2="100" y2="100" stroke="#1e40af" stroke-width="2" opacity="0.6"/>
-  <line x1="130" y1="130" x2="100" y2="100" stroke="#1e40af" stroke-width="2" opacity="0.6"/>
-  
-  <!-- Initials JA -->
-  <text x="100" y="110" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#1e40af" text-anchor="middle">JA</text>
-  
-  <!-- Decorative Tech Elements -->
-  <path d="M 40 100 L 60 100" stroke="#1e40af" stroke-width="2" opacity="0.4"/>
-  <path d="M 140 100 L 160 100" stroke="#1e40af" stroke-width="2" opacity="0.4"/>
-  <path d="M 100 40 L 100 60" stroke="#1e40af" stroke-width="2" opacity="0.4"/>
-  <path d="M 100 140 L 100 160" stroke="#1e40af" stroke-width="2" opacity="0.4"/>
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { 
+      fill: #000000; 
+    }
+    @media (prefers-color-scheme: dark) {
+      .logo-text { 
+        fill: #ffffff; 
+      }
+    }
+  </style>
+  <text 
+    x="40" 
+    y="55" 
+    font-family="Georgia, 'Times New Roman', serif" 
+    font-size="48" 
+    font-weight="400"
+    text-anchor="middle" 
+    class="logo-text"
+    letter-spacing="-2">JA</text>
 </svg>

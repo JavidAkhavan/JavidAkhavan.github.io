@@ -118,19 +118,19 @@ export function Header({
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 text-2xl font-bold text-foreground hover:text-primary transition-colors group"
+            className="flex items-center gap-2 text-2xl font-bold text-foreground hover:text-primary transition-colors group"
           >
-            <div className="relative w-10 h-10 transition-transform group-hover:scale-110">
+            <div className="relative w-12 h-12 transition-transform group-hover:scale-105">
               <Image
                 src="/logo.svg"
-                alt="Javid Akhavan Logo"
-                width={40}
-                height={40}
-                className="object-contain"
+                alt="Javid Akhavan"
+                width={48}
+                height={48}
+                className="object-contain dark:invert-0"
                 priority
               />
             </div>
-            <span className="hidden sm:inline">{logo}</span>
+            <span className="hidden sm:inline font-serif">{logo}</span>
           </Link>
 
           {/* Desktop Navigation */}

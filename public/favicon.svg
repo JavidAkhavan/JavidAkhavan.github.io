@@ -1,14 +1,28 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="32" height="32" rx="4" fill="#1e40af"/>
-  
-  <!-- Simplified Neural Network -->
-  <circle cx="10" cy="10" r="1.5" fill="white" opacity="0.6"/>
-  <circle cx="22" cy="10" r="1.5" fill="white" opacity="0.6"/>
-  <circle cx="10" cy="22" r="1.5" fill="white" opacity="0.6"/>
-  <circle cx="22" cy="22" r="1.5" fill="white" opacity="0.6"/>
-  <circle cx="16" cy="16" r="2" fill="white"/>
-  
-  <!-- Initials -->
-  <text x="16" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">JA</text>
+  <style>
+    .favicon-text { 
+      fill: #ffffff; 
+    }
+    .favicon-bg { 
+      fill: #000000; 
+    }
+    @media (prefers-color-scheme: dark) {
+      .favicon-text { 
+        fill: #000000; 
+      }
+      .favicon-bg { 
+        fill: #ffffff; 
+      }
+    }
+  </style>
+  <rect width="32" height="32" rx="4" class="favicon-bg"/>
+  <text 
+    x="16" 
+    y="23" 
+    font-family="Georgia, 'Times New Roman', serif" 
+    font-size="16" 
+    font-weight="400"
+    text-anchor="middle" 
+    class="favicon-text"
+    letter-spacing="-1">JA</text>
 </svg>
