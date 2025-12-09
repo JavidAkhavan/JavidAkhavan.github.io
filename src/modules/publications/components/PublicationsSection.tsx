@@ -131,13 +131,13 @@ export function PublicationsSection({
         <div className="flex flex-col sm:flex-row">
           {/* Publication Image */}
           {publication.image && (
-            <div className="relative h-48 w-full flex-shrink-0 overflow-hidden bg-muted sm:h-auto sm:w-48">
+            <div className="relative h-48 w-full flex-shrink-0 overflow-hidden bg-muted p-2 sm:h-auto sm:w-56">
               <Image
                 src={publication.image}
                 alt={publication.title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, 192px"
+                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 224px"
               />
             </div>
           )}
