@@ -109,9 +109,7 @@ export function SkillsSection({ data, className = '' }: SkillsSectionProps) {
             ))}
           </StaggeredList>
         ) : (
-          <p className="text-muted-foreground">
-            No skills entries available.
-          </p>
+          <p className="text-muted-foreground">No skills entries available.</p>
         )}
       </div>
     </section>
