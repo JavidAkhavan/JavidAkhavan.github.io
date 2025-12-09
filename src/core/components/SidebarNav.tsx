@@ -18,6 +18,8 @@ import {
   Mail,
   Award,
   FileText,
+  Menu,
+  X,
 } from 'lucide-react';
 
 interface NavItem {
