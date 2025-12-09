@@ -98,19 +98,21 @@ export function SkillsSection({ data, className = '' }: SkillsSectionProps) {
         <ScrollAnimation animation="fade">
           <h2 className="mb-8 text-3xl font-bold">Skills</h2>
         </ScrollAnimation>
-        <div className="grid gap-6 md:grid-cols-2">
-          {data.length > 0 ? (
-            <StaggeredList animation="slide-up" staggerDelay={120}>
-              {data.map((category) => (
-                <SkillCategoryCard key={category.id} category={category} />
-              ))}
-            </StaggeredList>
-          ) : (
-            <p className="text-muted-foreground">
-              No skills entries available.
-            </p>
-          )}
-        </div>
+        {data.length > 0 ? (
+          <StaggeredList
+            animation="slide-up"
+            staggerDelay={120}
+            className="grid gap-6 md:grid-cols-2"
+          >
+            {data.map((category) => (
+              <SkillCategoryCard key={category.id} category={category} />
+            ))}
+          </StaggeredList>
+        ) : (
+          <p className="text-muted-foreground">
+            No skills entries available.
+          </p>
+        )}
       </div>
     </section>
   );

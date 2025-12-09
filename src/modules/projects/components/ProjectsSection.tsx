@@ -104,13 +104,15 @@ export function ProjectsSection({
             <ScrollAnimation animation="slide-up" delay={200}>
               <h3 className="mb-4 text-xl font-semibold">Featured Projects</h3>
             </ScrollAnimation>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <StaggeredList animation="scale" staggerDelay={100}>
-                {featuredProjects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
-              </StaggeredList>
-            </div>
+            <StaggeredList
+              animation="scale"
+              staggerDelay={100}
+              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            >
+              {featuredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </StaggeredList>
           </div>
         )}
 
@@ -121,13 +123,15 @@ export function ProjectsSection({
                 <h3 className="mb-4 text-xl font-semibold">Other Projects</h3>
               </ScrollAnimation>
             )}
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <StaggeredList animation="scale" staggerDelay={100}>
-                {otherProjects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
-              </StaggeredList>
-            </div>
+            <StaggeredList
+              animation="scale"
+              staggerDelay={100}
+              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            >
+              {otherProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </StaggeredList>
           </div>
         )}
 
