@@ -1,130 +1,181 @@
 /**
  * Home Page
- * Renders all enabled modules from the module registry
+ * Clean and focused landing page with hero, about, quick links, and contact
  */
 
 import React from 'react';
 import { getContent } from '@/lib/content-adapter';
-import { getEnabledModules } from '@/registry/module-registry';
 import { HeroSection } from '@/modules/hero';
 import { AboutSection } from '@/modules/about';
-import { ExperienceSection } from '@/modules/experience';
-import { EducationSection } from '@/modules/education';
-import { SkillsSection } from '@/modules/skills';
-import { ProjectsSection } from '@/modules/projects';
-import { PublicationsSection } from '@/modules/publications';
-import { TeachingSection } from '@/modules/teaching';
 import { ContactSection } from '@/modules/contact';
-import { CertificatesSection } from '@/modules/certificates';
-import { TestScoresSection } from '@/modules/test-scores';
 import { SidebarNav } from '@/core/components/SidebarNav';
-import { ResearchMetrics } from '@/core/components/ResearchMetrics';
 import { ScrollToTop } from '@/core/components/ScrollToTop';
 import { SocialProofBadges } from '@/core/components/SocialProofBadges';
-import { certificatesData } from '@/data/certificates';
-import { testScoresData, transcriptUrl } from '@/data/test-scores';
-import { loadPublications } from '@/lib/publications-loader';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
+import { ScrollAnimation } from '@/core';
+import {
+  GraduationCap,
+  Briefcase,
+  FileText,
+  Code,
+  BookOpen,
+  Award,
+} from 'lucide-react';
 
 export default function Home() {
   const content = getContent().getSiteContent();
-  const enabledModules = getEnabledModules();
 
-  // Load publications from YAML
-  const publicationsYamlData = loadPublications();
-
-  // Calculate dynamic metrics from data
-  const totalPublications = publicationsYamlData.publications.length;
-  const featuredPublications = publicationsYamlData.publications.filter(
-    (pub) => pub.featured
-  ).length;
-
-  // Extract years of experience from experience data
+  // Calculate years of experience
   const currentYear = new Date().getFullYear();
   const firstJobYear = content.experience[0]?.startDate
     ? parseInt(content.experience[0].startDate.split(' ')[1])
-    : currentYear - 6; // fallback to 6 years
+    : currentYear - 6;
   const yearsExperience = currentYear - firstJobYear;
 
   // Extract education info for badges
-  const phd = content.education.find(
-    (edu) => edu.degree === 'Doctor of Philosophy (Ph.D.)'
+  const phd = content.education.find((edu) =>
+    edu.degree.includes('Doctor of Philosophy')
   );
-
-  const moduleComponents: Record<string, React.ReactNode> = {
-    hero: <HeroSection key="hero" data={content.hero} />,
-    about: <AboutSection key="about" data={content.about} />,
-    experience: (
-      <ExperienceSection key="experience" data={content.experience} />
-    ),
-    education: <EducationSection key="education" data={content.education} />,
-    skills: <SkillsSection key="skills" data={content.skills} />,
-    projects: <ProjectsSection key="projects" data={content.projects} />,
-    publications: (
-      <PublicationsSection
-        key="publications"
-        data={{
-          heading: 'Publications',
-          description:
-            'Selected publications from my research in additive manufacturing, machine learning, and quality control.',
-          publications: publicationsYamlData.publications,
-          profile: publicationsYamlData.profile,
-        }}
-      />
-    ),
-    teaching: <TeachingSection key="teaching" data={content.teaching} />,
-    certificates: (
-      <CertificatesSection key="certificates" data={certificatesData} />
-    ),
-    'test-scores': (
-      <TestScoresSection
-        key="test-scores"
-        data={testScoresData}
-        transcriptUrl={transcriptUrl}
-      />
-    ),
-    contact: <ContactSection key="contact" data={content.contact} />,
-  };
 
   return (
     <>
       <SidebarNav />
       <ScrollToTop />
       <main className="min-h-screen">
-        {enabledModules.map((module) => {
-          // Insert SocialProofBadges and ResearchMetrics after Hero section
-          if (module.id === 'hero') {
-            return (
-              <React.Fragment key="hero-with-enhancements">
-                {moduleComponents[module.id]}
-                <SocialProofBadges
-                  education={{
-                    label: phd?.degree || 'PhD in Robotics & AI',
-                    highlight:
-                      phd?.institution || 'Stevens Institute of Technology',
-                  }}
-                  gpa={{
-                    label: `Perfect ${phd?.gpa || '4.0'} GPA`,
-                    highlight: 'Graduate Studies',
-                  }}
-                  experience={{
-                    label: `${yearsExperience}+ Years Experience`,
-                    highlight: 'ML & Computer Vision',
-                  }}
-                  location={{
-                    label: 'Based in NJ, USA',
-                    highlight: 'Immediate Start Available',
-                  }}
-                />
-                <ResearchMetrics
-                  totalPublications={totalPublications}
-                  featuredPublications={featuredPublications}
-                  yearsExperience={yearsExperience}
-                />
-              </React.Fragment>
-            );
-          }
-          return moduleComponents[module.id];
-        })}
+        {/* Hero Section */}
+        <HeroSection data={content.hero} />
+
+        {/* Social Proof Badges */}
+        <SocialProofBadges
+          education={{
+            label: phd?.degree || 'PhD in Robotics & AI',
+            highlight: phd?.institution || 'Stevens Institute of Technology',
+          }}
+          gpa={{
+            label: `Perfect ${phd?.gpa || '4.0'} GPA`,
+            highlight: 'Graduate Studies',
+          }}
+          experience={{
+            label: `${yearsExperience}+ Years Experience`,
+            highlight: 'ML & Computer Vision',
+          }}
+          location={{
+            label: 'Based in NJ, USA',
+            highlight: 'Immediate Start Available',
+          }}
+        />
+
+        {/* About Section */}
+        <AboutSection data={content.about} />
+
+        {/* Quick Links Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <ScrollAnimation animation="fade">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-4xl font-bold">Explore My Work</h2>
+                <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                  Discover my academic research, professional experience, and
+                  technical projects
+                </p>
+              </div>
+            </ScrollAnimation>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {/* Academic Profile Card */}
+              <ScrollAnimation animation="scale" delay={100}>
+                <Link href="/academic">
+                  <Card className="group h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <CardHeader>
+                      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-primary/10 transition-transform group-hover:scale-110">
+                        <GraduationCap className="h-8 w-8 text-primary" />
+                      </div>
+                      <CardTitle className="text-2xl transition-colors group-hover:text-primary">
+                        Academic Profile
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <p className="text-muted-foreground">
+                        Explore my research publications, educational
+                        background, teaching experience, and academic
+                        achievements
+                      </p>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <FileText className="h-4 w-4 text-primary" />
+                          <span>Research Publications & Papers</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <GraduationCap className="h-4 w-4 text-primary" />
+                          <span>PhD & Graduate Education</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <BookOpen className="h-4 w-4 text-primary" />
+                          <span>Teaching Experience</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Award className="h-4 w-4 text-primary" />
+                          <span>Test Scores & Certifications</span>
+                        </div>
+                      </div>
+                      <Button variant="outline" className="mt-4 w-full">
+                        View Academic Profile →
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </ScrollAnimation>
+
+              {/* Professional Profile Card */}
+              <ScrollAnimation animation="scale" delay={200}>
+                <Link href="/professional">
+                  <Card className="group h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <CardHeader>
+                      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-primary/10 transition-transform group-hover:scale-110">
+                        <Briefcase className="h-8 w-8 text-primary" />
+                      </div>
+                      <CardTitle className="text-2xl transition-colors group-hover:text-primary">
+                        Professional Profile
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <p className="text-muted-foreground">
+                        View my industry experience, technical skills, and
+                        professional projects in ML and software engineering
+                      </p>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <Briefcase className="h-4 w-4 text-primary" />
+                          <span>6+ Years Industry Experience</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Code className="h-4 w-4 text-primary" />
+                          <span>Technical Skills & Expertise</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <FileText className="h-4 w-4 text-primary" />
+                          <span>Professional Projects</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Award className="h-4 w-4 text-primary" />
+                          <span>Industry Certifications</span>
+                        </div>
+                      </div>
+                      <Button variant="outline" className="mt-4 w-full">
+                        View Professional Profile →
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </ScrollAnimation>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <ContactSection data={content.contact} />
       </main>
     </>
   );

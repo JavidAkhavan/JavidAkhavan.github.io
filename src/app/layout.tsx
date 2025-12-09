@@ -103,6 +103,12 @@ export default function RootLayout({
         >
           <Header
             logo="Javid Akhavan"
+            navItems={[
+              { label: 'Home', href: '/' },
+              { label: 'Academic', href: '/academic' },
+              { label: 'Professional', href: '/professional' },
+              { label: 'Contact', href: '#contact' },
+            ]}
             email={content.contact.email}
             phone={content.contact.phone}
             location="New Jersey, USA"
