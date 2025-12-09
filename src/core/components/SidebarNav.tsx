@@ -136,17 +136,18 @@ export function SidebarNav() {
         setActiveSection(visibleSections[0]!.id);
       } else {
         // If no section is directly in view, find the one closest to top
-        const closestSection = sections
-          .filter((s) => s !== null)
-          .reduce((closest, current) => {
+        const filteredSections = sections.filter((s) => s !== null);
+        if (filteredSections.length > 0) {
+          const closestSection = filteredSections.reduce((closest, current) => {
             if (!closest) return current;
             if (!current) return closest;
             return Math.abs(current.top) < Math.abs(closest.top)
               ? current
               : closest;
           });
-        if (closestSection) {
-          setActiveSection(closestSection.id);
+          if (closestSection) {
+            setActiveSection(closestSection.id);
+          }
         }
       }
     };
