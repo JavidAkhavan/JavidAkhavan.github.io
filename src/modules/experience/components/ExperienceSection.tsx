@@ -8,6 +8,42 @@ import { ExperienceSectionProps, ExperienceCardProps } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollAnimation, StaggeredList } from '@/core';
 
+// Helper function to parse text with markdown-style links and convert to JSX
+function parseLinksInText(text: string) {
+  // Match [text](url) pattern
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: (string | React.ReactElement)[] = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    // Add text before the link
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    // Add the link
+    parts.push(
+      <a
+        key={match.index}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary underline decoration-primary/30 transition-all hover:decoration-primary"
+      >
+        {match[1]}
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
 function ExperienceCard({ experience }: ExperienceCardProps) {
   const dateRange = experience.current
     ? `${experience.startDate} - Present`
@@ -49,7 +85,7 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
                   <span className="mt-1 text-primary transition-transform group-hover:scale-125">
                     ▪
                   </span>
-                  <span>{highlight}</span>
+                  <span>{parseLinksInText(highlight)}</span>
                 </li>
               ))}
             </ul>
