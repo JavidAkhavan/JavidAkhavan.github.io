@@ -10,7 +10,6 @@ import { AboutSection } from '@/modules/about';
 import { ContactSection } from '@/modules/contact';
 import { SidebarNav } from '@/core/components/SidebarNav';
 import { ScrollToTop } from '@/core/components/ScrollToTop';
-import { SocialProofBadges } from '@/core/components/SocialProofBadges';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -27,18 +26,6 @@ import {
 export default function Home() {
   const content = getContent().getSiteContent();
 
-  // Calculate years of experience
-  const currentYear = new Date().getFullYear();
-  const firstJobYear = content.experience[0]?.startDate
-    ? parseInt(content.experience[0].startDate.split(' ')[1])
-    : currentYear - 6;
-  const yearsExperience = currentYear - firstJobYear;
-
-  // Extract education info for badges
-  const phd = content.education.find((edu) =>
-    edu.degree.includes('Doctor of Philosophy')
-  );
-
   return (
     <>
       <SidebarNav />
@@ -46,26 +33,6 @@ export default function Home() {
       <main className="min-h-screen">
         {/* Hero Section */}
         <HeroSection data={content.hero} />
-
-        {/* Social Proof Badges */}
-        <SocialProofBadges
-          education={{
-            label: phd?.degree || 'PhD in Robotics & AI',
-            highlight: phd?.institution || 'Stevens Institute of Technology',
-          }}
-          gpa={{
-            label: `Perfect ${phd?.gpa || '4.0'} GPA`,
-            highlight: 'Graduate Studies',
-          }}
-          experience={{
-            label: `${yearsExperience}+ Years Experience`,
-            highlight: 'ML & Computer Vision',
-          }}
-          location={{
-            label: 'Based in NJ, USA',
-            highlight: 'Immediate Start Available',
-          }}
-        />
 
         {/* About Section */}
         <AboutSection data={content.about} />
