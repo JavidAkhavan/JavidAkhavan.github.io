@@ -25,6 +25,7 @@ import {
   TrendingUp,
   ImageIcon,
 } from 'lucide-react';
+import { ScrollAnimation, StaggeredList } from '@/core';
 
 export function PublicationsSection({
   data,
@@ -282,12 +283,14 @@ export function PublicationsSection({
     >
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="mb-8">
-          <h2 className="mb-2 text-3xl font-bold">{data.heading}</h2>
-          {data.description && (
-            <p className="text-lg text-muted-foreground">{data.description}</p>
-          )}
-        </div>
+        <ScrollAnimation animation="fade">
+          <div className="mb-8">
+            <h2 className="mb-2 text-3xl font-bold">{data.heading}</h2>
+            {data.description && (
+              <p className="text-lg text-muted-foreground">{data.description}</p>
+            )}
+          </div>
+        </ScrollAnimation>
 
         {/* Citation Metrics */}
         {data.profile && (
@@ -437,7 +440,13 @@ export function PublicationsSection({
         {/* Publications List */}
         <div className="space-y-4">
           {paginatedPublications.length > 0 ? (
-            paginatedPublications.map(renderPublication)
+            <StaggeredList
+              animation="slide-up"
+              staggerDelay={80}
+              itemClassName="mb-4"
+            >
+              {paginatedPublications.map(renderPublication)}
+            </StaggeredList>
           ) : (
             <Card>
               <CardContent className="py-12 text-center">
