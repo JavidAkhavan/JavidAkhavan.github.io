@@ -105,14 +105,14 @@ export interface MediaAsset {
 export interface Publication {
   id: string;
   title: string;
-  authors?: string[];
+  authors?: string[] | string;
   venue: string;
   year: number;
-  type: 'journal' | 'conference' | 'preprint' | 'dataset';
-  status?: 'published' | 'under-review' | 'accepted';
+  type: 'journal' | 'conference' | 'preprint' | 'dataset' | string;
+  status?: 'published' | 'under-review' | 'accepted' | string;
   abstract?: string;
   links?: {
-    type: 'doi' | 'pdf' | 'scholar' | 'arxiv' | 'github' | 'other';
+    type: 'doi' | 'pdf' | 'scholar' | 'arxiv' | 'github' | 'other' | string;
     url: string;
     label?: string;
   }[];

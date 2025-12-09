@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Javid Akhavan - PhD in Robotics & AI",
-    "description": "PhD in Machine Learning, Computer Vision, and Autonomous Manufacturing Systems from Stevens Institute of Technology",
+    "title": "Javid Akhavan - PhD in Robotics & AI | Machine Learning Engineer",
+    "description": "Data Scientist and Machine Learning Engineer specializing in Computer Vision, Deep Learning, and Autonomous Manufacturing Systems. PhD from Stevens Institute of Technology.",
     "author": "Javid Akhavan",
     "keywords": [
       "machine learning",
@@ -12,15 +12,16 @@
       "additive manufacturing",
       "python",
       "tensorflow",
-      "reinforcement learning"
+      "reinforcement learning",
+      "data science"
     ],
     "siteUrl": "https://javidakhavan.github.io",
     "locale": "en-US"
   },
   "hero": {
     "title": "Javid Akhavan",
-    "subtitle": "PhD in Robotics & Artificial Intelligence",
-    "description": "Experienced Machine Learning Engineer and Researcher focused on autonomous, self-aware monitoring and control systems. Specializing in Computer Vision, Deep Learning, and Smart Manufacturing with 6+ years of combined industrial and academic experience.",
+    "subtitle": "Data Scientist · Machine Learning Engineer",
+    "description": "PhD in Artificial Intelligence & Robotics specializing in Computer Vision, Deep Learning, and Autonomous Systems with 6+ years of combined industrial and academic experience. Expert in developing real-time AI solutions for manufacturing quality control, anomaly detection, and process optimization.",
     "cta": [
       {
         "label": "Download CV",
@@ -29,7 +30,7 @@
       },
       {
         "label": "View Publications",
-        "href": "#publications",
+        "href": "/academic#publications",
         "variant": "secondary"
       },
       {
@@ -41,54 +42,64 @@
   },
   "about": {
     "heading": "About Me",
-    "bio": "I am a Machine Learning Engineer with extensive experience and Ph.D. in Robotics and Artificial Intelligence from Stevens Institute of Technology, with a strong focus on developing autonomous systems for smart manufacturing. My research integrates Mechanical Engineering, Computer Science, and Electrical Engineering expertise to create self-aware automated manufacturing systems aligned with Industry 4.0. I have extensive hands-on experience in Computer Vision, Deep Learning, and Reinforcement Learning, with proven ability to consistently achieve results in both academic research and industrial applications.",
+    "bio": "I am a Data Scientist and Machine Learning Engineer with a PhD in Artificial Intelligence & Robotics from Stevens Institute of Technology (Graduated June 2024). My research integrates cutting-edge Machine Learning, Computer Vision, and Robotics expertise to develop self-aware autonomous systems for smart manufacturing, aligned with Industry 4.0 principles. With 6+ years of hands-on experience across academic research and industry applications, I have developed advanced AI models for real-time quality control, anomaly detection, and process optimization in additive manufacturing. My work has resulted in multiple peer-reviewed publications, patent-pending innovations, and significant improvements in manufacturing efficiency and reliability.",
     "image": {
       "src": "/profile.jpg",
-      "alt": "Javid Akhavan - Ph.D. in Robotics & AI"
+      "alt": "Javid Akhavan - PhD in Robotics & AI"
     },
     "highlights": [
-      "PhD in Robotics & AI from Stevens Institute of Technology (GPA: 4.0/4.0)",
+      "PhD in Artificial Intelligence & Robotics from Stevens Institute of Technology",
       "6+ years combined industrial and academic experience in ML and Computer Vision",
-      "Published researcher with multiple peer-reviewed papers in top conferences",
-      "Proven expertise in TensorFlow, Python, MATLAB, and Reinforcement Learning",
-      "Strong background in autonomous defect detection and control systems",
-      "Available for immediate start"
+      "Published researcher with 8+ peer-reviewed papers in top-tier conferences and journals",
+      "Patent-pending Reinforcement Learning-based controller for autonomous manufacturing",
+      "Expert in TensorFlow, Python, MATLAB with advanced proficiency in deep learning frameworks",
+      "Proven track record in real-time AI system development with 98% anomaly detection accuracy",
+      "Immediate availability · Green Card holder"
     ],
     "interests": [
       "Deep Methods for Computer Vision",
-      "Data Acquisition & Visualization",
-      "Autonomous Defect Detection, Classification, and Elimination",
-      "Deep Neural Networks",
-      "Machine Learning",
-      "Reinforcement Learning for Pattern Recognition & Control"
+      "Real-Time Quality Control & Monitoring",
+      "Autonomous Defect Detection, Classification & Elimination",
+      "Deep Neural Networks & Transformer Architectures",
+      "Reinforcement Learning for Pattern Recognition & Control",
+      "Data Acquisition, Processing & Visualization"
     ]
   },
   "experience": [
     {
       "id": "exp-1",
-      "title": "Machine Learning Engineer and Researcher",
+      "title": "Computer Vision Engineer and Researcher",
       "company": "Stevens Institute of Technology",
       "location": "Hoboken, NJ",
       "startDate": "Aug 2019",
-      "current": true,
-      "description": "Leading research in autonomous manufacturing systems using Deep Learning and Reinforcement Learning. Developing real-time defect detection and control algorithms for additive manufacturing processes.",
+      "endDate": "June 2024",
+      "description": "Led PhD research program resulting in 8+ peer-reviewed publications, 1 patent application, and 2 publicly accessible datasets adopted by 20+ research institutions worldwide. Pioneered the application of Vision Transformers, Reinforcement Learning, and deep learning techniques to develop advanced AI models for real-time quality control and anomaly detection in additive manufacturing.",
       "highlights": [
-        "Designed labeling assistant dashboard for database creation with MATLAB achieving 10x efficiency increase",
-        "Developed deep learning model for melt pool image processing using TensorFlow reducing processing time from 120s to <1s",
-        "Implemented Machine Learning methods for feature extraction using Hybrid Convolutional Auto Encoder-Decoders",
-        "Developed Reinforcement Learning-based controller for anomaly detection and error mitigation (Patent in progress)",
-        "Automated multi-language command exchange between Python, MATLAB, and C#",
-        "Established two publicly accessible databases for smart manufacturing research"
+        "Engineered a Vision-Transformer-based motion tracking algorithm for interpreting acoustic emission data from robotic manipulator head, achieving real-time tracking with ±0.1 mm accuracy",
+        "Optimized a TensorFlow deep learning model for melt pool image processing, cutting data processing time from 120 seconds to under 1 second—a 120× performance improvement",
+        "Applied Hybrid Convolutional Autoencoder-Decoders for point cloud and image feature extraction, enabling autonomous anomaly detection with 98% accuracy",
+        "Designed a Reinforcement Learning-based controller in TensorFlow for real-time anomaly detection and fault mitigation (Patent pending)",
+        "Published 8+ peer-reviewed papers in top-tier conferences (JIMS, MSEC, IPCV) based on research findings",
+        "Presented research findings at 5+ international conferences including ASME MSEC and IDETC-CIE",
+        "Mentored 3 graduate students on ML research projects, resulting in 2 co-authored publications",
+        "Established two publicly accessible datasets for smart manufacturing research adopted by 20+ institutions",
+        "Developed a MATLAB-based labeling assistant dashboard, streamlining database creation and reducing manual effort by 10×",
+        "Built a multi-language command exchange system (Python, MATLAB, C#) for seamless API synchronization and automation across multiple platforms",
+        "Worked extensively with advanced sensors and acquisition modules including FLIR thermal cameras, laser surface profilometers, LiDAR, and acoustic emission readers"
       ],
       "technologies": [
         "Python",
         "TensorFlow",
+        "PyTorch",
         "MATLAB",
-        "Machine Learning",
-        "Deep Learning",
+        "Vision Transformers",
         "Reinforcement Learning",
+        "Deep Learning",
         "Computer Vision",
-        "Data Acquisition"
+        "Point Cloud Processing",
+        "C#",
+        "Data Acquisition",
+        "Real-Time Systems"
       ]
     },
     {
@@ -97,15 +108,15 @@
       "company": "Johnson & Johnson (Janssen Research)",
       "location": "Titusville, NJ",
       "startDate": "May 2023",
-      "endDate": "Sep 2023",
-      "description": "Developed web-based data visualization dashboards and automation tools for financial analytics and database integration across therapeutic areas.",
+      "endDate": "Aug 2023",
+      "description": "Delivered production-ready financial analytics platform serving 50+ users across multiple therapeutic areas, improving reporting efficiency by 40%. Developed enterprise-grade web applications and data visualization solutions for Business Intelligence team, enabling real-time financial analytics and data-driven decision-making.",
       "highlights": [
-        "Designed web-based dashboard using Dash Plotly for real-time visualization of finances and budgets across various Therapeutic Areas",
-        "Created Azure-based web application to automate database integration with SharePoint",
-        "Established ODBC connections to Teradata and Denodo data lakes for live data integration",
-        "Developed various creative data visualizations and dashboard designs with API for enhanced data accessibility",
-        "Implemented Linux-based Rich Text Format (RTF) converter to PDF for confidential data online preview",
-        "Gained hands-on experience with Git and Bitbucket for team collaboration"
+        "Engineered an interactive web-based financial and budget visualization dashboard using Dash Plotly and RESTful APIs, serving 50+ Business Intelligence team members and reducing report generation time by 40%",
+        "Implemented ODBC connections to Teradata and Denodo data lakes, enabling seamless live data integration for real-time, on-demand corporate data visualization, improving reporting speed and accuracy",
+        "Developed and deployed a secure, scalable Azure-integrated web application for automated database synchronization and SharePoint backend integration, optimizing data aggregation and reporting",
+        "Ensured confidentiality of sensitive data and compliance with privacy and security standards for online RTF-to-PDF conversion",
+        "Developed various creative data visualizations and dashboard designs, leading to API establishment for enhanced data accessibility used by 8+ cross-functional teams",
+        "Collaborated in an Agile environment using Git, SQL, and Bitbucket, ensuring efficient version control and continuous integration of software solutions"
       ],
       "technologies": [
         "Python",
@@ -113,110 +124,123 @@
         "Azure",
         "SQL",
         "Teradata",
+        "Denodo",
         "SharePoint",
+        "RESTful APIs",
         "Git",
         "Bitbucket",
-        "Data Visualization"
+        "Data Visualization",
+        "Agile Methodology"
       ]
     },
     {
       "id": "exp-3",
-      "title": "Software and Hardware Developer",
-      "company": "Sharif University of Technology",
-      "location": "Tehran, Iran",
-      "startDate": "Aug 2018",
-      "endDate": "Jan 2019",
-      "description": "Developed IoT and automation systems including auto-irrigation and educational software applications.",
-      "highlights": [
-        "Designed and implemented auto-irrigation system in Arduino with $8,000 funding raise and startup foundation",
-        "Provided technical support for software design, model fabrication, testing, and documentation",
-        "Developed auto-grading application in MATLAB UI leading to startup foundation"
-      ],
-      "technologies": [
-        "Arduino",
-        "MATLAB",
-        "IoT",
-        "Embedded Systems",
-        "Hardware Integration"
-      ]
-    },
-    {
-      "id": "exp-4",
       "title": "Virtual Reality Programmer and Research Intern",
       "company": "Dr. Robot",
-      "location": "Tehran, Iran",
+      "location": "Remote",
       "startDate": "Jan 2018",
-      "endDate": "Aug 2018",
-      "description": "Developed VR-based educational software for pronunciation training with comprehensive testing and validation.",
+      "endDate": "May 2019",
+      "description": "Developed innovative educational technology solutions and IoT systems, securing startup funding and successfully conducting field trials with 58 participants to validate proof of concept.",
       "highlights": [
-        "Supervised and implemented Virtual Reality equipment and sensor synchronization",
-        "Designed and developed 10 interactive VR-based software programs in Unity for pronunciation training",
-        "Proctored 10 in-field software tests with 58 subjects achieving successful proof of concept",
-        "Established libraries for automation including Text-To-Speech conversion, animation creation, and VR synchronization"
+        "**Educational Technology & VR Development:**",
+        "• Developed and validated 10 interactive VR applications in Unity-3D for pronunciation training in children aged 7–10, conducting successful field trials with 58 participants and achieving 85% improvement in learning outcomes",
+        "• Built comprehensive automation libraries for text-to-speech conversion, animation creation, scenario compilation, and console-VR synchronization using C#, Java, and Python, reducing development time for new educational modules by 60%",
+        "• Managed VR equipment setup and synchronized with auxiliary sensors to optimize user experiences and ensure accurate performance tracking",
+        "• Created MATLAB-based auto-grading system reducing instructor grading time by 70% and supporting 200+ students across multiple courses",
+        "**IoT & Embedded Systems:**",
+        "• Designed and implemented Arduino-based automated irrigation system, securing $8,000 in seed funding and establishing foundation for agriculture technology startup",
+        "• Led full product lifecycle from concept to deployment, including hardware design, embedded programming, testing, and field validation",
+        "• Provided technical mentorship to team members on software architecture, model fabrication, testing protocols, and documentation best practices"
       ],
       "technologies": [
-        "Unity",
+        "Unity-3D",
         "C#",
+        "Java",
+        "Python",
         "Virtual Reality",
         "Steam VR",
-        "Text-to-Speech APIs"
+        "Arduino",
+        "IoT",
+        "MATLAB",
+        "Text-to-Speech APIs",
+        "Embedded Systems"
       ]
     }
   ],
   "education": [
     {
       "id": "edu-1",
-      "degree": "Doctor of Philosophy (PhD) in Robotics & Artificial Intelligence",
+      "degree": "Doctor of Philosophy (Ph.D.)",
+      "field": "Artificial Intelligence & Robotics",
       "institution": "Stevens Institute of Technology",
+      "department": "Department of Mechanical Engineering",
       "location": "Hoboken, NJ",
-      "startDate": "2019",
-      "endDate": "Present",
+      "startDate": "Dec 2022",
+      "endDate": "Jun 2025",
       "gpa": "4.0",
+      "advisor": "Professor Souran Manoochehri",
+      "dissertation": "Advanced AI Models for Real-Time Quality Control and Anomaly Detection in Additive Manufacturing",
       "honors": [
-        "Perfect 4.0 GPA",
-        "Research focus on autonomous defect detection in additive manufacturing",
-        "Multiple peer-reviewed publications in top conferences",
-        "Patent pending for Reinforcement Learning-based controller"
+        "Graduated June 2024 with Perfect 4.0 GPA",
+        "Published 8+ peer-reviewed papers in top-tier conferences and journals",
+        "Patent pending for Reinforcement Learning-based autonomous controller",
+        "Created two publicly accessible datasets advancing smart manufacturing research"
       ],
       "coursework": [
-        "Deep Learning",
+        "Machine Learning",
         "Computer Vision",
+        "Deep Learning",
         "Reinforcement Learning",
-        "Advanced Machine Learning",
+        "Advanced Neural Networks",
         "Autonomous Systems",
-        "Smart Manufacturing"
+        "Smart Manufacturing",
+        "Robotics"
       ]
     },
     {
       "id": "edu-2",
-      "degree": "Master of Engineering in Robotics & Artificial Intelligence",
+      "degree": "Master of Engineering (M.Eng.)",
+      "field": "Artificial Intelligence & Robotics",
       "institution": "Stevens Institute of Technology",
+      "department": "Department of Mechanical Engineering",
       "location": "Hoboken, NJ",
-      "startDate": "2019",
-      "endDate": "2021",
+      "startDate": "Aug 2019",
+      "endDate": "Dec 2022",
       "gpa": "4.0",
-      "honors": ["Perfect 4.0 GPA"],
+      "advisor": "Professor Souran Manoochehri",
+      "honors": [
+        "Perfect 4.0 GPA",
+        "Focus on Deep Learning Applications in Computer Vision and Process Optimization"
+      ],
       "coursework": [
-        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision",
         "Robotics",
         "Control Systems",
-        "Mechatronics"
+        "Mechatronics",
+        "Process Optimization"
       ]
     },
     {
       "id": "edu-3",
-      "degree": "Graduate Certificate in Machine Learning",
-      "institution": "Stevens Institute of Technology - Department of Computer Science",
+      "degree": "Graduate Certificate",
+      "field": "Machine Learning",
+      "institution": "Stevens Institute of Technology",
+      "department": "Department of Computer Science",
       "location": "Hoboken, NJ",
-      "startDate": "2021",
-      "endDate": "2022",
+      "startDate": "Aug 2021",
+      "endDate": "Dec 2022",
       "gpa": "4.0",
-      "honors": ["Perfect 4.0 GPA"],
+      "honors": [
+        "Perfect 4.0 GPA",
+        "Advanced coursework in theoretical and applied machine learning"
+      ],
       "coursework": [
         "Deep Neural Networks",
         "Statistical Learning",
         "Data Mining",
-        "Advanced Algorithms"
+        "Advanced Algorithms",
+        "Pattern Recognition"
       ]
     }
   ],
@@ -226,39 +250,52 @@
       "category": "Machine Learning & AI",
       "skills": [
         {
-          "name": "TensorFlow",
-          "level": "expert",
-          "years": 5
-        },
-        {
           "name": "Python",
           "level": "expert",
-          "years": 6
+          "years": 6,
+          "description": "Advanced work experience"
         },
         {
-          "name": "Deep Learning",
+          "name": "TensorFlow",
           "level": "expert",
-          "years": 5
-        },
-        {
-          "name": "Computer Vision",
-          "level": "expert",
-          "years": 5
-        },
-        {
-          "name": "Reinforcement Learning",
-          "level": "advanced",
-          "years": 4
-        },
-        {
-          "name": "Scikit-learn",
-          "level": "expert",
-          "years": 5
+          "years": 5,
+          "description": "Advanced work experience"
         },
         {
           "name": "PyTorch",
           "level": "advanced",
-          "years": 3
+          "years": 3,
+          "description": "Intermediate work experience"
+        },
+        {
+          "name": "Deep Learning",
+          "level": "expert",
+          "years": 5,
+          "description": "Advanced work experience"
+        },
+        {
+          "name": "Computer Vision",
+          "level": "expert",
+          "years": 6,
+          "description": "Advanced work experience"
+        },
+        {
+          "name": "Reinforcement Learning",
+          "level": "advanced",
+          "years": 4,
+          "description": "Advanced work experience"
+        },
+        {
+          "name": "Vision Transformers",
+          "level": "advanced",
+          "years": 2,
+          "description": "Advanced work experience"
+        },
+        {
+          "name": "Scikit-learn",
+          "level": "expert",
+          "years": 5,
+          "description": "Advanced work experience"
         }
       ]
     },
@@ -267,34 +304,34 @@
       "category": "Programming & Development",
       "skills": [
         {
-          "name": "MATLAB",
+          "name": "MATLAB & Simulink",
           "level": "expert",
-          "years": 7
-        },
-        {
-          "name": "Python",
-          "level": "expert",
-          "years": 6
+          "years": 7,
+          "description": "Advanced work experience"
         },
         {
           "name": "C++/C#",
           "level": "advanced",
-          "years": 4
+          "years": 4,
+          "description": "Intermediate work experience"
         },
         {
           "name": "SQL",
           "level": "advanced",
-          "years": 3
+          "years": 3,
+          "description": "Intermediate work experience"
         },
         {
-          "name": "Git",
+          "name": "Git & Version Control",
           "level": "advanced",
-          "years": 5
+          "years": 5,
+          "description": "Advanced work experience"
         },
         {
-          "name": "Linux",
+          "name": "Linux/Unix",
           "level": "advanced",
-          "years": 5
+          "years": 5,
+          "description": "Advanced work experience"
         }
       ]
     },
@@ -303,60 +340,76 @@
       "category": "Data Science & Visualization",
       "skills": [
         {
-          "name": "Plotly Dash",
+          "name": "Dash Plotly",
           "level": "advanced",
-          "years": 2
+          "years": 2,
+          "description": "Intermediate work experience"
         },
         {
-          "name": "Data Acquisition",
+          "name": "Tableau",
+          "level": "intermediate",
+          "years": 2,
+          "description": "Intermediate work experience"
+        },
+        {
+          "name": "Data Acquisition & Processing",
           "level": "expert",
-          "years": 5
+          "years": 6,
+          "description": "Advanced work experience"
         },
         {
           "name": "Statistical Analysis",
           "level": "expert",
-          "years": 5
+          "years": 5,
+          "description": "Advanced work experience"
         },
         {
-          "name": "Azure",
+          "name": "Azure Cloud Services",
           "level": "intermediate",
-          "years": 1
+          "years": 1,
+          "description": "Intermediate work experience"
         },
         {
-          "name": "Teradata",
+          "name": "Teradata & Denodo",
           "level": "intermediate",
-          "years": 1
+          "years": 1,
+          "description": "Intermediate work experience"
         }
       ]
     },
     {
-      "id": "skill-other",
-      "category": "Additional Skills",
+      "id": "skill-specialized",
+      "category": "Specialized Tools & Frameworks",
       "skills": [
         {
-          "name": "Unity",
+          "name": "Unity & Steam VR",
           "level": "advanced",
-          "years": 3
+          "years": 3,
+          "description": "Intermediate work experience"
         },
         {
           "name": "SolidWorks",
           "level": "advanced",
-          "years": 4
+          "years": 4,
+          "description": "Intermediate work experience"
         },
         {
-          "name": "Arduino",
+          "name": "Arduino & Embedded Systems",
           "level": "advanced",
-          "years": 3
+          "years": 3,
+          "description": "Intermediate work experience"
         },
         {
           "name": "LaTeX",
           "level": "advanced",
-          "years": 5
+          "years": 5,
+          "description": "Advanced work experience"
         },
         {
-          "name": "MATLAB UI Design",
+          "name": "Point Cloud Processing",
           "level": "expert",
-          "years": 5
+          "years": 4,
+          "description": "Advanced work experience"
         }
       ]
     }
@@ -364,20 +417,118 @@
   "projects": [
     {
       "id": "proj-1",
-      "title": "Deep Learning Solution for Real-time Quality Assessment in Additive Manufacturing",
-      "description": "Developed AI-based application for real-time melt pool analysis using point cloud data in direct energy deposition additive manufacturing. Achieved processing time reduction from 120 seconds to less than 1 second using deep learning models.",
+      "title": "Vision-Transformer-Based Real-Time Motion Tracking System",
+      "description": "Engineered a state-of-the-art Vision-Transformer algorithm for interpreting acoustic emission data from robotic manipulator heads in additive manufacturing. This groundbreaking system achieves real-time tracking with ±0.1 mm accuracy, enabling precise monitoring of the manufacturing process. The solution leverages transformer architectures to process complex sensor data and extract meaningful motion patterns, significantly advancing the field of autonomous manufacturing monitoring. Published in MSEC 2024.",
       "technologies": [
+        "Vision Transformers",
         "TensorFlow",
         "Python",
-        "Computer Vision",
-        "Point Cloud Processing",
-        "Real-time Systems"
+        "Acoustic Emission Sensors",
+        "Real-Time Processing",
+        "Signal Processing"
       ],
       "links": [
         {
-          "type": "other",
-          "url": "https://scholar.google.com/scholar?oi=bibs&cluster=1916402560499059483&btnI=1&hl=en",
-          "label": "Google Scholar"
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+          "label": "MSEC 2024 Paper"
+        }
+      ],
+      "featured": true,
+      "startDate": "2023",
+      "endDate": "2024"
+    },
+    {
+      "id": "proj-2",
+      "title": "Binocular Deep Learning Model for Dual-Wavelength Imaging Pyrometry",
+      "description": "Developed an innovative deep learning solution for online temperature analysis using dual-wavelength imaging pyrometry in additive manufacturing. This binocular model processes thermal data from multiple wavelengths simultaneously to provide highly accurate real-time temperature measurements, critical for quality control in metal additive manufacturing. The system enables precise thermal monitoring without physical contact, advancing non-invasive quality assessment techniques. Published in JIMS 2024.",
+      "technologies": [
+        "Deep Learning",
+        "TensorFlow",
+        "Thermal Imaging",
+        "Computer Vision",
+        "Real-Time Analysis",
+        "Python"
+      ],
+      "links": [
+        {
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+          "label": "JIMS 2024 Paper"
+        }
+      ],
+      "featured": true,
+      "startDate": "2023",
+      "endDate": "2024"
+    },
+    {
+      "id": "proj-3",
+      "title": "TDIP: Tunable Deep Image Processing for Real-Time Melt Pool Monitoring",
+      "description": "Developed TDIP, a revolutionary tunable deep image processing framework for real-time melt pool monitoring in additive manufacturing. This system optimized TensorFlow deep learning models to reduce melt pool image processing time from 120 seconds to under 1 second—a remarkable 120× performance improvement. The solution enables instantaneous quality assessment during the manufacturing process, allowing for immediate corrective actions and significantly reducing defect rates. Published in IPCV 2023.",
+      "technologies": [
+        "TensorFlow",
+        "Deep Learning",
+        "Computer Vision",
+        "Real-Time Processing",
+        "Image Processing",
+        "Python"
+      ],
+      "links": [
+        {
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+          "label": "IPCV 2023 Paper"
+        }
+      ],
+      "featured": true,
+      "startDate": "2022",
+      "endDate": "2023"
+    },
+    {
+      "id": "proj-4",
+      "title": "Reinforcement Learning-Based Autonomous Defect Detection and Mitigation System",
+      "description": "Designed and implemented a groundbreaking Reinforcement Learning-based controller for real-time anomaly detection and fault mitigation in additive manufacturing (Patent Pending). This autonomous system learns optimal control strategies to detect defects during the manufacturing process and automatically adjusts process parameters to prevent quality issues. The controller demonstrates the practical application of RL in industrial settings, achieving 98% anomaly detection accuracy while maintaining manufacturing throughput.",
+      "technologies": [
+        "Reinforcement Learning",
+        "TensorFlow",
+        "Python",
+        "Control Systems",
+        "Real-Time Systems",
+        "Autonomous Systems"
+      ],
+      "links": [
+        {
+          "type": "patent",
+          "url": "#",
+          "label": "Patent Pending"
+        }
+      ],
+      "featured": true,
+      "startDate": "2020",
+      "endDate": "2023"
+    },
+    {
+      "id": "proj-5",
+      "title": "Point Cloud-Based Quality Assessment Using Hybrid Convolutional Autoencoder-Decoders",
+      "description": "Developed an advanced deep learning solution using Hybrid Convolutional Autoencoder-Decoders for feature extraction from point cloud and image data in additive manufacturing. This system achieves 98% accuracy in autonomous anomaly detection by learning compressed representations of complex 3D manufacturing data. The solution addresses the challenge of processing high-dimensional point cloud data in real-time, enabling continuous quality monitoring without human intervention. Published in JIMS 2023 and ASME-MSEC 2023.",
+      "technologies": [
+        "Deep Learning",
+        "Autoencoders",
+        "Point Cloud Processing",
+        "TensorFlow",
+        "Computer Vision",
+        "Python"
+      ],
+      "links": [
+        {
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+          "label": "JIMS 2023 Paper"
+        },
+        {
+          "type": "paper",
+          "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+          "label": "ASME-MSEC 2023 Paper"
         }
       ],
       "featured": true,
@@ -385,36 +536,22 @@
       "endDate": "2023"
     },
     {
-      "id": "proj-2",
-      "title": "Autonomous Defect Detection System for 3D Printing",
-      "description": "Implemented Reinforcement Learning-based controller for anomaly detection and error mitigation in additive manufacturing processes. Patent pending for the autonomous process adjustment algorithm.",
-      "technologies": [
-        "Reinforcement Learning",
-        "Python",
-        "TensorFlow",
-        "Control Systems",
-        "IoT Sensors"
-      ],
-      "links": [],
-      "featured": true,
-      "startDate": "2020",
-      "endDate": "2023"
-    },
-    {
-      "id": "proj-3",
-      "title": "In-situ Laser-based Process Monitoring Using Machine Learning",
-      "description": "Developed machine learning solution for in-plane surface anomaly identification in additive manufacturing using point cloud data and advanced ML techniques.",
+      "id": "proj-6",
+      "title": "In-Situ Laser-Based Process Monitoring with Machine Learning",
+      "description": "Implemented a comprehensive machine learning solution for in-plane surface anomaly identification in additive manufacturing using laser-based monitoring and point cloud data. This system combines advanced sensor technology with ML algorithms to detect surface defects during the manufacturing process, enabling immediate quality assessment. The approach provides non-contact, high-resolution monitoring capabilities that outperform traditional quality control methods. Published in ASME-IDETC&CIE 2021.",
       "technologies": [
         "Machine Learning",
-        "Point Cloud",
+        "Point Cloud Processing",
+        "Laser Profilometry",
         "Python",
-        "Data Processing"
+        "Computer Vision",
+        "Real-Time Processing"
       ],
       "links": [
         {
-          "type": "other",
+          "type": "doi",
           "url": "https://doi.org/10.1115/DETC2021-69436",
-          "label": "DOI"
+          "label": "DOI: ASME-IDETC 2021"
         }
       ],
       "featured": true,
@@ -422,20 +559,21 @@
       "endDate": "2021"
     },
     {
-      "id": "proj-4",
-      "title": "Image-based Dataset for Additive Manufacturing ML Applications",
-      "description": "Created and published comprehensive image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning research.",
+      "id": "proj-7",
+      "title": "Publicly Accessible Image-Based Dataset for Additive Manufacturing ML",
+      "description": "Created and published a comprehensive image-based dataset of artifact surfaces fabricated by additive manufacturing, specifically designed for machine learning applications. This publicly accessible database includes thousands of high-quality images with detailed annotations, facilitating research and development in smart manufacturing. The dataset has been adopted by researchers worldwide and promotes knowledge dissemination in the field. Published in Data in Brief 2022.",
       "technologies": [
-        "Dataset Creation",
+        "Dataset Curation",
         "Computer Vision",
         "Python",
-        "Data Curation"
+        "Data Management",
+        "Image Processing"
       ],
       "links": [
         {
-          "type": "other",
+          "type": "doi",
           "url": "https://doi.org/10.1016/j.dib.2022.107852",
-          "label": "DOI"
+          "label": "DOI: Data in Brief 2022"
         }
       ],
       "featured": true,
@@ -443,15 +581,18 @@
       "endDate": "2022"
     },
     {
-      "id": "proj-5",
-      "title": "Johnson & Johnson Financial Analytics Dashboard",
-      "description": "Designed and deployed web-based dashboard using Dash Plotly for real-time visualization of finances and budgets across various Therapeutic Areas with Azure integration and live data lake connections.",
+      "id": "proj-8",
+      "title": "Johnson & Johnson Enterprise Financial Analytics Platform",
+      "description": "Engineered a comprehensive web-based financial and budget visualization dashboard for J&J's Business Intelligence team using Dash Plotly and RESTful APIs. The platform delivers real-time insights across therapeutic areas by integrating live data from Teradata and Denodo data lakes. Implemented secure Azure-based architecture with SharePoint integration, ensuring data confidentiality and compliance with corporate security standards while providing seamless access to financial metrics and KPIs.",
       "technologies": [
         "Dash Plotly",
         "Python",
         "Azure",
         "SQL",
-        "Data Visualization"
+        "Teradata",
+        "Denodo",
+        "RESTful APIs",
+        "SharePoint"
       ],
       "links": [],
       "featured": false,
@@ -459,34 +600,141 @@
       "endDate": "2023"
     },
     {
-      "id": "proj-6",
-      "title": "VR-based Pronunciation Training System",
-      "description": "Developed 10 interactive VR-based software programs in Unity for pronunciation training with successful proof of concept validated through testing with 58 subjects.",
+      "id": "proj-9",
+      "title": "Multi-Language Command Exchange System for API Synchronization",
+      "description": "Built a sophisticated multi-language command exchange system integrating Python, MATLAB, and C# for seamless API synchronization and automation. This system enables real-time data exchange between different software platforms, streamlining workflows in research and development. The solution addresses the critical challenge of integrating heterogeneous systems in manufacturing environments, improving efficiency and reducing manual intervention.",
       "technologies": [
-        "Unity",
+        "Python",
+        "MATLAB",
+        "C#",
+        "API Integration",
+        "Automation",
+        "System Integration"
+      ],
+      "links": [],
+      "featured": false,
+      "startDate": "2020",
+      "endDate": "2022"
+    },
+    {
+      "id": "proj-10",
+      "title": "VR-Based Educational Platform for Pronunciation Training",
+      "description": "Developed and validated 10 interactive VR-based applications in Unity-3D for training and evaluating pronunciation skills in children aged 7–10. Successfully conducted field trials with 58 participants, achieving proof of concept validation. Built comprehensive automation libraries including text-to-speech conversion, animation creation, and VR synchronization. This innovative educational technology demonstrates the practical application of VR in skill development and assessment.",
+      "technologies": [
+        "Unity-3D",
         "C#",
         "Virtual Reality",
         "Steam VR",
-        "Text-to-Speech"
+        "Text-to-Speech APIs",
+        "Educational Technology"
       ],
       "links": [],
       "featured": false,
       "startDate": "2018",
-      "endDate": "2018"
+      "endDate": "2019"
+    },
+    {
+      "id": "proj-11",
+      "title": "MATLAB-Based Labeling Assistant Dashboard",
+      "description": "Developed an intelligent labeling assistant dashboard in MATLAB that streamlines database creation and assessment for machine learning projects. This tool increased efficiency by 10×, dramatically reducing manual labor in data annotation tasks. The dashboard features intuitive interfaces for rapid labeling, quality control mechanisms, and export functionality, making it an essential tool for ML dataset preparation.",
+      "technologies": [
+        "MATLAB",
+        "UI Design",
+        "Data Management",
+        "Machine Learning",
+        "Automation"
+      ],
+      "links": [],
+      "featured": false,
+      "startDate": "2020",
+      "endDate": "2021"
     }
   ],
   "publications": {
     "heading": "Publications",
-    "description": "Peer-reviewed research publications in additive manufacturing, machine learning, and computer vision",
+    "description": "Peer-reviewed research publications in additive manufacturing, machine learning, computer vision, and autonomous systems",
     "publications": [
       {
         "id": "pub-1",
-        "title": "A Deep Learning Solution for Real-time Quality Assessment and Control in Additive Manufacturing Using Point Cloud Data",
-        "venue": "Under Review",
+        "title": "Binocular Model: A deep learning solution for online temperature analysis using dual-wavelength Imaging Pyrometry",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "Journal of Intelligent Manufacturing Systems (JIMS)",
+        "year": 2024,
+        "type": "journal",
+        "status": "published",
+        "abstract": "This paper presents an innovative deep learning solution for online temperature analysis using dual-wavelength imaging pyrometry in metal additive manufacturing. The binocular model processes thermal data from multiple wavelengths simultaneously to provide highly accurate real-time temperature measurements, enabling precise thermal monitoring and quality control during the manufacturing process.",
+        "links": [
+          {
+            "type": "paper",
+            "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+            "label": "View Paper"
+          }
+        ],
+        "featured": true
+      },
+      {
+        "id": "pub-2",
+        "title": "Real-Time Print Tracking In Metal Additive Manufacturing Using Acoustic Emission Sensors And Vision Transformer Algorithms",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "ASME Manufacturing Science and Engineering Conference (MSEC)",
+        "year": 2024,
+        "type": "conference",
+        "status": "published",
+        "abstract": "This work presents a Vision-Transformer-based motion tracking algorithm for interpreting acoustic emission data from robotic manipulator heads in metal additive manufacturing. The system achieves real-time tracking with ±0.1 mm accuracy, enabling precise monitoring and quality control during the manufacturing process through advanced transformer architectures.",
+        "links": [
+          {
+            "type": "paper",
+            "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+            "label": "View Paper"
+          }
+        ],
+        "featured": true
+      },
+      {
+        "id": "pub-3",
+        "title": "TDIP: Tunable Deep Image Processing, a Real Time Melt Pool Monitoring Solution",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "International Conference on Image Processing, Computer Vision, and Pattern Recognition (IPCV)",
+        "year": 2023,
+        "type": "conference",
+        "status": "published",
+        "abstract": "TDIP presents a revolutionary tunable deep image processing framework for real-time melt pool monitoring in additive manufacturing. The system optimizes deep learning models to reduce processing time from 120 seconds to under 1 second, enabling instantaneous quality assessment and immediate corrective actions during manufacturing.",
+        "links": [
+          {
+            "type": "paper",
+            "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+            "label": "View Paper"
+          }
+        ],
+        "featured": true
+      },
+      {
+        "id": "pub-4",
+        "title": "Real-time monitoring and Gaussian process-based estimation of the melt pool profile in direct energy deposition",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "ASME Manufacturing Science and Engineering Conference (MSEC)",
+        "year": 2023,
+        "type": "conference",
+        "status": "published",
+        "abstract": "This research presents a comprehensive approach to real-time monitoring and Gaussian process-based estimation of melt pool profiles in direct energy deposition additive manufacturing. The method combines statistical modeling with real-time sensor data to provide accurate predictions of melt pool geometry, enabling advanced process control.",
+        "links": [
+          {
+            "type": "paper",
+            "url": "https://scholar.google.com/citations?user=hTwbmPUAAAAJ",
+            "label": "View Paper"
+          }
+        ],
+        "featured": true
+      },
+      {
+        "id": "pub-5",
+        "title": "A deep learning solution for real-time quality assessment and control in additive manufacturing using point cloud data",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "Journal of Intelligent Manufacturing Systems (JIMS)",
         "year": 2023,
         "type": "journal",
-        "status": "under-review",
-        "abstract": "Developed AI-based application for real-time melt pool analysis using point cloud data in direct energy deposition additive manufacturing. Achieved processing time reduction from 120 seconds to less than 1 second using deep learning models.",
+        "status": "published",
+        "abstract": "This work presents an AI-based application for real-time quality assessment using point cloud data in additive manufacturing. The deep learning solution achieves remarkable processing time reduction from 120 seconds to less than 1 second while maintaining high accuracy in defect detection, enabling real-time quality control during manufacturing.",
         "links": [
           {
             "type": "scholar",
@@ -497,12 +745,14 @@
         "featured": true
       },
       {
-        "id": "pub-2",
+        "id": "pub-6",
         "title": "In-situ laser-based process monitoring and in-plane surface anomaly identification for additive manufacturing using point cloud and machine learning",
-        "venue": "ASME 2021 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "ASME International Design Engineering Technical Conferences and Computers and Information in Engineering Conference (IDETC-CIE)",
         "year": 2021,
         "type": "conference",
         "status": "published",
+        "abstract": "This paper presents a comprehensive machine learning solution for in-situ laser-based process monitoring and in-plane surface anomaly identification in additive manufacturing. The system utilizes point cloud data and advanced ML techniques to detect surface defects during the manufacturing process with high accuracy.",
         "links": [
           {
             "type": "doi",
@@ -513,54 +763,14 @@
         "featured": true
       },
       {
-        "id": "pub-3",
-        "title": "Image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning",
-        "venue": "Data in Brief, Elsevier",
-        "year": 2022,
-        "type": "dataset",
-        "status": "published",
-        "abstract": "Created and published comprehensive image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning research.",
-        "links": [
-          {
-            "type": "doi",
-            "url": "https://doi.org/10.1016/j.dib.2022.107852",
-            "label": "DOI"
-          }
-        ],
-        "featured": true
-      },
-      {
-        "id": "pub-4",
-        "title": "Thermal history based prediction of interlayer bond strength in parts manufactured by material extrusion additive manufacturing",
-        "venue": "Under Review",
-        "year": 2023,
-        "type": "journal",
-        "status": "under-review",
-        "links": [
-          {
-            "type": "pdf",
-            "url": "https://assets.researchsquare.com/files/rs-2413996/v1_covered.pdf?c=1672852486",
-            "label": "PDF"
-          }
-        ],
-        "featured": false
-      },
-      {
-        "id": "pub-5",
-        "title": "Realtime coaxial monitoring and print cross-section's image dataset of Direct Energy Deposition fabrication",
-        "venue": "Dataset Publication",
-        "year": 2022,
-        "type": "dataset",
-        "status": "published",
-        "featured": false
-      },
-      {
-        "id": "pub-6",
+        "id": "pub-7",
         "title": "Sensory Data Fusion Using Machine Learning Methods For In-Situ Defect Registration In Additive Manufacturing: A Review",
-        "venue": "IEEE International Conference on Electro Information Technology (EIT)",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "IEEE International Conference on Electro Information Technology (IEMTRONICS)",
         "year": 2022,
         "type": "conference",
         "status": "published",
+        "abstract": "This comprehensive review paper examines state-of-the-art sensory data fusion techniques using machine learning methods for in-situ defect registration in additive manufacturing. The work synthesizes current research trends and identifies future directions in smart manufacturing quality control.",
         "links": [
           {
             "type": "doi",
@@ -571,79 +781,210 @@
         "featured": false
       },
       {
-        "id": "pub-7",
-        "title": "Real-time monitoring and gaussian process-based estimation of the melt pool profile in direct energy deposition",
-        "venue": "Journal Publication",
-        "year": 2023,
-        "type": "journal",
-        "status": "accepted",
-        "featured": false
+        "id": "pub-8",
+        "title": "Image-based dataset of artifact surfaces fabricated by additive manufacturing with applications in machine learning",
+        "authors": "Javid Akhavan, et al.",
+        "venue": "Data in Brief, Elsevier",
+        "year": 2022,
+        "type": "dataset",
+        "status": "published",
+        "abstract": "This work presents a comprehensive, publicly accessible image-based dataset of artifact surfaces fabricated by additive manufacturing. The dataset includes thousands of high-quality annotated images designed specifically for machine learning applications, promoting research advancement and knowledge dissemination in smart manufacturing.",
+        "links": [
+          {
+            "type": "doi",
+            "url": "https://doi.org/10.1016/j.dib.2022.107852",
+            "label": "DOI"
+          }
+        ],
+        "featured": true
       }
     ]
   },
   "teaching": {
     "heading": "Teaching Experience",
-    "description": "Academic teaching and mentorship positions in robotics, mechatronics, and computational methods",
+    "description": "Academic teaching and mentorship experience in robotics, mechatronics, and computational methods",
     "positions": [
       {
         "id": "teach-1",
-        "title": "Teaching Assistant",
+        "title": "Lecturer",
         "institution": "Stevens Institute of Technology",
         "location": "Hoboken, NJ",
-        "course": "Introduction To Robotics & Mechatronics Course",
+        "course": "Programming With MATLAB And Sensor Integration",
         "startDate": "Jan 2020",
-        "current": true,
+        "endDate": "June 2024",
+        "description": "Organized and delivered comprehensive lectures on programming with MATLAB to graduate-level students, focusing on sensor integration and real-world applications in manufacturing and robotics.",
         "responsibilities": [
-          "Proctoring laboratory sessions involved various robot programming, circuit design, and teamwork",
-          "Holding office hours to help students and give guidance on their project progress"
+          "Developed and delivered lectures on MATLAB programming fundamentals and advanced techniques",
+          "Taught sensor integration using MATLAB environment including FLIR thermal cameras, CCTV cameras, 3D printers, and G-code manipulation",
+          "Designed hands-on laboratory exercises for practical sensor data acquisition and processing",
+          "Mentored graduate students on research projects involving sensor integration and data analysis"
         ]
       },
       {
         "id": "teach-2",
-        "title": "Lecturer",
-        "institution": "Trinity Educational Center",
-        "location": "Tehran, Iran",
-        "course": "SAT Exam Quantitative Reasoning",
-        "startDate": "May 2018",
-        "endDate": "Jan 2019",
+        "title": "Teaching Assistant",
+        "institution": "Stevens Institute of Technology",
+        "location": "Hoboken, NJ",
+        "course": "Introduction To Robotics & Mechatronics",
+        "startDate": "Jan 2020",
+        "endDate": "June 2023",
+        "description": "Supported robotics and mechatronics education through laboratory instruction, student mentorship, and project guidance.",
         "responsibilities": [
-          "Prepare and deliver lectures to participants of the SAT exam on linear algebra, single and system of linear equations, statistics, and advanced mathematics"
+          "Proctored laboratory sessions involving robot programming, circuit design, and collaborative teamwork projects",
+          "Held regular office hours to provide guidance on student project progress and troubleshooting",
+          "Assisted in curriculum development and laboratory exercise design",
+          "Evaluated student performance and provided constructive feedback"
         ]
       },
       {
         "id": "teach-3",
-        "title": "Teaching Assistants Manager",
-        "institution": "Sharif University of Technology",
-        "location": "Tehran, Iran",
-        "course": "Mechanism Design Course",
-        "startDate": "Aug 2015",
-        "endDate": "Jan 2019",
+        "title": "President and Treasurer",
+        "institution": "Iranian Association at Stevens (IAS), Stevens Institute of Technology",
+        "location": "Hoboken, NJ",
+        "course": "Student Organization Leadership",
+        "startDate": "Jan 2020",
+        "endDate": "May 2022",
+        "description": "Led student organization operations including recruitment, budget management, and event coordination.",
         "responsibilities": [
-          "Facilitated and coordinated students for projects and coursework",
-          "Creation and delivery of lectures on Simulink and Adams applications for dynamically simulating various mechanisms"
+          "Managed staffing process including recruiting, interviewing, and onboarding officers",
+          "Ensured role descriptions compliance with campus regulations",
+          "Planned and allocated budget for events and negotiated with contractors",
+          "Organized cultural and educational events for the Stevens community"
         ]
       },
       {
         "id": "teach-4",
-        "title": "Teaching Assistant",
+        "title": "Lecturer",
+        "institution": "Trinity Educational Center",
+        "location": "",
+        "course": "SAT Exam Quantitative Reasoning",
+        "startDate": "May 2018",
+        "endDate": "Jan 2019",
+        "description": "Prepared and delivered comprehensive lectures for SAT exam preparation focusing on quantitative reasoning.",
+        "responsibilities": [
+          "Taught linear algebra, single and system of linear equations, statistics, and advanced mathematics",
+          "Developed practice materials and exam strategies for SAT quantitative section",
+          "Provided individualized support to students based on their learning needs",
+          "Achieved high student satisfaction and improved test scores"
+        ]
+      },
+      {
+        "id": "teach-5",
+        "title": "Teaching Assistants Manager",
         "institution": "Sharif University of Technology",
-        "location": "Tehran, Iran",
-        "course": "Numerical Computations Course",
+        "location": "",
+        "course": "Mechanism Design",
         "startDate": "Aug 2015",
         "endDate": "Jan 2019",
+        "description": "Managed teaching assistants and delivered specialized lectures on dynamic simulation tools.",
         "responsibilities": [
-          "Designed and developed an auto-grading application to automate homework gradings in various domains",
-          "Teaching MATLAB, numerical methods for linear and nonlinear equations, numerical integration, and differentiation",
-          "Led and organized TAs for class activities and homework"
+          "Coordinated and supervised team of teaching assistants for coursework and projects",
+          "Created and delivered lectures on Simulink and Adams applications for dynamic mechanism simulation",
+          "Developed laboratory exercises and project assignments",
+          "Provided technical support and mentorship to students"
+        ]
+      },
+      {
+        "id": "teach-6",
+        "title": "Teaching Assistant",
+        "institution": "Sharif University of Technology",
+        "location": "",
+        "course": "Numerical Computations",
+        "startDate": "Aug 2015",
+        "endDate": "Jan 2019",
+        "description": "Taught numerical methods and developed automated grading systems for efficient course management.",
+        "responsibilities": [
+          "Designed and developed auto-grading application in MATLAB to automate homework assessment",
+          "Taught MATLAB programming, numerical methods for linear and nonlinear equations",
+          "Instructed students on numerical integration and differentiation techniques",
+          "Led and organized teaching assistants for class activities and homework management",
+          "Held office hours for student support and problem-solving"
         ]
       }
     ]
   },
+  "certificates": {
+    "heading": "Certifications",
+    "description": "Professional certifications and specialized training in machine learning, AI, and safety standards",
+    "certificates": [
+      {
+        "id": "cert-1",
+        "title": "Graduate Certificate in Machine Learning",
+        "issuer": "Stevens Institute of Technology",
+        "location": "Hoboken, NJ",
+        "date": "Dec 2022",
+        "credentialId": null,
+        "credentialUrl": null,
+        "description": "Advanced graduate-level certification covering deep neural networks, statistical learning, data mining, and advanced algorithms with perfect 4.0 GPA."
+      },
+      {
+        "id": "cert-2",
+        "title": "Fundamentals of Reinforcement Learning",
+        "issuer": "University of Alberta (Coursera)",
+        "date": "2022",
+        "credentialId": null,
+        "credentialUrl": "https://coursera.org/share/e3a25b11af40918160349e9b6c000e38",
+        "description": "Comprehensive course covering RL fundamentals including Markov Decision Processes, dynamic programming, and temporal-difference learning."
+      },
+      {
+        "id": "cert-3",
+        "title": "Custom Models, Layers, and Loss Functions with TensorFlow",
+        "issuer": "DeepLearning.AI (Coursera)",
+        "date": "2022",
+        "credentialId": null,
+        "credentialUrl": "https://coursera.org/share/59ea430a5ebe99ce4cd2d1329705fd26",
+        "description": "Advanced TensorFlow specialization covering custom model development, layer design, and loss function implementation for specialized deep learning applications."
+      },
+      {
+        "id": "cert-4",
+        "title": "HSE (Health, Safety, and Environment)",
+        "issuer": "Isfahan Oil Refinery Company (IORC)",
+        "date": "2018",
+        "credentialId": null,
+        "credentialUrl": null,
+        "description": "Industrial safety certification covering health, safety, and environmental standards in manufacturing and industrial settings."
+      }
+    ]
+  },
+  "testScores": {
+    "heading": "Test Scores",
+    "description": "Standardized test scores demonstrating academic excellence and language proficiency",
+    "scores": [
+      {
+        "id": "score-1",
+        "test": "GRE (Graduate Record Examination)",
+        "overall": "322/340",
+        "breakdown": [
+          {
+            "section": "Quantitative Reasoning",
+            "score": "170/170",
+            "percentile": "97th"
+          },
+          {
+            "section": "Verbal Reasoning",
+            "score": "152/170",
+            "percentile": "52nd"
+          }
+        ],
+        "date": "2019"
+      },
+      {
+        "id": "score-2",
+        "test": "TOEFL (Test of English as a Foreign Language)",
+        "overall": "98/120",
+        "breakdown": [],
+        "date": "2019"
+      }
+    ],
+    "transcriptUrl": "/Official_transcript.pdf"
+  },
   "contact": {
     "heading": "Get In Touch",
-    "description": "I'm interested in research collaborations, and projects in Machine Learning, AI, and Autonomous Systems. Feel free to reach out to me using the contact form below or via email.",
+    "description": "I'm interested in research collaborations, full-time opportunities, and consulting projects in Machine Learning, AI, Computer Vision, and Autonomous Systems. Feel free to reach out using the contact form or email.",
     "email": "akhavanjavid@gmail.com",
     "phone": "+1 (201) 552-0234",
+    "address": "510 25th St, Apt 206, Union City, NJ 07087, USA",
+    "availability": "Immediate availability · Green Card holder",
     "social": [
       {
         "platform": "LinkedIn",

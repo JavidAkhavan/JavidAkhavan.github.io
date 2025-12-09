@@ -66,8 +66,8 @@ export function SidebarNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navItems, setNavItems] = useState<NavItem[]>([]);
 
+  // Detect sections on mount
   useEffect(() => {
-    // Dynamically detect sections on the page
     const detectSections = () => {
       const sections = document.querySelectorAll('[data-testid$="-section"]');
       const detectedItems: NavItem[] = [];
@@ -84,14 +84,20 @@ export function SidebarNav() {
         }
       });
 
-      setNavItems(detectedItems);
-      if (detectedItems.length > 0 && !activeSection) {
+      if (detectedItems.length > 0) {
+        setNavItems(detectedItems);
         setActiveSection(detectedItems[0].id);
       }
     };
 
-    // Run detection after DOM is ready
-    detectSections();
+    // Run detection after a short delay to ensure DOM is ready
+    const timer = setTimeout(detectSections, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Handle scroll tracking
+  useEffect(() => {
+    if (navItems.length === 0) return;
 
     // Show sidebar after initial scroll
     const handleInitialScroll = () => {
@@ -156,7 +162,7 @@ export function SidebarNav() {
     handleScroll(); // Initial check
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navItems]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(
