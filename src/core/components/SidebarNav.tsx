@@ -66,6 +66,7 @@ export function SidebarNav() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Show sidebar after initial scroll
@@ -145,66 +146,144 @@ export function SidebarNav() {
         top: offsetPosition,
         behavior: 'smooth',
       });
+
+      // Close mobile menu after navigation
+      setMobileMenuOpen(false);
     }
   };
 
   return (
-    <nav
-      className={`fixed left-8 top-1/2 z-40 hidden -translate-y-1/2 transition-all duration-500 lg:block ${
-        isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
-      }`}
-    >
-      <div className="space-y-1 rounded-lg border bg-background/80 p-2 shadow-lg backdrop-blur-sm">
-        {navItems.map((item) => {
-          const isActive = activeSection === item.id;
-          return (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`group relative flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-all ${
-                isActive
-                  ? 'bg-primary text-primary-foreground shadow-md'
-                  : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
-              }`}
-              title={item.label}
-            >
-              {/* Progress indicator */}
-              {isActive && (
-                <div className="absolute left-0 top-0 h-full w-1 rounded-l-md bg-primary-foreground" />
-              )}
-
-              <span
-                className={`transition-transform ${isActive ? 'scale-110' : ''}`}
-              >
-                {item.icon}
-              </span>
-
-              {/* Label - show on hover */}
-              <span
-                className={`absolute left-full ml-4 whitespace-nowrap rounded-md bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md transition-all ${
+    <>
+      {/* Desktop Sidebar - Hidden on mobile, visible on lg and up */}
+      <nav
+        className={`fixed left-8 top-1/2 z-40 hidden -translate-y-1/2 transition-all duration-500 lg:block ${
+          isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
+        }`}
+      >
+        <div className="space-y-1 rounded-lg border bg-background/80 p-2 shadow-lg backdrop-blur-sm">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`group relative flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-all ${
                   isActive
-                    ? 'opacity-0 group-hover:opacity-100'
-                    : 'pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100'
+                    ? 'bg-primary text-primary-foreground shadow-md'
+                    : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
                 }`}
+                title={item.label}
               >
-                {item.label}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+                {/* Progress indicator */}
+                {isActive && (
+                  <div className="absolute left-0 top-0 h-full w-1 rounded-l-md bg-primary-foreground" />
+                )}
 
-      {/* Scroll progress indicator */}
-      <div className="mt-4 flex justify-center">
-        <div className="relative h-32 w-1 overflow-hidden rounded-full bg-secondary">
-          <div
-            className="absolute left-0 top-0 w-full bg-primary transition-all duration-300"
-            style={{
-              height: `${scrollProgress}%`,
-            }}
-          />
+                <span
+                  className={`transition-transform ${isActive ? 'scale-110' : ''}`}
+                >
+                  {item.icon}
+                </span>
+
+                {/* Label - show on hover */}
+                <span
+                  className={`absolute left-full ml-4 whitespace-nowrap rounded-md bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md transition-all ${
+                    isActive
+                      ? 'opacity-0 group-hover:opacity-100'
+                      : 'pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100'
+                  }`}
+                >
+                  {item.label}
+                </span>
+              </button>
+            );
+          })}
         </div>
-      </div>
-    </nav>
+
+        {/* Scroll progress indicator */}
+        <div className="mt-4 flex justify-center">
+          <div className="relative h-32 w-1 overflow-hidden rounded-full bg-secondary">
+            <div
+              className="absolute left-0 top-0 w-full bg-primary transition-all duration-300"
+              style={{
+                height: `${scrollProgress}%`,
+              }}
+            />
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile FAB Toggle Button - Only visible on mobile (below lg) */}
+      {isVisible && (
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-all duration-300 hover:scale-110 lg:hidden ${
+            mobileMenuOpen ? 'rotate-90' : ''
+          }`}
+          aria-label="Toggle navigation menu"
+        >
+          {mobileMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      )}
+
+      {/* Mobile Sidebar Menu */}
+      {mobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+
+          {/* Mobile Menu Panel */}
+          <nav className="fixed bottom-24 right-6 z-50 max-h-[70vh] w-64 overflow-y-auto rounded-lg border bg-background/95 p-4 shadow-2xl backdrop-blur-sm lg:hidden">
+            <div className="space-y-2">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`flex w-full items-center gap-3 rounded-md px-4 py-3 text-sm font-medium transition-all ${
+                      isActive
+                        ? 'bg-primary text-primary-foreground shadow-md'
+                        : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
+                    }`}
+                  >
+                    <span
+                      className={`transition-transform ${isActive ? 'scale-110' : ''}`}
+                    >
+                      {item.icon}
+                    </span>
+                    <span>{item.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Mobile Scroll Progress */}
+            <div className="mt-4 flex items-center gap-2 border-t pt-4">
+              <div className="flex-1">
+                <div className="relative h-2 overflow-hidden rounded-full bg-secondary">
+                  <div
+                    className="absolute left-0 top-0 h-full bg-primary transition-all duration-300"
+                    style={{
+                      width: `${scrollProgress}%`,
+                    }}
+                  />
+                </div>
+              </div>
+              <span className="text-xs text-muted-foreground">
+                {Math.round(scrollProgress)}%
+              </span>
+            </div>
+          </nav>
+        </>
+      )}
+    </>
   );
 }
