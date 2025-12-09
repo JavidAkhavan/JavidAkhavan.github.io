@@ -255,6 +255,7 @@ export function PublicationsSection({
 
   return (
     <section
+      id="publications"
       className={`publications-section py-16 ${className}`}
       data-testid="publications-section"
     >

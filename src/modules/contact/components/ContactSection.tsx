@@ -67,6 +67,7 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
 
   return (
     <section
+      id="contact"
       className={`contact-section py-16 ${className}`}
       data-testid="contact-section"
     >

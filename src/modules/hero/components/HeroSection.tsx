@@ -3,11 +3,31 @@
  * Content-agnostic - accepts data via props
  */
 
+'use client';
+
 import React from 'react';
 import { HeroSectionProps } from '../types';
 import { Button } from '@/components/ui/button';
 
 export function HeroSection({ data, className = '' }: HeroSectionProps) {
+  const handleClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Handle anchor links with smooth scroll
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+
+        // Update URL hash without jumping
+        window.history.pushState(null, '', href);
+      }
+    }
+  };
   return (
     <section className={`hero-section ${className}`} data-testid="hero-section">
       <div className="container mx-auto px-4 py-20">
@@ -34,6 +54,7 @@ export function HeroSection({ data, className = '' }: HeroSectionProps) {
                 <Button key={index} variant={variant} asChild>
                   <a
                     href={cta.href}
+                    onClick={(e) => handleClick(cta.href, e)}
                     {...(isDownload && {
                       download: true,
                       target: '_blank',
