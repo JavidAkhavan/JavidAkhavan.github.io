@@ -153,120 +153,121 @@ export function PublicationsSection({
 
                   {/* Metadata badges */}
                   <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
-                <span className="rounded-full bg-primary/10 px-2.5 py-1 font-medium text-primary transition-all group-hover:bg-primary/20">
-                  {publication.type}
-                </span>
-                <span className="text-muted-foreground">
-                  {publication.year}
-                </span>
-                {publication.citations !== undefined &&
-                  publication.citations > 0 && (
-                    <span className="flex items-center gap-1 rounded-full bg-blue-500/10 px-2.5 py-1 font-medium text-blue-600 dark:text-blue-400">
-                      <TrendingUp className="h-3 w-3" />
-                      {publication.citations} citations
+                    <span className="rounded-full bg-primary/10 px-2.5 py-1 font-medium text-primary transition-all group-hover:bg-primary/20">
+                      {publication.type}
                     </span>
-                  )}
-                {publication.featured && (
-                  <span className="flex items-center gap-1 rounded-full bg-yellow-500/10 px-2.5 py-1 font-semibold text-yellow-600 dark:text-yellow-400">
-                    <Award className="h-3 w-3" />
-                    Featured
-                  </span>
-                )}
-                {publication.status && publication.status !== 'published' && (
-                  <span className="rounded-full bg-orange-500/10 px-2.5 py-1 font-medium text-orange-600 dark:text-orange-400">
-                    {publication.status}
-                  </span>
-                )}
+                    <span className="text-muted-foreground">
+                      {publication.year}
+                    </span>
+                    {publication.citations !== undefined &&
+                      publication.citations > 0 && (
+                        <span className="flex items-center gap-1 rounded-full bg-blue-500/10 px-2.5 py-1 font-medium text-blue-600 dark:text-blue-400">
+                          <TrendingUp className="h-3 w-3" />
+                          {publication.citations} citations
+                        </span>
+                      )}
+                    {publication.featured && (
+                      <span className="flex items-center gap-1 rounded-full bg-yellow-500/10 px-2.5 py-1 font-semibold text-yellow-600 dark:text-yellow-400">
+                        <Award className="h-3 w-3" />
+                        Featured
+                      </span>
+                    )}
+                    {publication.status &&
+                      publication.status !== 'published' && (
+                        <span className="rounded-full bg-orange-500/10 px-2.5 py-1 font-medium text-orange-600 dark:text-orange-400">
+                          {publication.status}
+                        </span>
+                      )}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </CardHeader>
+            </CardHeader>
 
-        <CardContent className="space-y-3">
-          {/* Authors */}
-          {publication.authors && publication.authors.length > 0 && (
-            <div className="text-sm text-muted-foreground">
-              <span className="font-medium">Authors:</span>{' '}
-              {publication.authors.join(', ')}
-            </div>
-          )}
-
-          {/* Venue */}
-          {publication.venue && (
-            <div className="flex items-start gap-2">
-              <BookOpen className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground" />
-              <span className="text-sm italic text-muted-foreground">
-                {publication.venue}
-                {publication.volumeInfo && `, ${publication.volumeInfo}`}
-                {publication.pageInfo && `, ${publication.pageInfo}`}
-              </span>
-            </div>
-          )}
-
-          {/* Abstract */}
-          {publication.abstract && (
-            <div className="text-sm leading-relaxed text-muted-foreground">
-              {hasLongAbstract && !isExpanded
-                ? `${publication.abstract.substring(0, 300)}...`
-                : publication.abstract}
-              {hasLongAbstract && (
-                <button
-                  onClick={() => toggleExpanded(publication.id)}
-                  className="ml-2 text-primary hover:underline"
-                >
-                  {isExpanded ? 'Show less' : 'Read more'}
-                </button>
+            <CardContent className="space-y-3">
+              {/* Authors */}
+              {publication.authors && publication.authors.length > 0 && (
+                <div className="text-sm text-muted-foreground">
+                  <span className="font-medium">Authors:</span>{' '}
+                  {publication.authors.join(', ')}
+                </div>
               )}
-            </div>
-          )}
 
-          {/* Keywords */}
-          {publication.keywords && publication.keywords.length > 0 && (
-            <div className="flex flex-wrap gap-1.5">
-              {publication.keywords.map((keyword, idx) => (
-                <span
-                  key={idx}
-                  className="rounded-md bg-secondary px-2 py-0.5 text-xs font-medium transition-colors hover:bg-secondary/80"
-                >
-                  {keyword}
-                </span>
-              ))}
-            </div>
-          )}
+              {/* Venue */}
+              {publication.venue && (
+                <div className="flex items-start gap-2">
+                  <BookOpen className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground" />
+                  <span className="text-sm italic text-muted-foreground">
+                    {publication.venue}
+                    {publication.volumeInfo && `, ${publication.volumeInfo}`}
+                    {publication.pageInfo && `, ${publication.pageInfo}`}
+                  </span>
+                </div>
+              )}
 
-          {/* Links */}
-          {publication.links && publication.links.length > 0 && (
-            <div className="flex flex-wrap gap-2 pt-2">
-              {publication.links.map((link, idx) => (
-                <Button
-                  key={idx}
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="h-8"
-                >
-                  <a
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5"
-                  >
-                    {link.type === 'doi' && (
-                      <FileText className="h-3.5 w-3.5" />
-                    )}
-                    {link.type === 'pdf' && (
-                      <FileText className="h-3.5 w-3.5" />
-                    )}
-                    {link.type !== 'doi' && link.type !== 'pdf' && (
-                      <ExternalLink className="h-3.5 w-3.5" />
-                    )}
-                    {link.label || link.type.toUpperCase()}
-                  </a>
-                </Button>
-              ))}
-            </div>
-          )}
-        </CardContent>
+              {/* Abstract */}
+              {publication.abstract && (
+                <div className="text-sm leading-relaxed text-muted-foreground">
+                  {hasLongAbstract && !isExpanded
+                    ? `${publication.abstract.substring(0, 300)}...`
+                    : publication.abstract}
+                  {hasLongAbstract && (
+                    <button
+                      onClick={() => toggleExpanded(publication.id)}
+                      className="ml-2 text-primary hover:underline"
+                    >
+                      {isExpanded ? 'Show less' : 'Read more'}
+                    </button>
+                  )}
+                </div>
+              )}
+
+              {/* Keywords */}
+              {publication.keywords && publication.keywords.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  {publication.keywords.map((keyword, idx) => (
+                    <span
+                      key={idx}
+                      className="rounded-md bg-secondary px-2 py-0.5 text-xs font-medium transition-colors hover:bg-secondary/80"
+                    >
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Links */}
+              {publication.links && publication.links.length > 0 && (
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {publication.links.map((link, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="h-8"
+                    >
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5"
+                      >
+                        {link.type === 'doi' && (
+                          <FileText className="h-3.5 w-3.5" />
+                        )}
+                        {link.type === 'pdf' && (
+                          <FileText className="h-3.5 w-3.5" />
+                        )}
+                        {link.type !== 'doi' && link.type !== 'pdf' && (
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        )}
+                        {link.label || link.type.toUpperCase()}
+                      </a>
+                    </Button>
+                  ))}
+                </div>
+              )}
+            </CardContent>
           </div>
         </div>
       </Card>

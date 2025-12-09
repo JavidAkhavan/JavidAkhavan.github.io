@@ -45,7 +45,8 @@ export function Header({
 
   const getSocialIcon = (platform: string) => {
     const lowerPlatform = platform.toLowerCase();
-    if (lowerPlatform.includes('linkedin')) return <Linkedin className="h-4 w-4" />;
+    if (lowerPlatform.includes('linkedin'))
+      return <Linkedin className="h-4 w-4" />;
     if (lowerPlatform.includes('github')) return <Github className="h-4 w-4" />;
     return null;
   };
