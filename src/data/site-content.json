@@ -75,14 +75,14 @@
       "endDate": "June 2024",
       "description": "Led PhD research program resulting in 8+ peer-reviewed publications, 1 patent application, and 2 publicly accessible datasets adopted by 20+ research institutions worldwide. Pioneered the application of Vision Transformers, Reinforcement Learning, and deep learning techniques to develop advanced AI models for real-time quality control and anomaly detection in additive manufacturing.",
       "highlights": [
-        "Engineered a Vision-Transformer-based motion tracking algorithm for interpreting acoustic emission data from robotic manipulator head, achieving real-time tracking with ±0.1 mm accuracy",
-        "Optimized a TensorFlow deep learning model for melt pool image processing, cutting data processing time from 120 seconds to under 1 second—a 120× performance improvement",
+        "Engineered a Vision-Transformer-based motion tracking algorithm for interpreting acoustic emission data from robotic manipulator head, achieving real-time tracking with ±0.1 mm accuracy (published in MSEC 2024)",
+        "Optimized a TensorFlow deep learning model (TDIP) for melt pool image processing, cutting data processing time from 120 seconds to under 1 second—a 120× performance improvement (published in IPCV 2023)",
         "Applied Hybrid Convolutional Autoencoder-Decoders for point cloud and image feature extraction, enabling autonomous anomaly detection with 98% accuracy",
         "Designed a Reinforcement Learning-based controller in TensorFlow for real-time anomaly detection and fault mitigation (Patent pending)",
-        "Published 8+ peer-reviewed papers in top-tier conferences (JIMS, MSEC, IPCV) based on research findings",
+        "Published 8+ peer-reviewed papers in top-tier conferences (JIMS, MSEC, IPCV) - view all publications on Google Scholar",
         "Presented research findings at 5+ international conferences including ASME MSEC and IDETC-CIE",
         "Mentored 3 graduate students on ML research projects, resulting in 2 co-authored publications",
-        "Established two publicly accessible datasets for smart manufacturing research adopted by 20+ institutions",
+        "Established two publicly accessible datasets for smart manufacturing research adopted by 20+ institutions (Data in Brief 2022)",
         "Developed a MATLAB-based labeling assistant dashboard, streamlining database creation and reducing manual effort by 10×",
         "Built a multi-language command exchange system (Python, MATLAB, C#) for seamless API synchronization and automation across multiple platforms",
         "Worked extensively with advanced sensors and acquisition modules including FLIR thermal cameras, laser surface profilometers, LiDAR, and acoustic emission readers"
