@@ -61,7 +61,10 @@ export function CertificatesSection({
           {data.length > 0 ? (
             <StaggeredList animation="slide-up" staggerDelay={80}>
               {data.map((certificate) => (
-                <CertificateCard key={certificate.id} certificate={certificate} />
+                <CertificateCard
+                  key={certificate.id}
+                  certificate={certificate}
+                />
               ))}
             </StaggeredList>
           ) : (

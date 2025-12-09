@@ -19,7 +19,9 @@ export function AboutSection({ data, className = '' }: AboutSectionProps) {
         <ScrollAnimation animation="fade">
           <Card>
             <CardHeader>
-              <CardTitle className="text-3xl font-bold">{data.heading}</CardTitle>
+              <CardTitle className="text-3xl font-bold">
+                {data.heading}
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid gap-6 md:grid-cols-2">
@@ -79,7 +81,9 @@ export function AboutSection({ data, className = '' }: AboutSectionProps) {
                           className="flex items-center gap-2 rounded-lg bg-secondary/50 p-3 transition-all hover:bg-secondary"
                         >
                           <span className="text-primary">•</span>
-                          <span className="text-sm font-medium">{interest}</span>
+                          <span className="text-sm font-medium">
+                            {interest}
+                          </span>
                         </div>
                       ))}
                     </div>

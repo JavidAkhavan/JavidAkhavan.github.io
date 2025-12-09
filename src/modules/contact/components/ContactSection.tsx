@@ -76,7 +76,9 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
         <ScrollAnimation animation="fade">
           <Card>
             <CardHeader>
-              <CardTitle className="text-3xl font-bold">{data.heading}</CardTitle>
+              <CardTitle className="text-3xl font-bold">
+                {data.heading}
+              </CardTitle>
               {data.description && (
                 <p className="text-lg text-muted-foreground">
                   {data.description}
@@ -87,7 +89,9 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
               <div className="grid gap-6 md:grid-cols-2">
                 <ScrollAnimation animation="slide-up" delay={200}>
                   <div className="space-y-4">
-                    <h3 className="text-xl font-semibold">Contact Information</h3>
+                    <h3 className="text-xl font-semibold">
+                      Contact Information
+                    </h3>
                     {data.email && (
                       <div>
                         <p className="text-sm font-medium text-muted-foreground">
@@ -220,7 +224,9 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
                         {formState === 'error' && (
                           <div className="flex items-center gap-2 rounded-md bg-red-500/10 px-4 py-2 text-sm text-red-600 dark:text-red-400">
                             <XCircle className="h-4 w-4" />
-                            <span>Failed to send message. Please try again.</span>
+                            <span>
+                              Failed to send message. Please try again.
+                            </span>
                           </div>
                         )}
                       </form>
