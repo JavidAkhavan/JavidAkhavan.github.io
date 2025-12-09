@@ -3,6 +3,7 @@
 /**
  * Sidebar Navigation Component
  * Sticky navigation with scroll-spy functionality
+ * Dynamically detects sections on the current page
  */
 
 import React, { useEffect, useState } from 'react';
@@ -28,47 +29,70 @@ interface NavItem {
   icon: React.ReactNode;
 }
 
-const navItems: NavItem[] = [
-  { id: 'hero', label: 'Home', icon: <Home className="h-4 w-4" /> },
-  { id: 'about', label: 'About', icon: <User className="h-4 w-4" /> },
-  {
-    id: 'experience',
-    label: 'Experience',
-    icon: <Briefcase className="h-4 w-4" />,
-  },
-  {
-    id: 'education',
-    label: 'Education',
-    icon: <GraduationCap className="h-4 w-4" />,
-  },
-  { id: 'skills', label: 'Skills', icon: <Code className="h-4 w-4" /> },
-  { id: 'projects', label: 'Projects', icon: <Folder className="h-4 w-4" /> },
-  {
-    id: 'publications',
-    label: 'Publications',
-    icon: <BookOpen className="h-4 w-4" />,
-  },
-  { id: 'teaching', label: 'Teaching', icon: <Users className="h-4 w-4" /> },
-  {
-    id: 'certificates',
-    label: 'Certificates',
-    icon: <Award className="h-4 w-4" />,
-  },
-  {
-    id: 'test-scores',
-    label: 'Test Scores',
-    icon: <FileText className="h-4 w-4" />,
-  },
-  { id: 'contact', label: 'Contact', icon: <Mail className="h-4 w-4" /> },
-];
+// Icon mapping for dynamic section detection
+const iconMap: Record<string, React.ReactNode> = {
+  hero: <Home className="h-4 w-4" />,
+  about: <User className="h-4 w-4" />,
+  experience: <Briefcase className="h-4 w-4" />,
+  education: <GraduationCap className="h-4 w-4" />,
+  skills: <Code className="h-4 w-4" />,
+  projects: <Folder className="h-4 w-4" />,
+  publications: <BookOpen className="h-4 w-4" />,
+  teaching: <Users className="h-4 w-4" />,
+  certificates: <Award className="h-4 w-4" />,
+  'test-scores': <FileText className="h-4 w-4" />,
+  contact: <Mail className="h-4 w-4" />,
+};
+
+// Label mapping for better display names
+const labelMap: Record<string, string> = {
+  hero: 'Home',
+  about: 'About',
+  experience: 'Experience',
+  education: 'Education',
+  skills: 'Skills',
+  projects: 'Projects',
+  publications: 'Publications',
+  teaching: 'Teaching',
+  certificates: 'Certificates',
+  'test-scores': 'Test Scores',
+  contact: 'Contact',
+};
 
 export function SidebarNav() {
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [navItems, setNavItems] = useState<NavItem[]>([]);
 
   useEffect(() => {
+    // Dynamically detect sections on the page
+    const detectSections = () => {
+      const sections = document.querySelectorAll('[data-testid$="-section"]');
+      const detectedItems: NavItem[] = [];
+
+      sections.forEach((section) => {
+        const testId = section.getAttribute('data-testid');
+        if (testId) {
+          const id = testId.replace('-section', '');
+          detectedItems.push({
+            id,
+            label: labelMap[id] || id.charAt(0).toUpperCase() + id.slice(1),
+            icon: iconMap[id] || <Folder className="h-4 w-4" />,
+          });
+        }
+      });
+
+      setNavItems(detectedItems);
+      if (detectedItems.length > 0 && !activeSection) {
+        setActiveSection(detectedItems[0].id);
+      }
+    };
+
+    // Run detection after DOM is ready
+    detectSections();
+
     // Show sidebar after initial scroll
     const handleInitialScroll = () => {
       if (window.scrollY > 100) {
@@ -151,6 +175,11 @@ export function SidebarNav() {
       setMobileMenuOpen(false);
     }
   };
+
+  // Don't render if no sections detected
+  if (navItems.length === 0) {
+    return null;
+  }
 
   return (
     <>
