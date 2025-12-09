@@ -6,6 +6,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import {
   PublicationsSectionProps,
   Publication,
@@ -22,6 +23,7 @@ import {
   Search,
   Award,
   TrendingUp,
+  ImageIcon,
 } from 'lucide-react';
 
 export function PublicationsSection({
@@ -124,17 +126,33 @@ export function PublicationsSection({
     return (
       <Card
         key={publication.id}
-        className="group mb-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        className="group mb-4 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
       >
-        <CardHeader>
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex-1">
-              <CardTitle className="text-lg leading-tight transition-colors group-hover:text-primary">
-                {publication.title}
-              </CardTitle>
+        <div className="flex flex-col sm:flex-row">
+          {/* Publication Image */}
+          {publication.image && (
+            <div className="relative h-48 w-full flex-shrink-0 overflow-hidden bg-muted sm:h-auto sm:w-48">
+              <Image
+                src={publication.image}
+                alt={publication.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, 192px"
+              />
+            </div>
+          )}
 
-              {/* Metadata badges */}
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+          {/* Publication Content */}
+          <div className="flex flex-1 flex-col">
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <CardTitle className="text-lg leading-tight transition-colors group-hover:text-primary">
+                    {publication.title}
+                  </CardTitle>
+
+                  {/* Metadata badges */}
+                  <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
                 <span className="rounded-full bg-primary/10 px-2.5 py-1 font-medium text-primary transition-all group-hover:bg-primary/20">
                   {publication.type}
                 </span>
@@ -249,6 +267,8 @@ export function PublicationsSection({
             </div>
           )}
         </CardContent>
+          </div>
+        </div>
       </Card>
     );
   };

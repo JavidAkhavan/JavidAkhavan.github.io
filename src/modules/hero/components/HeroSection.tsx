@@ -10,7 +10,10 @@ import { HeroSectionProps } from '../types';
 import { Button } from '@/components/ui/button';
 
 export function HeroSection({ data, className = '' }: HeroSectionProps) {
-  const handleClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (
+    href: string,
+    e: React.MouseEvent<HTMLAnchorElement>
+  ) => {
     // Handle anchor links with smooth scroll
     if (href.startsWith('#')) {
       e.preventDefault();

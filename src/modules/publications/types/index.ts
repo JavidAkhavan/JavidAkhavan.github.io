@@ -17,6 +17,7 @@ export interface Publication {
   volumeInfo?: string;
   pageInfo?: string;
   keywords?: string[];
+  image?: string; // Path to publication thumbnail/image
   links?: {
     type: 'doi' | 'pdf' | 'scholar' | 'arxiv' | 'github' | 'other';
     url: string;

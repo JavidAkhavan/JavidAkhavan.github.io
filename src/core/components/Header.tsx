@@ -1,6 +1,6 @@
 /**
  * Header Component
- * Main site header with navigation
+ * Main site header with navigation and contact info
  */
 
 'use client';
@@ -9,6 +9,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 export interface NavItem {
   label: string;
@@ -16,24 +17,100 @@ export interface NavItem {
   external?: boolean;
 }
 
+export interface SocialLink {
+  platform: string;
+  url: string;
+}
+
 export interface HeaderProps {
   logo?: string;
   navItems?: NavItem[];
+  email?: string;
+  phone?: string;
+  location?: string;
+  social?: SocialLink[];
   className?: string;
 }
 
 export function Header({
   logo = 'JA',
   navItems = [],
+  email,
+  phone,
+  location,
+  social = [],
   className = '',
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
+  const getSocialIcon = (platform: string) => {
+    const lowerPlatform = platform.toLowerCase();
+    if (lowerPlatform.includes('linkedin')) return <Linkedin className="h-4 w-4" />;
+    if (lowerPlatform.includes('github')) return <Github className="h-4 w-4" />;
+    return null;
+  };
+
   return (
     <header
-      className={`sticky top-0 z-[var(--z-sticky)] bg-background/80 backdrop-blur-sm border-b border-border ${className}`}
+      className={`sticky top-0 z-[var(--z-sticky)] bg-background/95 backdrop-blur-sm border-b border-border ${className}`}
       data-testid="site-header"
     >
+      {/* Top Bar with Contact Info */}
+      <div className="border-b border-border/50 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-10 text-xs">
+            {/* Contact Info */}
+            <div className="hidden lg:flex items-center gap-4 text-muted-foreground">
+              {email && (
+                <a
+                  href={`mailto:${email}`}
+                  className="flex items-center gap-1.5 hover:text-foreground transition-colors"
+                >
+                  <Mail className="h-3.5 w-3.5" />
+                  <span>{email}</span>
+                </a>
+              )}
+              {phone && (
+                <a
+                  href={`tel:${phone}`}
+                  className="flex items-center gap-1.5 hover:text-foreground transition-colors"
+                >
+                  <Phone className="h-3.5 w-3.5" />
+                  <span>{phone}</span>
+                </a>
+              )}
+              {location && (
+                <div className="flex items-center gap-1.5">
+                  <MapPin className="h-3.5 w-3.5" />
+                  <span>{location}</span>
+                </div>
+              )}
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-2">
+              {social.map((link) => {
+                const icon = getSocialIcon(link.platform);
+                return icon ? (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 px-2 py-1 rounded hover:bg-background/50 text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label={link.platform}
+                  >
+                    {icon}
+                    <span className="hidden sm:inline">{link.platform}</span>
+                  </a>
+                ) : null;
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

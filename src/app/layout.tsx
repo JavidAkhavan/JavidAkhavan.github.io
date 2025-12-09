@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/core/components/ThemeProvider';
 import { StructuredData } from '@/core/components/StructuredData';
+import { Header } from '@/core/components/Header';
+import { getContent } from '@/lib/content-adapter';
 import './globals.css';
 
 const geistSans = Geist({
@@ -83,6 +85,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const content = getContent().getSiteContent();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -97,6 +101,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header
+            logo="Javid Akhavan"
+            email={content.contact.email}
+            phone={content.contact.phone}
+            location="New Jersey, USA"
+            social={content.contact.social}
+          />
           {children}
         </ThemeProvider>
       </body>
