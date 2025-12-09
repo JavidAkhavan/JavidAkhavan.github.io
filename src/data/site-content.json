@@ -1,4 +1,6 @@
 {
+  "_comment": "This JSON file contains all content for the portfolio website. To maintain modularity, all text content is stored here rather than hardcoded in components.",
+  "_linkFormatting": "Text fields support markdown-style links using the format: [text](url). Example: 'Published in [MSEC 2024](https://example.com)' will render as a clickable link. This is parsed by the parseLinksInText() function in ExperienceSection.tsx and can be extended to other components as needed.",
   "metadata": {
     "title": "Javid Akhavan - PhD in Robotics & AI | Machine Learning Engineer",
     "description": "Data Scientist and Machine Learning Engineer specializing in Computer Vision, Deep Learning, and Autonomous Manufacturing Systems. PhD from Stevens Institute of Technology.",
