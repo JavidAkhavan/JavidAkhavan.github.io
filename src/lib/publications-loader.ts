@@ -67,7 +67,6 @@ export function loadPublications(): PublicationsData {
 
     return data;
   } catch (error) {
-    console.error('Error loading publications YAML:', error);
     // Return empty structure if file doesn't exist
     return {
       profile: {

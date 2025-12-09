@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { CertificatesSectionProps, CertificateCardProps } from '../types';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink, Award } from 'lucide-react';
 
 function CertificateCard({ certificate }: CertificateCardProps) {

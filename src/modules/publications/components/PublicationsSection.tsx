@@ -20,8 +20,6 @@ import {
   FileText,
   BookOpen,
   Search,
-  ChevronDown,
-  ChevronUp,
   Award,
   TrendingUp,
 } from 'lucide-react';

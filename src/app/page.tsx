@@ -99,7 +99,8 @@ export default function Home() {
                 <SocialProofBadges
                   education={{
                     label: phd?.degree || 'PhD in Robotics & AI',
-                    highlight: phd?.institution || 'Stevens Institute of Technology',
+                    highlight:
+                      phd?.institution || 'Stevens Institute of Technology',
                   }}
                   gpa={{
                     label: `Perfect ${phd?.gpa || '4.0'} GPA`,

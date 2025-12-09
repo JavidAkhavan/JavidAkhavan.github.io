@@ -16,6 +16,8 @@ import {
   BookOpen,
   Users,
   Mail,
+  Award,
+  FileText,
 } from 'lucide-react';
 
 interface NavItem {
@@ -45,6 +47,16 @@ const navItems: NavItem[] = [
     icon: <BookOpen className="h-4 w-4" />,
   },
   { id: 'teaching', label: 'Teaching', icon: <Users className="h-4 w-4" /> },
+  {
+    id: 'certificates',
+    label: 'Certificates',
+    icon: <Award className="h-4 w-4" />,
+  },
+  {
+    id: 'test-scores',
+    label: 'Test Scores',
+    icon: <FileText className="h-4 w-4" />,
+  },
   { id: 'contact', label: 'Contact', icon: <Mail className="h-4 w-4" /> },
 ];
 

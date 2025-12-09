@@ -51,7 +51,6 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
         throw new Error('Form submission failed');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
       setFormState('error');
       setTimeout(() => setFormState('idle'), 5000);
     }

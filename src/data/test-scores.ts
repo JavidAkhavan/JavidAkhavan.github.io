@@ -27,4 +27,4 @@ export const testScoresData: TestScore[] = [
   },
 ];
 
-export const transcriptUrl = '/file/Official_transcript.pdf';
+export const transcriptUrl = '/Official_transcript.pdf';

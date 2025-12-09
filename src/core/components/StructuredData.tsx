@@ -39,11 +39,11 @@ export function StructuredData() {
       'Python',
       'MATLAB',
     ],
-    email: 'mailto:jakhavan@stevens.edu',
+    email: 'mailto:akhavanjavid@gmail.com',
     sameAs: [
-      'https://www.linkedin.com/in/javid-akhavan/',
+      'https://www.linkedin.com/in/javid-akhavan-94b700151/',
       'https://github.com/javidakhavan',
-      'https://scholar.google.com/citations?user=F1dmBdMAAAAJ',
+      'https://scholar.google.com/citations?user=hTwbmPUAAAAJ',
     ],
   };
 
