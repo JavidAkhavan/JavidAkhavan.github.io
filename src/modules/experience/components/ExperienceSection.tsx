@@ -6,6 +6,7 @@
 import React from 'react';
 import { ExperienceSectionProps, ExperienceCardProps } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ScrollAnimation, StaggeredList } from '@/core';
 
 function ExperienceCard({ experience }: ExperienceCardProps) {
   const dateRange = experience.current
@@ -85,12 +86,16 @@ export function ExperienceSection({
       data-testid="experience-section"
     >
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-3xl font-bold">Experience</h2>
+        <ScrollAnimation animation="fade">
+          <h2 className="mb-8 text-3xl font-bold">Experience</h2>
+        </ScrollAnimation>
         <div className="space-y-4">
           {data.length > 0 ? (
-            data.map((experience) => (
-              <ExperienceCard key={experience.id} experience={experience} />
-            ))
+            <StaggeredList animation="slide-up" staggerDelay={100}>
+              {data.map((experience) => (
+                <ExperienceCard key={experience.id} experience={experience} />
+              ))}
+            </StaggeredList>
           ) : (
             <p className="text-muted-foreground">
               No experience entries available.

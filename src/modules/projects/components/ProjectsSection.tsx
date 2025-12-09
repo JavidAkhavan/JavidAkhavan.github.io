@@ -8,6 +8,7 @@ import { ProjectsSectionProps, ProjectCardProps } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import { ScrollAnimation, StaggeredList } from '@/core';
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -94,15 +95,21 @@ export function ProjectsSection({
       data-testid="projects-section"
     >
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-3xl font-bold">Projects</h2>
+        <ScrollAnimation animation="fade">
+          <h2 className="mb-8 text-3xl font-bold">Projects</h2>
+        </ScrollAnimation>
 
         {featuredProjects.length > 0 && (
           <div className="mb-8">
-            <h3 className="mb-4 text-xl font-semibold">Featured Projects</h3>
+            <ScrollAnimation animation="slide-up" delay={200}>
+              <h3 className="mb-4 text-xl font-semibold">Featured Projects</h3>
+            </ScrollAnimation>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {featuredProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
+              <StaggeredList animation="scale" staggerDelay={100}>
+                {featuredProjects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </StaggeredList>
             </div>
           </div>
         )}
@@ -110,12 +117,16 @@ export function ProjectsSection({
         {otherProjects.length > 0 && (
           <div>
             {featuredProjects.length > 0 && (
-              <h3 className="mb-4 text-xl font-semibold">Other Projects</h3>
+              <ScrollAnimation animation="slide-up" delay={400}>
+                <h3 className="mb-4 text-xl font-semibold">Other Projects</h3>
+              </ScrollAnimation>
             )}
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {otherProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
+              <StaggeredList animation="scale" staggerDelay={100}>
+                {otherProjects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </StaggeredList>
             </div>
           </div>
         )}

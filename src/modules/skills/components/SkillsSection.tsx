@@ -8,6 +8,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { SkillsSectionProps, SkillCategoryCardProps } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ScrollAnimation, StaggeredList } from '@/core';
 
 // Map skill levels to proficiency percentages
 const getLevelPercentage = (level?: string): number => {
@@ -94,12 +95,16 @@ export function SkillsSection({ data, className = '' }: SkillsSectionProps) {
       data-testid="skills-section"
     >
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-3xl font-bold">Skills</h2>
+        <ScrollAnimation animation="fade">
+          <h2 className="mb-8 text-3xl font-bold">Skills</h2>
+        </ScrollAnimation>
         <div className="grid gap-6 md:grid-cols-2">
           {data.length > 0 ? (
-            data.map((category) => (
-              <SkillCategoryCard key={category.id} category={category} />
-            ))
+            <StaggeredList animation="slide-up" staggerDelay={120}>
+              {data.map((category) => (
+                <SkillCategoryCard key={category.id} category={category} />
+              ))}
+            </StaggeredList>
           ) : (
             <p className="text-muted-foreground">
               No skills entries available.

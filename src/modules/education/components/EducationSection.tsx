@@ -6,6 +6,7 @@
 import React from 'react';
 import { EducationSectionProps, EducationCardProps } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ScrollAnimation, StaggeredList } from '@/core';
 
 function EducationCard({ education }: EducationCardProps) {
   const dateRange = `${education.startDate}${education.endDate ? ` - ${education.endDate}` : ''}`;
@@ -90,12 +91,16 @@ export function EducationSection({
       data-testid="education-section"
     >
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-3xl font-bold">Education</h2>
+        <ScrollAnimation animation="fade">
+          <h2 className="mb-8 text-3xl font-bold">Education</h2>
+        </ScrollAnimation>
         <div className="space-y-4">
           {data.length > 0 ? (
-            data.map((education) => (
-              <EducationCard key={education.id} education={education} />
-            ))
+            <StaggeredList animation="slide-up" staggerDelay={100}>
+              {data.map((education) => (
+                <EducationCard key={education.id} education={education} />
+              ))}
+            </StaggeredList>
           ) : (
             <p className="text-muted-foreground">
               No education entries available.

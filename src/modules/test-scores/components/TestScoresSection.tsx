@@ -8,6 +8,7 @@ import { TestScoresSectionProps, TestScoreCardProps } from '../types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Download, GraduationCap } from 'lucide-react';
+import { ScrollAnimation, StaggeredList } from '@/core';
 
 function TestScoreCard({ testScore }: TestScoreCardProps) {
   return (
@@ -59,27 +60,31 @@ export function TestScoresSection({
       data-testid="test-scores-section"
     >
       <div className="container mx-auto px-4">
-        <div className="mb-8 flex items-center justify-between">
-          <h2 className="text-3xl font-bold">Test Scores</h2>
-          {transcriptUrl && (
-            <Button asChild variant="outline">
-              <a
-                href={transcriptUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Download className="h-4 w-4" />
-                Download Transcript
-              </a>
-            </Button>
-          )}
-        </div>
+        <ScrollAnimation animation="fade">
+          <div className="mb-8 flex items-center justify-between">
+            <h2 className="text-3xl font-bold">Test Scores</h2>
+            {transcriptUrl && (
+              <Button asChild variant="outline">
+                <a
+                  href={transcriptUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Download className="h-4 w-4" />
+                  Download Transcript
+                </a>
+              </Button>
+            )}
+          </div>
+        </ScrollAnimation>
         <div className="space-y-4">
           {data.length > 0 ? (
-            data.map((testScore) => (
-              <TestScoreCard key={testScore.id} testScore={testScore} />
-            ))
+            <StaggeredList animation="slide-up" staggerDelay={100}>
+              {data.map((testScore) => (
+                <TestScoreCard key={testScore.id} testScore={testScore} />
+              ))}
+            </StaggeredList>
           ) : (
             <p className="text-muted-foreground">No test scores available.</p>
           )}

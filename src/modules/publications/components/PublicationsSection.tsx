@@ -287,7 +287,9 @@ export function PublicationsSection({
           <div className="mb-8">
             <h2 className="mb-2 text-3xl font-bold">{data.heading}</h2>
             {data.description && (
-              <p className="text-lg text-muted-foreground">{data.description}</p>
+              <p className="text-lg text-muted-foreground">
+                {data.description}
+              </p>
             )}
           </div>
         </ScrollAnimation>

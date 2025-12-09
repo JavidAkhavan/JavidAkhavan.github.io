@@ -7,6 +7,7 @@ import React from 'react';
 import { CertificatesSectionProps, CertificateCardProps } from '../types';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink, Award } from 'lucide-react';
+import { ScrollAnimation, StaggeredList } from '@/core';
 
 function CertificateCard({ certificate }: CertificateCardProps) {
   return (
@@ -53,12 +54,16 @@ export function CertificatesSection({
       data-testid="certificates-section"
     >
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-3xl font-bold">Certificates</h2>
+        <ScrollAnimation animation="fade">
+          <h2 className="mb-8 text-3xl font-bold">Certificates</h2>
+        </ScrollAnimation>
         <div className="space-y-4">
           {data.length > 0 ? (
-            data.map((certificate) => (
-              <CertificateCard key={certificate.id} certificate={certificate} />
-            ))
+            <StaggeredList animation="slide-up" staggerDelay={80}>
+              {data.map((certificate) => (
+                <CertificateCard key={certificate.id} certificate={certificate} />
+              ))}
+            </StaggeredList>
           ) : (
             <p className="text-muted-foreground">No certificates available.</p>
           )}
