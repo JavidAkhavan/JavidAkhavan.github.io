@@ -142,15 +142,11 @@
       "endDate": "May 2019",
       "description": "Developed innovative educational technology solutions and IoT systems, securing startup funding and successfully conducting field trials with 58 participants to validate proof of concept.",
       "highlights": [
-        "**Educational Technology & VR Development:**",
-        "• Developed and validated 10 interactive VR applications in Unity-3D for pronunciation training in children aged 7–10, conducting successful field trials with 58 participants and achieving 85% improvement in learning outcomes",
-        "• Built comprehensive automation libraries for text-to-speech conversion, animation creation, scenario compilation, and console-VR synchronization using C#, Java, and Python, reducing development time for new educational modules by 60%",
-        "• Managed VR equipment setup and synchronized with auxiliary sensors to optimize user experiences and ensure accurate performance tracking",
-        "• Created MATLAB-based auto-grading system reducing instructor grading time by 70% and supporting 200+ students across multiple courses",
-        "**IoT & Embedded Systems:**",
-        "• Designed and implemented Arduino-based automated irrigation system, securing $8,000 in seed funding and establishing foundation for agriculture technology startup",
-        "• Led full product lifecycle from concept to deployment, including hardware design, embedded programming, testing, and field validation",
-        "• Provided technical mentorship to team members on software architecture, model fabrication, testing protocols, and documentation best practices"
+        "Developed and validated 10 interactive VR applications in Unity-3D for pronunciation training in children aged 7–10, conducting successful field trials with 58 participants and achieving 85% improvement in learning outcomes",
+        "Built comprehensive automation libraries for text-to-speech conversion, animation creation, scenario compilation, and console-VR synchronization using C#, Java, and Python, reducing development time for new educational modules by 60%",
+        "Created MATLAB-based auto-grading system reducing instructor grading time by 70% and supporting 200+ students across multiple courses",
+        "Designed and implemented Arduino-based automated irrigation system, securing $8,000 in seed funding and establishing foundation for agriculture technology startup",
+        "Led full product lifecycle from concept to deployment, including hardware design, embedded programming, testing, and field validation"
       ],
       "technologies": [
         "Unity-3D",

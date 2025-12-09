@@ -23,7 +23,7 @@ Formspree is a free form backend service that handles form submissions for stati
 
 1. After logging in, click "+ New Form"
 2. Give your form a name: `Portfolio Contact Form`
-3. Set the email address where you want to receive submissions: `jakhavan@stevens.edu`
+3. Set the email address where you want to receive submissions: `akhavanjavid@gmail.com`
 4. Click "Create Form"
 
 ### Step 3: Get Your Form Endpoint
@@ -61,7 +61,7 @@ const formspreeEndpoint = 'https://formspree.io/f/xwpkvngl';
 
 1. User fills out the contact form on your website
 2. Form data is sent to Formspree
-3. Formspree forwards the message to your email: `jakhavan@stevens.edu`
+3. Formspree forwards the message to your email: `akhavanjavid@gmail.com`
 4. You receive an email with:
    - Sender's name
    - Sender's email address
