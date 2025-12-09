@@ -220,8 +220,8 @@ export function ContactSection({ data, className = '' }: ContactSectionProps) {
                     )}
                   </form>
                   <p className="text-xs text-muted-foreground">
-                    Messages are sent securely. You&apos;ll
-                    receive a confirmation email.
+                    Messages are sent securely. You&apos;ll receive a
+                    confirmation email.
                   </p>
                 </div>
               )}

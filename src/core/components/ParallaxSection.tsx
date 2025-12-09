@@ -31,10 +31,7 @@ export function ParallaxSection({
       const windowHeight = window.innerHeight;
 
       // Only apply parallax when section is in view
-      if (
-        rect.top < windowHeight &&
-        rect.bottom > 0
-      ) {
+      if (rect.top < windowHeight && rect.bottom > 0) {
         const yOffset = (scrolled - sectionTop) * speed;
         setOffset(yOffset);
       }

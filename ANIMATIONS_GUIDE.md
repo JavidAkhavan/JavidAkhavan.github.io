@@ -15,19 +15,19 @@ import { ScrollAnimation } from '@/core';
 
 <ScrollAnimation animation="slide-up" delay={200} duration={600}>
   <div>Your content here</div>
-</ScrollAnimation>
+</ScrollAnimation>;
 ```
 
 #### Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `animation` | `'fade' \| 'slide-up' \| 'slide-down' \| 'slide-left' \| 'slide-right' \| 'scale' \| 'blur'` | `'fade'` | Animation type |
-| `delay` | `number` | `0` | Delay before animation starts (ms) |
-| `duration` | `number` | `600` | Animation duration (ms) |
-| `threshold` | `number` | `0.1` | Intersection threshold (0-1) |
-| `once` | `boolean` | `true` | Animate only once |
-| `className` | `string` | `''` | Additional CSS classes |
+| Prop        | Type                                                                                         | Default  | Description                        |
+| ----------- | -------------------------------------------------------------------------------------------- | -------- | ---------------------------------- |
+| `animation` | `'fade' \| 'slide-up' \| 'slide-down' \| 'slide-left' \| 'slide-right' \| 'scale' \| 'blur'` | `'fade'` | Animation type                     |
+| `delay`     | `number`                                                                                     | `0`      | Delay before animation starts (ms) |
+| `duration`  | `number`                                                                                     | `600`    | Animation duration (ms)            |
+| `threshold` | `number`                                                                                     | `0.1`    | Intersection threshold (0-1)       |
+| `once`      | `boolean`                                                                                    | `true`   | Animate only once                  |
+| `className` | `string`                                                                                     | `''`     | Additional CSS classes             |
 
 #### Examples
 
@@ -58,22 +58,22 @@ Animate list items with sequential delays (like Apple's product features).
 import { StaggeredList } from '@/core';
 
 <StaggeredList animation="slide-up" staggerDelay={100}>
-  {items.map(item => (
+  {items.map((item) => (
     <div key={item.id}>{item.content}</div>
   ))}
-</StaggeredList>
+</StaggeredList>;
 ```
 
 #### Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `animation` | `'fade' \| 'slide-up' \| 'slide-down' \| 'slide-left' \| 'slide-right' \| 'scale'` | `'slide-up'` | Animation type |
-| `staggerDelay` | `number` | `100` | Delay between each item (ms) |
-| `duration` | `number` | `600` | Animation duration (ms) |
-| `threshold` | `number` | `0.1` | Intersection threshold |
-| `className` | `string` | `''` | Container CSS classes |
-| `itemClassName` | `string` | `''` | Item CSS classes |
+| Prop            | Type                                                                               | Default      | Description                  |
+| --------------- | ---------------------------------------------------------------------------------- | ------------ | ---------------------------- |
+| `animation`     | `'fade' \| 'slide-up' \| 'slide-down' \| 'slide-left' \| 'slide-right' \| 'scale'` | `'slide-up'` | Animation type               |
+| `staggerDelay`  | `number`                                                                           | `100`        | Delay between each item (ms) |
+| `duration`      | `number`                                                                           | `600`        | Animation duration (ms)      |
+| `threshold`     | `number`                                                                           | `0.1`        | Intersection threshold       |
+| `className`     | `string`                                                                           | `''`         | Container CSS classes        |
+| `itemClassName` | `string`                                                                           | `''`         | Item CSS classes             |
 
 #### Examples
 
@@ -108,15 +108,15 @@ import { ParallaxSection } from '@/core';
 
 <ParallaxSection speed={0.5}>
   <div>Content that moves slower than scroll</div>
-</ParallaxSection>
+</ParallaxSection>;
 ```
 
 #### Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `speed` | `number` | `0.5` | Parallax speed (-1 to 1) |
-| `className` | `string` | `''` | Additional CSS classes |
+| Prop        | Type     | Default | Description              |
+| ----------- | -------- | ------- | ------------------------ |
+| `speed`     | `number` | `0.5`   | Parallax speed (-1 to 1) |
+| `className` | `string` | `''`    | Additional CSS classes   |
 
 #### Speed Guide
 
@@ -194,7 +194,7 @@ import { ParallaxSection } from '@/core';
   <ParallaxSection speed={0.3}>
     <div
       className="absolute inset-0 bg-cover bg-center"
-      style={{backgroundImage: 'url(/hero-bg.jpg)'}}
+      style={{ backgroundImage: 'url(/hero-bg.jpg)' }}
     />
   </ParallaxSection>
 
@@ -214,12 +214,8 @@ import { ParallaxSection } from '@/core';
     <h2>Publications</h2>
   </ScrollAnimation>
 
-  <StaggeredList
-    animation="slide-left"
-    staggerDelay={100}
-    itemClassName="mb-4"
-  >
-    {publications.map(pub => (
+  <StaggeredList animation="slide-left" staggerDelay={100} itemClassName="mb-4">
+    {publications.map((pub) => (
       <PublicationCard key={pub.id} {...pub} />
     ))}
   </StaggeredList>
@@ -303,7 +299,9 @@ html {
 <section>
   <h2>Title</h2>
   <div className="grid grid-cols-3">
-    {items.map(item => <Card key={item.id} />)}
+    {items.map((item) => (
+      <Card key={item.id} />
+    ))}
   </div>
 </section>
 ```
@@ -316,11 +314,10 @@ html {
     <h2>Title</h2>
   </ScrollAnimation>
 
-  <StaggeredList
-    animation="slide-up"
-    className="grid grid-cols-3"
-  >
-    {items.map(item => <Card key={item.id} />)}
+  <StaggeredList animation="slide-up" className="grid grid-cols-3">
+    {items.map((item) => (
+      <Card key={item.id} />
+    ))}
   </StaggeredList>
 </section>
 ```
@@ -328,19 +325,23 @@ html {
 ## Troubleshooting
 
 **Animation not triggering?**
+
 - Check that element is in viewport
 - Adjust `threshold` prop (default 0.1)
 - Ensure parent doesn't have `overflow: hidden`
 
 **Animations too fast/slow?**
+
 - Adjust `duration` prop (ms)
 - Default is 600ms
 
 **Stagger not working?**
+
 - Ensure children are direct React nodes
 - Check `staggerDelay` is reasonable (50-200ms)
 
 **Parallax jittery?**
+
 - Reduce `speed` value
 - Ensure parent has defined height
 - Check for conflicting transforms
